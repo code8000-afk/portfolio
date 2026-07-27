@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GENIEPLUS 입니다.">
+    <meta name="author" content="시스템게이트">
+    <meta name="-csrf" content="b4d963cf-a117-4e04-9a4e-0bd906cefa2a">
+    <meta name="-csrf-header" content="X-CSRF-TOKEN">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>GENIEPLUS</title>
+    <!-- basic css -->
+    <link type="text/css" rel="stylesheet" href="css/basics-reset.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-common.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-layout.css">
+    <link type="text/css" rel="stylesheet" href="css/geniplus-common.css">
+    <link type="text/css" rel="stylesheet" href="XEIcon-2.2.0/xeicon.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/basics-common.js"></script>
+    <script type="text/javascript" src="js/geniplus-common.js"></script>
+</head>
+<body class="sub-wrapper">
+     <div class="sub-wrap">
+        <div id="skip-nav">
+            <a href="#contents_container">본문 바로가기</a>
+        </div>
+        
+   <!-- 헤더 영역 -->
+        <div id="header-wrap" class="header-wrap"> <!-- 20260615 header-warp 감싸는 영역 추가 start -->
+        <header class="sub-header-area">
+            <div class="header-inner">
+                <div class="header-logo">
+					<a href="#"><span>KETEP logo</span></a>
+					<a href="00_1_메인화면.html"><span class="sr-only">GENIE PLUS</span></a>
+				</div>
+            </div>
+			<nav>
+				<a href="00_3_마이페이지.html">마이페이지</a>
+				<a href="00_2_대민용목록.html" class="active">사업공고</a>
+				<a href="#">온라인 사전검토</a>
+				<a href="#">온라인 평가</a>
+				<a href="#">온라인 메타순환기획</a>
+			</nav>
+			<div class="sidebar-profile">
+				<div class="profile-info">
+					<div class="profile-time">
+						<span>59분 58초</span>
+						<button class="btn btn-xs btn-outline-gray btn-prolong">연장</button>
+						<button class="btn btn-xs btn-outline-gray">로그아웃</button>
+					</div>
+					<div class="profile-name">
+						<button type="button"><strong>이하연</strong><span>연구원님</span></button>
+						<div class="profile-name-util">
+							<button type="button" class="btn-pop-close"><span class="sr-only">팝업 닫기</span></button>
+							<div class="pop-profile-info">
+								<div class="pop-avatar"></div>
+								<div class="pop-meta">
+									<strong class="pop-name">이하연</strong>
+									<span class="pop-role">과장/연구원</span>
+								</div>
+							</div>
+							<div class="pop-profile-menu">
+								<a href="#none" class="btn-pop-menu icon-change btn-popup-open" data-target="modal-authority">권한 변경</a>
+								<a href="#" class="btn-pop-menu icon-edit">개인정보 수정</a>
+								<a href="#" class="btn-pop-menu icon-out">로그아웃</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+				<div id="modal-authority" class="common-modal_wrap">
+					<div class="common-modal_dimmed btn-popup-close"></div>
+					<div class="common-modal_content">
+						<div class="common-modal_header">
+							<h2 class="common-modal_title">사용자 권한 변경</h2>
+							<button type="button" class="common-btn_close btn-popup-close" title="닫기"></button>
+						</div>
+						<div class="common-modal_body">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg">
+									<div class="title-left">
+										<h2 class="title-text"><span>변경하실 권한을 선택해 주세요</span></h2>
+									</div>
+								</div>
+								<div class="auth-card-container">
+									<div class="auth-card-list">
+										<div class="auth-card-item auth-card-checked">
+											<input type="radio" name="auth_select" id="auth_1" checked>
+											<label for="auth_1">
+												<span class="auth-num">01</span>
+												<strong class="auth-title">사업 담당자</strong>
+												<span class="auth-badge">현재 권한</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_2">
+											<label for="auth_2">
+												<span class="auth-num">02</span>
+												<strong class="auth-title">과제 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_3">
+											<label for="auth_3">
+												<span class="auth-num">03</span>
+												<strong class="auth-title">관리 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_4">
+											<label for="auth_4">
+												<span class="auth-num">04</span>
+												<strong class="auth-title">평가 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="common-modal_footer">
+							<button type="button" class="btn btn-md btn-outline-gray common-btn_cancel btn-popup-close">취소</button>
+							<button type="button" class="btn btn-md btn-blue common-btn_confirm btn-popup-close">변경 적용</button>
+						</div>
+					</div>
+				</div>
+        </header>
+	 </div>
+
+        <div class="sub-container">
+            <!-- 사이드바 토글 버튼 -->
+            <button class="btn btn-outline-gray sidebar-toggle-btn" id="sidebarToggle" aria-label="메뉴 토글"><span class="hide">열기/닫기</span></button>
+
+            <!-- 사이드바 영역 -->
+            <aside class="sub-sidebar" id="sidebar">
+				<div class="sidebar-title">사업계획서 작성</div> <!-- 20260624 좌측 타이틀 추가 -->
+					<nav class="sidebar-nav">
+						<!-- 1 Depth 시작 -->
+						<ul class="nav-menu depth-1">
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="xi-user-o menu-icon"></i><span class="nav-text">마이페이지</span>
+								</a>
+							</li>
+
+							<!-- 사업공고/접수 (하위 메뉴 있음) -->
+							<li class="nav-item has-sub open">
+								<a href="#" class="nav-link">
+									<i class="xi-document menu-icon"></i><span class="nav-text">사업공고/접수</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<!-- 2 Depth 시작 -->
+										<ul class="sub-menu depth-2">
+											<li class="nav-item">
+												<a href="#" class="sub-link">
+													<span class="nav-text">기술수요조사</span>
+												</a>
+											</li>
+											<li class="nav-item has-sub">
+												<a href="#" class="sub-link">
+													<span class="nav-text">사업공고</span><i class="xi-angle-down arrow"></i>
+												</a>
+												<div class="sub-menu-wrap">
+													<div class="sub-menu-inner">
+														<!-- 3 Depth 시작 -->
+														<ul class="sub-menu depth-3">
+															<li class="nav-item">
+																<a href="#" class="sub-link">
+																	<span class="nav-text">공고예고조회</span>
+																</a>
+															</li>
+															<li class="nav-item has-sub">
+																<a href="#" class="sub-link">
+																	<span class="nav-text">R&D 통합공고</span><i class="xi-angle-down arrow"></i>
+																</a>
+																<div class="sub-menu-wrap">
+																	<div class="sub-menu-inner">
+																		<!-- 4 Depth 시작 -->
+																		<ul class="sub-menu depth-4">
+																			<li class="nav-item"><a href="#" class="sub-link active"><span class="nav-text">공고상세조회</span></a></li>
+																			<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">신규과제 접수</span></a></li>
+																			<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">제출서류 다운로드</span></a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="nav-item">
+												<a href="#" class="sub-link">
+													<span class="nav-text">접수결과조회</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<!-- 과제평가관리 -->
+							<li class="nav-item has-sub">
+								<a href="#" class="nav-link">
+									<i class="xi-pen-o menu-icon"></i><span class="nav-text">과제평가관리</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<ul class="sub-menu depth-2">
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">평가위원 선정</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">온라인 평가시스템</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">평가결과 통보</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<!-- 협약 및 정산 -->
+							<li class="nav-item has-sub">
+								<a href="#" class="nav-link">
+									<i class="xi-receipt menu-icon"></i><span class="nav-text">협약 및 정산</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<ul class="sub-menu depth-2">
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">전자협약 체결</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">사업비 관리</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">정산결과 조회</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</aside>
+
+			
+			
+            <!-- 메인 콘텐츠 영역 -->
+            <main class="sub-main-content general-wrap" id="contents_container"> <!-- 20260624 대민용 화면 (외부) general-wrap 클래스 추가 -->
+				<!-- 20260624 타이틀 위치 변경 start -->
+            <nav class="lnb">
+                <div class="lnb-inner">
+                    <div class="title-name">
+                        <h1>사업공고</h1>
+                    </div>
+                    <div class="lnb-right">
+                        <div class="lnb-left">
+                            <span class="home">
+                                <a href="#"><i class="xi-home"></i><span class="sr-only">홈(메인) 화면으로 이동</span></a>
+                            </span>
+                            <div class="fn-dropdown" id="lv1">
+                                <button type="button">
+                                    <span>사업공고</span>
+                                </button>
+                                <ul>
+                                    <li><a href="#">서브메뉴 테스트 01-01</a></li>
+                                    <li><a href="#">서브메뉴 테스트 01-02</a></li>
+                                    <li><a href="#">서브메뉴 테스트 01-03</a></li>
+                                    <li><a href="#">서브메뉴 테스트 01-04</a></li>
+                                    <li><a href="#">서브메뉴 테스트 01-05</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn btn-xs btn-outline-gray icon-xi-zoom-out"><span class="sr-only">축소</span></button>
+                        <button class="scale-status">100%</button>
+                        <button class="btn btn-xs btn-outline-gray icon-xi-zoom-in"><span class="sr-only">확대</span></button>
+                    </div>
+                </div>
+            </nav>
+			<!-- 20260624 타이틀 위치 변경 end -->
+
+				<div class="content-area-wrap">
+					<!-- 20260624 대민용 기본 테이블 start -->
+					<div class="content-area">
+						<div class="com-list-container"> <!-- 20260624 com-list-container 추가  -->
+						<!-- 20260624 공고 조회 start -->
+						<div class="con-box-item">
+							<div class="extra_area_wrap">
+							<div class="board-view-area">
+								<div class="board-view-header">
+									<div class="board-view-meta">
+										<span class="board-view-category">사업공고</span>
+										<span class="board-view-date">2026.05.29</span>
+									</div>
+									<div class="board-view-title">2026년 에너지국제공동연구사업 신규지원 대상과제 공고</div>
+								</div>
+								<div class="board-view-detail">
+									<div class="board-view-row">
+										<div class="board-view-label">작성자</div>
+										<div class="board-view-value">관리자</div>
+									</div>
+									<div class="board-view-row">
+										<div class="board-view-label">조회수</div>
+										<div class="board-view-value">1,234</div>
+									</div>
+								</div>
+
+								<!-- 20260624 관련 사업공고(임의명칭입니다) start -->
+								<div class="card-it-wrap">
+									<div class="bcard-it-label">관련 사업공고</div>
+									<div class="card-it-box">
+										<div class="card-it-main">
+											<div class="card-it-row cate">
+												<span class="card-it-lbl">사업분류</span>
+												<span>원자력 핵심기술-중장기_중대형-원전선전화기술개발사업</span>
+											</div>
+											<div class="card-it-row tit">
+												<span class="card-it-lbl">과제명</span>
+												<span>웨스팅하우스 증기발생기 습분분리기 국산화</span>
+											</div>
+										</div>
+										<div class="card-it-desc">
+											<span class="card-it-d-item"><strong>개발형태</strong>혁신제품</span>
+											<span class="card-it-d-item bar"><strong>공모형태</strong>품목지정</span>
+											<span class="card-it-d-item"><strong>접수기간</strong>2026-05-22 09:00 ~ 2026-06-26 18:00</span>
+											<span class="card-it-d-item"><strong>마감잔여시간</strong><span class="time-highlight">31일 2시간 45분</span></span>
+										</div>
+										<div class="card-it-side">
+											<button class="btn btn-md btn-outline-green" onclick="location.href='/pms/html/subjReg.do'">신청하기</button>
+										</div>
+									</div>
+									<div class="card-it-box">
+										<div class="card-it-main">
+											<div class="card-it-row cate">
+												<span class="card-it-lbl">사업분류</span>
+												<span>원자력 핵심기술-중장기_중대형-원전선전화기술개발사업</span>
+											</div>
+											<div class="card-it-row tit">
+												<span class="card-it-lbl">과제명</span>
+												<span>표준형 증기발생기 2차측 상부 in-Bundle 원격육안검사 및 이물질제거 설비 개발</span>
+											</div>
+										</div>
+										<div class="card-it-desc">
+											<span class="card-it-d-item"><strong>개발형태</strong>혁신제품</span>
+											<span class="card-it-d-item bar"><strong>공모형태</strong>품목지정</span>
+											<span class="card-it-d-item"><strong>접수기간</strong>2026-05-22 09:00 ~ 2026-06-26 18:00</span>
+											<span class="card-it-d-item"><strong>마감잔여시간</strong><span class="time-highlight">31일 2시간 45분</span></span>
+										</div>
+										<div class="card-it-side">
+											<button class="btn btn-md btn-outline-green" onclick="location.href='/pms/html/subjReg.do'">신청하기</button>
+										</div>
+									</div>
+									<div class="card-it-box">
+										<div class="card-it-main">
+											<div class="card-it-row cate">
+												<span class="card-it-lbl">사업분류</span>
+												<span>자원개발기술개발-중장기_중대형-자원기술개발</span>
+											</div>
+											<div class="card-it-row tit">
+												<span class="card-it-lbl">과제명</span>
+												<span>스마트 무인항공 물리탐사 시스템 개발 및 현장실증</span>
+											</div>
+										</div>
+										<div class="card-it-desc">
+											<span class="card-it-d-item"><strong>개발형태</strong>혁신제품</span>
+											<span class="card-it-d-item bar"><strong>공모형태</strong>품목지정</span>
+											<span class="card-it-d-item"><strong>접수기간</strong>2026-05-22 09:00 ~ 2026-06-26 18:00</span>
+											<span class="card-it-d-item"><strong>마감잔여시간</strong><span class="time-highlight">31일 2시간 45분</span></span>
+										</div>
+										<div class="card-it-side">
+											<button class="btn btn-md btn-outline-green" onclick="location.href='/pms/html/subjReg.do'">신청하기</button>
+										</div>
+									</div>
+								</div>
+								<!-- 20260624 관련 사업공고(임의명칭입니다) end -->
+								<div class="board-view-text">
+									<div><div>
+										2024년 에너지국제공동연구사업 신규지원 대상 연구개발 과제를 다음과 같이 공고하오니 해당 과제를 수행하고자 하는 기관은 관련 규정에 따라 신청하여 주시기 바랍니다. <br><br>
+
+										<div style="margin-top: 30px; color: rgb(27, 27, 27); font-size: 17px; font-weight: bold; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: rgb(226, 240, 255); padding: 6px 0px 6px 8px;">1. 사업개요 </div>
+										<div style="color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은고딕, dotum, 돋움; font-size: 15px; font-weight: bold; margin-top: 23px; margin-bottom: 5px; margin-left: 12px;">1-1. 사업목적 </div>
+										<div style="padding-left: 12px; margin-top: 15px; margin-left: 20px; margin-right: 10px; font-size: 14px; color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: url(../../home_data/assets/img/notice/icon/noticicon02.gif) 0px 9px no-repeat;">에너지 국제공동연구를 통한 기술협력 활성화로 국가 에너지기술 경쟁력 제고와 에너지안보 확립 및 에너지 신시장 창출에 기여</div>
+										<div style="background: url(../../home_data/assets/img/notice/icon/icon_08.gif) 0px 7px no-repeat; color: rgb(34, 34, 34); padding-left: 18px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; font-size: 15px; margin-top: 15px; margin-bottom: 5px; margin-left: 12px; font-weight: bold;">품목지정 국제공동연구</div>
+										<div class="table table-responsive" style="width: 97%; border-width: 2px 1px 1px; border-style: solid; border-color: rgb(147, 187, 214) rgb(217, 217, 217) rgb(217, 217, 217); margin-left: 10px; margin-bottom: 10px;"> 
+			<table> 
+			<caption style="position: absolute; top: 0px; left: -1e+11px; font-size: 1px; color: rgb(255, 255, 255); height: 1px;">품목지정 국제공동연구 </caption> 
+			<colgroup> 
+			<col width="5%"> 
+			<col width="5%"> 
+			<col width="24%"> 
+			<col width="5%"> 
+			<col width="5%"> 
+			<col width="5%"> 
+			<col width="5%"> 
+			<col width="5%"> 
+			<col width="5%"> 
+			<col width="5%"> 
+			<col width="4%"> 
+			<col width="4%"> 
+			<col width="5%"> 
+			<col width="5%"> 
+			<col width="5%"> 
+			<col width="5%"> 
+			</colgroup> 
+			<thead> 
+			<tr> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">내역<br>
+			사업</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">기술<br>
+			분야</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">과제명</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">협력<br>
+			국가</th> 
+			<th scope="col" colspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">과제유형</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">총<br>
+			수행<br>
+			기간<br>
+			(개월)</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">'24년 <br>
+			정부<br>
+			출연금<br>
+			(안)</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">총<br>
+			정부<br>
+			출연금(안)</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">주관<br>
+			기관</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">기업<br>
+			참여</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">해외<br>
+			기관</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">기술료</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">과제수</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">안전<br>
+			과제<br>
+			여부</th> 
+			<th scope="col" rowspan="2" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">다운<br>
+			로드</th> 
+			</tr> 
+			<tr> 
+			<th scope="col" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">공모<br>
+			구분</th> 
+			<th scope="col" style="font-weight: bold; font-size: 13px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 5px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">기술<br>
+			성격</th> 
+			</tr> 
+			</thead> 
+			<tbody> 
+			<tr> 
+			<td rowspan="2" style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; background: rgb(250, 250, 250); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">기술<br>
+			선도</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">효율<br>
+			향상</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">AI 플랫폼 기반 기술 적용 고효율 스마트<br>
+			전력변환시스템 개발</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">기술<br>
+			선도국</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">품목<br>
+			지정</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">혁신<br>
+			제품</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">36<br>
+			이내</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">6억원<br>
+			내외</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">40억원<br>
+			내외</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">제한<br>
+			없음</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">필수<br>
+			참여</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">필수<br>
+			참여</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">징수</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">1개</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">-</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);"> <a href="https://www.ketep.re.kr/atchfile/downloadAtchfile.do?vchkcode=00C7nYJa2QHv" title="다운로드"><img src="./C_2_1_2_사업계획서 작성-신청하기_files/pdf.gif" alt="pdf"></a></td>
+			</tr> 
+			<tr> 
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">전력<br>
+			계통</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">분산자원 중심의 AI 기반 최적 급전운영<br>
+			기술개발</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">기술<br>
+			선도국</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">품목<br>
+			지정</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">혁신<br>
+			제품</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">36<br>
+			이내</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">6억원<br>
+			내외</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">30억원<br>
+			내외</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">제한<br>
+			없음</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">필수<br>
+			참여</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">필수<br>
+			참여</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">징수</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">1개</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">-</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);"> <a href="https://www.ketep.re.kr/atchfile/downloadAtchfile.do?vchkcode=N082D86BEp44" title="다운로드"><img src="./C_2_1_2_사업계획서 작성-신청하기_files/pdf.gif" alt="pdf"></a></td>
+			</tr> 
+			<tr> 
+			<td rowspan="2" style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; background: rgb(250, 250, 250); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">시장<br>
+			개척</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">효율<br>
+			향상</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">냉방·제습·환기청정 기술을 적용한 하이브리드<br>
+			모듈형 공조시스템 개발 및 실증</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">시장<br>
+			진출국</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">품목<br>
+			지정</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">혁신<br>
+			제품</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">36<br>
+			이내</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">5억원<br>
+			내외</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">30억원<br>
+			내외</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">중소<br>
+			중견</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">필수<br>
+			참여</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">필수<br>
+			참여</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">징수</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">1개</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">-</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);"> <a href="https://www.ketep.re.kr/atchfile/downloadAtchfile.do?vchkcode=U0c488lziaIf" title="다운로드"><img src="./C_2_1_2_사업계획서 작성-신청하기_files/pdf.gif" alt="pdf"></a></td>
+			</tr> 
+			<tr> 
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">전력<br>
+			계통</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">분산전원 연계 전력 안정 운영시스템 사업화<br>
+			기술개발 및 실증</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">시장<br>
+			진출국</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">품목<br>
+			지정</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">혁신<br>
+			제품</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">36<br>
+			이내</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">5억원<br>
+			내외</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">40억원<br>
+			내외</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">중소<br>
+			중견</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">필수<br>
+			참여</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">필수<br>
+			참여</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">징수</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">1개</td>
+			<td style="color: rgb(51, 51, 51); font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); padding: 1px;">-</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 13px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);"> <a href="https://www.ketep.re.kr/atchfile/downloadAtchfile.do?vchkcode=wfB15Q747qXC" title="다운로드"><img src="./C_2_1_2_사업계획서 작성-신청하기_files/pdf.gif" alt="pdf"></a></td>
+			</tr> 
+			</tbody> 
+			</table> </div>
+			<div style="margin-top: 30px; color: rgb(27, 27, 27); font-size: 17px; font-weight: bold; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: rgb(226, 240, 255); padding: 6px 0px 6px 8px;">2. 신청방법, 신청서 제출기한 및 접수처</div>
+			<div style="background: url(../../home_data/assets/img/notice/icon/icon_08.gif) 0px 7px no-repeat; color: rgb(34, 34, 34); padding-left: 18px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; font-size: 15px; margin-top: 15px; margin-bottom: 5px; margin-left: 12px; font-weight: bold;">신청방법 및 제출기한</div>
+			<div class="table table-responsive" style="width: 97%; border-width: 2px 1px 1px; border-style: solid; border-color: rgb(147, 187, 214) rgb(225, 225, 225) rgb(225, 225, 225); margin-left: 10px; margin-bottom: 10px;"> 
+			<table> 
+			<caption style="position: absolute; top: 0px; left: -1e+11px; font-size: 1px; color: rgb(255, 255, 255); height: 1px;">신청방법, 신청서 제출기한 및 접수처</caption> 
+			<colgroup> 
+			<col style="width: 25%;"> 
+			<col style="width: 75%;"> 
+			</colgroup> 
+			<thead> 
+			<tr> 
+			<th scope="col" style="font-weight: bold; font-size: 14px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 10px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(225, 225, 225); border-bottom: 1px solid rgb(225, 225, 225);" class="NamoSE_border_show">구분</th> 
+			<th scope="col" style="font-weight: bold; font-size: 14px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 10px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(225, 225, 225); border-bottom: 1px solid rgb(225, 225, 225);" class="NamoSE_border_show">내용</th> 
+			</tr> 
+			</thead> 
+			<tbody> 
+			<tr> 
+			<td style="color: rgb(51, 51, 51); padding: 10px; font-size: 14px; background: rgb(250, 250, 250); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(225, 225, 225); border-bottom: 1px solid rgb(225, 225, 225); font-weight: bold;">신청방법</td>
+			<td style="color: rgb(51, 51, 51); padding: 10px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: left; border-right: 1px solid rgb(225, 225, 225); border-bottom: 1px solid rgb(225, 225, 225);"> 
+			<div style="padding-left: 8px; font-size: 14px; color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: url(../../home_data/assets/img/notice/icon/noticicon03.gif) 0px 9px no-repeat;"><span style="font-weight: bold;">계획서(필수서류) 및 첨부서류 온라인 일괄 접수</span><br>
+			 * 오프라인(방문) 서류제출 불필요</div> </td>
+			</tr> 
+			<tr> 
+			<td style="color: rgb(51, 51, 51); padding: 10px; font-size: 14px; background: rgb(250, 250, 250); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(225, 225, 225); border-bottom: 1px solid rgb(225, 225, 225); font-weight: bold;">공고기간</td>
+			<td style="color: rgb(51, 51, 51); padding: 10px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: left; border-right: 1px solid rgb(225, 225, 225); border-bottom: 1px solid rgb(225, 225, 225);"> 
+			<div style="padding-left: 8px; font-size: 14px; color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: url(../../home_data/assets/img/notice/icon/noticicon03.gif) 0px 9px no-repeat;">2024. 8. 9.(금) ～ 9. 23.(월) 18시까지</div> </td>
+			</tr> 
+			<tr> 
+			<td rowspan="2" style="color: rgb(51, 51, 51); padding: 10px; font-size: 14px; background: rgb(250, 250, 250); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(225, 225, 225); border-bottom: 1px solid rgb(225, 225, 225); font-weight: bold;">신청 기간 및 관련 양식 교부</td>
+			<td style="color: rgb(51, 51, 51); padding: 10px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: left; border-right: 1px solid rgb(225, 225, 225); border-bottom: 1px solid rgb(225, 225, 225);"> 
+			<div style="padding-left: 8px; font-size: 14px; color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: url(../../home_data/assets/img/notice/icon/noticicon03.gif) 0px 9px no-repeat;">2024. 8. 16.(금) ～ 9. 23.(월) 18시까지<br>
+			 * 전산등록과 동시에 첨부 서류를 온라인으로 접수<br>
+			 * <span style="font-weight: bold;">접수마감시간 엄수 요망</span></div> </td>
+			</tr> 
+			<tr> 
+			<td style="color: rgb(51, 51, 51); padding: 10px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: left; border-right: 1px solid rgb(225, 225, 225); border-bottom: 1px solid rgb(225, 225, 225);"> 
+			<div style="padding-left: 8px; font-size: 14px; color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: url(../../home_data/assets/img/notice/icon/noticicon03.gif) 0px 9px no-repeat;">양식교부 및 안내</div> 
+			<div style="padding-left: 5px;">- <span style="font-weight: bold;">범부처통합연구지원시스템(<a href="https://www.iris.go.kr/" target="_blank" title="새창열기">www.iris.go.kr</a>)</span></div> 
+			<div style="padding-left: 5px;">- 한국에너지기술평가원 홈페이지(<a href="https://www.ketep.re.kr/" target="_blank" title="새창열기">www.ketep.re.kr</a>) 정책과 소식(사업공고)</div> </td>
+			</tr> 
+			</tbody> 
+			</table> </div>
+			<div style="padding-left: 12px; margin-top: 5px; margin-left: 20px; margin-right: 10px; font-size: 14px; color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: url(../../home_data/assets/img/notice/icon/noticicon02.gif) 0px 9px no-repeat; font-weight: bold;">전산 등록처 : 범부처통합연구지원시스템(IRIS,<a href="https://www.iris.go.kr/" target="_blank" title="새창열기">www.iris.go.kr</a>)</div>
+			<div style="margin-left: 25px; margin-top: 5px; font-size: 13px; color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-indent: -1em; padding-left: 14px;">※ 범부처통합연구지원시스템(IRIS)을 통한 과제신청을 위해 <span style="font-weight: bold;">사전에 반드시‘접수전 필수 이행사항’을 조치</span>하여야 함(첨부 매뉴얼 참조)</div>
+			<div style="padding-left: 11px; margin-left: 32px; font-size: 13px; color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: url(../../home_data/assets/img/notice/icon/icon_star.gif) 0px 9px no-repeat; font-weight: bold;">필수이행사항 : 이용자 회원가입 및 연구자전환, 기관대표자 등록 및 기관총괄담당자 신청, 기관 당담자 권한 부여 및 주관연구기관 승인권한 확인 등</div>
+			<div style="padding-left: 11px; margin-left: 32px; font-size: 13px; color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: url(../../home_data/assets/img/notice/icon/icon_star.gif) 0px 9px no-repeat; font-weight: bold;">필수이행사항 : 이용자 회원가입 및 연구자전환, 기관대표자 등록 및 기관총괄담당자 신청, 기관 당담자 권한 부여 및 주관연구기관 승인권한 확인 등</div>
+			<div style="padding-left: 11px; margin-left: 32px; font-size: 13px; color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: url(../../home_data/assets/img/notice/icon/icon_star.gif) 0px 9px no-repeat; font-weight: bold;">전산접수 시 기관대표자 신용정보 조회 미동의 시 연구개발계획서 최종제출 불가 </div>
+			<div style="margin-left: 25px; margin-top: 5px; font-size: 13px; color: rgb(34, 34, 34); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-indent: -1em; padding-left: 14px;">※ 반드시 신청마감일 전 까지 제출이 완료되어야하며, <span style="font-weight: bold; text-decoration: underline;">마감시간(18:00)이 지나면 접수시스템이 자동으로 차단되어 접수 불가</span></div>
+
+			<div style="margin-top: 30px; color: rgb(27, 27, 27); font-size: 17px; font-weight: bold; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; background: rgb(226, 240, 255); padding: 6px 0px 6px 8px;">3. 문의처 등</div>
+			<div style="background: url(../../home_data/assets/img/notice/icon/icon_08.gif) 0px 7px no-repeat; color: rgb(34, 34, 34); padding-left: 18px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; font-size: 15px; margin-top: 15px; margin-bottom: 5px; margin-left: 12px; font-weight: bold;">상세 내용 및 관련 양식은 범부처통합연구지원시스템(<a href="https://www.iris.go.kr/" target="_blank" title="새창열기" style="color: rgb(51, 51, 51);">www.iris.go.kr</a>), 한국에너지기술평가원 홈페이지(<a href="https://www.ketep.re.kr/" target="_blank" title="새창열기" style="color: rgb(51, 51, 51);">www.ketep.re.kr</a>) 정책과 소식(사업공고) 참조</div>
+			<div style="background: url(../../home_data/assets/img/notice/icon/icon_08.gif) 0px 7px no-repeat; color: rgb(34, 34, 34); padding-left: 18px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; font-size: 15px; margin-top: 15px; margin-bottom: 5px; margin-left: 12px; font-weight: bold;">과제 접수 및 평가 관련 문의</div>
+			<div class="table table-responsive" style="width: 97%; border-width: 2px 1px 1px; border-style: solid; border-color: rgb(147, 187, 214) rgb(217, 217, 217) rgb(217, 217, 217); margin-left: 10px; margin-bottom: 5px;"> 
+			<table> 
+			<caption style="position: absolute; top: 0px; left: -1e+11px; font-size: 1px; color: rgb(255, 255, 255); height: 1px;">과제 접수 및 평가 관련 문의</caption> 
+			<colgroup> 
+			<col width="25%"> 
+			<col width="10%"> 
+			<col width="20%"> 
+			<col width="20%"> 
+			<col width="25%"> 
+			</colgroup> 
+			<thead> 
+			<tr> 
+			<th scope="col" style="font-weight: bold; font-size: 14px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 10px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">구분</th> 
+			<th scope="col" style="font-weight: bold; font-size: 14px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 10px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">소속</th> 
+			<th scope="col" style="font-weight: bold; font-size: 14px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 10px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">담당자</th> 
+			<th scope="col" style="font-weight: bold; font-size: 14px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 10px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">연락처</th> 
+			<th scope="col" style="font-weight: bold; font-size: 14px; background-color: rgb(238, 247, 251); color: rgb(0, 82, 139); text-align: center; padding: 10px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);" class="NamoSE_border_show">E-mail</th> 
+			</tr> 
+			</thead> 
+			<tbody> 
+			<tr> 
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; background: rgb(250, 250, 250); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">효율향상</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">KETEP</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">이정은 전임</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">+82.2.3469.8435</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">jungeun0405@ketep.re.kr</td>
+			</tr> 
+			<tr> 
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; background: rgb(250, 250, 250); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">전력계통</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">KETEP</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">백종현 전임</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">+82.2.3469.8438</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">baek@ketep.re.kr</td>
+			</tr> 
+			<tr> 
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; background: rgb(250, 250, 250); font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">한-노르웨이</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">KETEP</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">백상주 책임</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">+82.2.3469.8431</td>
+			<td style="color: rgb(51, 51, 51); padding: 7px; font-size: 14px; font-family: Malgun Gothic, 맑은 고딕, Dotum, 돋움, Gulim, 굴림; text-align: center; border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217);">sky31778@ketep.re.kr</td>
+			</tr> 
+			</tbody> 
+			</table> </div>
+										</div></div>
+								</div>
+
+								<!-- 20260624 첨부파일 영역 start -->
+								<div class="board-view-row full">
+									<div class="board-view-label">첨부파일</div>
+									<div class="board-view-value">
+										<a href="http://118.219.64.106:8282/pms/html/bizDocDtl.do#" class="ext-file_link" download="">2026년 에너지국제공동연구사업 신규지원 대상과제 공고문_최종.pdf (1.9MB)</a>
+										<a href="http://118.219.64.106:8282/pms/html/bizDocDtl.do#" class="ext-file_link" download="">1. 제출서류 및 참고.zip (2.2MB)</a>
+										<a href="http://118.219.64.106:8282/pms/html/bizDocDtl.do#" class="ext-file_link" download="">2. 관련법령 및 규정.zip (3.7MB)</a>
+									</div>
+								</div>
+								<!-- 20260624 첨부파일 영역 end -->
+
+								<div class="content-bottom-util">
+									<button type="button" class="btn btn-lg btn-outline-gray" onclick="javascript:location.href='/pms/html/bizDocReg.do'">목록으로</button>
+								</div>
+							</div>
+							</div>
+						</div>
+						<!-- 20260624 공고 조회 end -->
+							
+						</div> 
+					</div>
+					<!-- 20260624 대민용 기본 테이블 end -->
+				</div>
+			</main>
+        </div>
+		 <!-- 20260619 서브 푸터 변경 start -->
+		 <footer class="krds_footer">
+			<div class="footer_info">
+			<!-- 20260619 info_left 영역 추가 start -->
+			<div class="info_left">
+				<nav class="footer_links">
+					<a href="#" class="link_item">서비스 이용약관</a>
+					<a href="#" class="link_item bold">개인정보처리방침</a>
+					<a href="#" class="link_item">이메일무단수집거부</a>
+				</nav>
+				<address class="info_address">
+					<span class="addr_item">(06175) 서울특별시강남구 테헤란로 114길 14 유니온빌딩</span>
+					<span class="addr_item">대표전화:02-3469-8400</span>
+					<span class="addr_item">팩스:02-555-2430</span>
+				</address>
+				<p class="info_copyright">copyright(C) 2026 korea institute of energy technology evaluation and planning. all rights reserved.</p>
+			</div>
+			<!-- 20260619 info_left 영역 추가 end -->
+			<!-- 20260619 info_right 관련기관 영역 추가 start -->
+			<div class="info_right">
+				<div class="footer_select_group">
+					<div class="custom_dropdown">
+						<button type="button" class="dropdown_btn" aria-haspopup="true" aria-expanded="false">패밀리사이트</button>
+						<ul class="dropdown_menu">
+							<li><a href="https://www.ketep.re.kr" target="_blank" title="새창열림">한국에너지기술평가원</a></li>
+							<li><a href="https://www.energyinsight.or.kr" target="_blank" title="새창열림">에너지기술 인사이트 플랫폼</a></li>
+						</ul>
+					</div>
+					<div class="custom_dropdown">
+						<button type="button" class="dropdown_btn" aria-haspopup="true" aria-expanded="false">관련기관</button>
+						<ul class="dropdown_menu">
+							<li><a href="https://www.me.go.kr" target="_blank" title="새창열림">기후에너지환경부</a></li>
+							<li><a href="https://www.kiat.or.kr" target="_blank" title="새창열림">한국산업기술진흥원</a></li>
+							<li><a href="https://www.ntis.go.kr" target="_blank" title="새창열림">NTIS 국가과학기술지식정보서비스</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 20260619 info_right 관련기관 영역 추가 end -->
+		</div>
+		</footer>
+		 <!-- 20260619 서브 푸터 변경 end -->
+    </div>
+</body>
+</html>

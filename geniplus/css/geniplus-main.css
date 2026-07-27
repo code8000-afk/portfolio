@@ -1,0 +1,352 @@
+@charset "utf-8";
+
+/* ==========================================================================
+대민 - 기본 HTML/BODY 세팅
+========================================================================== */
+html, body { margin: 0; padding: 0; min-height: 100%; overflow-x: hidden; overflow-y: auto; }
+.main-wrap { display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; overflow-y: auto; position: relative;}
+.main-wrap .header-logo a { width: 11rem !important; }
+.main-wrap .header-logo a:hover { opacity: 0.8; }
+
+/* ==========================================================================
+대민 - 상단 헤더 영역
+========================================================================== */
+.main-header-area {position: fixed;top: 0;left: 0;width: 100%;height: 10rem;z-index: 100;background: linear-gradient(to bottom, rgb(46 52 63 / 68%) 28%, transparent 100%);transition: background 0.3s ease-in-out;}
+.main-header-area.scrolled { background: #121212ad !important; }
+.header-inner {display: flex;justify-content: space-between;align-items: center;width: 100%;height: 100%;padding: 0 5%;border-bottom: 0.1rem solid #ffffff1a;box-sizing: border-box;}
+.header-logo { display: flex; align-items: center; gap: 1.5rem; margin: 0; }
+.header-logo img { height: 3rem; }
+.logo-divider { color: rgba(255,255,255,0.3); font-size: 1.4rem; font-weight: 300; }
+.header-gnb ul { display: flex; gap: 6rem; margin: 0; padding: 0; color: #fff; list-style: none; font-size: 1.6rem; }
+.header-util {display: flex;gap: 1rem !important;}
+.header-util a {font-size: 2.8rem;text-decoration: none;transition: opacity 0.3s, transform 0.3s;display: flex;color: #fff;border: none;padding: 0rem;margin: 0rem;box-shadow: none;background: none;}
+.header-util a:hover { background:none; box-shadow: none;}
+.header-gnb a {position: relative;color: rgba(255, 255, 255, 0.8);font-size: 1.5rem;font-weight: 600;text-decoration: none;transition: all 0.25s ease;display: flex;align-items: center;height: 100%;padding: 0rem 0.5rem 0.8rem 0.5rem;white-space: nowrap;}
+.header-gnb a:hover, .header-gnb a.active { color: #54fae8; }
+.header-gnb a::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 0.3rem; background: #54fae8; transform: scaleX(0); transition: transform 0.25s ease; }
+.header-gnb a:hover::after, .header-gnb a.active::after { transform: scaleX(1); }
+
+/* ==========================================================================
+대민 - 배경 영상 영역
+========================================================================== */
+.video-bg-wrap {position: fixed;top: 0;left: 0;width: 100%;height: 100vh;z-index: -1;overflow: hidden;background-color: #000;}
+.main-bg-video {width: 130%;height: 100%;object-fit: cover;object-position: center;animation: moveLeftOnce 5s linear forwards;}
+@keyframes moveLeftOnce { 0% { transform: translateX(0rem); } 100% { transform: translateX(0rem); width: 100%;}}
+
+/* ==========================================================================
+대민 - 메인 레이아웃 컨테이너 영역
+========================================================================== */
+.main-container { position: relative; flex: 1; display: flex; width: 100%; padding-top: 10rem; padding-bottom: 4rem; color: #fff; box-sizing: border-box; background-color: transparent; transition: background-color 0.5s ease-in-out;}
+
+/* ==========================================================================
+대민 - 좌측 콘텐츠 타이틀 영역
+========================================================================== */
+.main-left-area {width: 50%;display: flex;flex-direction: column;justify-content: center;padding: 4rem 5% 4rem 8%;box-sizing: border-box;align-items: flex-start;text-align: left;}
+.main-title-box, .btn-desc-util, .notice-rolling-box { position: relative; left: 0; transform: translateX(0); }
+.main-title-box {margin-bottom: 2rem;width: 100%;}
+.main-title-box .mint-text {font-size: 3.3rem;font-weight: bold;color: #fff;}
+.main-title-box .main-tit {font-size: 6.5rem;font-weight: 700;line-height: 1.2;margin-bottom: 2.5rem;gap: 0rem;color: #fff;}
+.main-title-box .main-tit span {display: block;}
+.main-tit {display: flex;flex-direction: column;gap: 1.5rem;color: #ffffff;font-weight: 700;word-break: keep-all;}
+.main-tit .mint-text { display: block; line-height: 1.3; }
+.main-tit .mint-text:nth-child(1) {font-size: 3.8rem;letter-spacing: -0.05rem;color: #00ffd6 !important;}
+.main-tit .mint-text:nth-child(1) b {color: #00fdff;}
+.main-tit .mint-text:nth-child(2) {font-size: 3.8rem;letter-spacing: 0px;margin-bottom: 1rem;}
+.main-tit .mint-text:nth-child(3) span {position: relative;font-size: 2.5rem;font-weight: 600;box-shadow: none;}
+.main-tit .mint-text:nth-child(3) span strong {color: #00fdff;position: relative;}
+.main-tit .mint-plus-icon {position: absolute;color: #00fdff;font-size: 3rem;font-weight: 800;top: -1.5rem;right: -2.2rem;text-shadow: 0 0.2rem 0.4rem rgb(0 0 0 / 48%);}
+.main-title-box .main-desc {font-size: 1.5rem;line-height: 1.6;color: #ffffff;margin-bottom: 2.5rem;word-break: keep-all;font-weight: 400;}
+
+/* ==========================================================================
+대민 - 좌측 콘텐츠 사업공고 롤링 영역
+========================================================================== */
+.notice-rolling-box {display: flex;flex-direction: column;background: rgb(15 23 42 / 37%);border-radius: 2rem;padding: 2.5rem 3rem 3rem 3rem;width: 100%;position: relative;backdrop-filter: blur(1rem);box-sizing: border-box;}
+.notice-label { display: flex; gap: 1rem; margin-bottom: 2rem; border-bottom: 0.1rem solid rgba(255,255,255,0.1); padding-bottom: 1.2rem; position: relative; }
+.notice-label button { background: none; border: none; color: rgba(255,255,255,0.6); font-size: 1.6rem; font-weight: 600; padding: 0.5rem 1.5rem; cursor: pointer; transition: all 0.3s ease; position: relative; }
+.notice-label button:hover { color: #54fae8; }
+.notice-label button.active { color: #54fae8; }
+.notice-label button.active::after { content: ""; position: absolute; bottom: -1.3rem; left: 0; width: 100%; height: 0.2rem; background: #54fae8; }
+.notice-list-viewport { flex: 1; display: none; position: relative; width: 100%; }
+.notice-list-viewport.active { display: block; }
+.notice-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 1.2rem; }
+.notice-item { display: flex; align-items: center; height: auto; line-height: normal; white-space: nowrap; overflow: hidden; text-align: left; }
+.notice-item a { color: #e2e6f0; text-decoration: none; font-size: 1.5rem; letter-spacing: -0.05rem; display: flex; align-items: center; gap: 1rem; width: 100%; overflow: hidden; }
+.notice-item a:hover {color: #54fae8;}
+.notice-item a:hover .notice-txt { text-decoration: underline; }
+.notice-item a span { display: inline-flex; align-items: center; justify-content: center; padding: 0.2rem 0.8rem; font-size: 1.1rem; font-weight: 700; border-radius: 0.4rem; min-width: 4.5rem; box-sizing: border-box; text-align: center; flex-shrink: 0; }
+.notice-item a span.badge-new { background: #ef4444; color: #fff; }
+.notice-item a span.badge-must { background: #f59e0b; color: #fff; }
+.notice-item a span.badge-plan { background: #3b82f6; color: #fff; }
+.notice-item a span.badge-end { background: #64748b; color: #fff; }
+.notice-item a span.badge-none {background: none;color: rgba(255,255,255,0.4);min-width: auto;padding: 0 2.3rem;position: relative;}
+.notice-item a span.badge-none::before { content: "•"; font-size: 1.6rem; position: absolute; left: 50%; transform: translateX(-50%); }
+.notice-txt { margin: 0; padding: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+.notice-controls {position: absolute;right: 0;top: -6.1rem;margin-top: 0;display: flex;align-items: center;}
+.btn-more { font-size: 1.3rem; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s; }
+.btn-more:hover { color: #54fae8; }
+.main-desc-util{display:flex;align-items:center;justify-content:center;gap:2.0rem;width:100%;margin: 0rem auto;padding: 0rem;box-sizing:border-box;}
+.main-desc-util *, .main-desc-util *::before, .main-desc-util *::after{box-sizing:border-box;}
+.btn-desc-util{display:inline-flex;align-items:center;justify-content:flex-start;flex:1;width: 100%;padding: 1.5rem 1.5rem;border-radius: 100rem;color:#333333;text-decoration:none;box-shadow:0 0.4rem 1.5rem rgba(0,0,0,0.03);transition:all 0.3s cubic-bezier(0.4,0,0.2,1);text-align:left;gap: 1rem;backdrop-filter: blur(1rem);background: #13273f82;}
+.btn-desc-util:hover{background-color: #00000087;border-color:#e2e4e8;transform:translateY(-0.3rem);box-shadow:0 0.8rem 2.0rem rgba(0,0,0,0.06);}
+.util-icon{display:inline-flex;align-items:center;justify-content:center;width: 4.5rem;height: 4.5rem;border-radius:50%;font-size:2.8rem;flex-shrink:0;}
+.icon-infor{background: #c7f0ff;}
+.icon-manual{background: #e3d1ff;}
+.icon-Inquiry{background: #ffd1d6;}
+.util-text-wrap{display:flex;flex-direction:column;gap:0.4rem;}
+.util-title{font-size: 1.4rem;font-weight:700;color: #ffffff;line-height:1.3;}
+.icon-infor i {color: #317791;}
+.icon-manual i {color: #7f61af;}
+.icon-Inquiry i {color: #c5767f;}
+
+.btn-infor .util-title,
+.btn-manual .util-title,
+.btn-Inquiry .util-title {display: flex; align-items: center; gap:1rem;}
+.btn-infor .util-title::before {content: "";display: inline-flex;width: 0.5rem;height: 0.5rem;border-radius: 10rem;background: #ef4444;}
+.btn-manual .util-title::before {content: "";display: inline-flex;width: 0.5rem;height: 0.5rem;border-radius: 10rem;background: #f59e0b;}
+.btn-Inquiry .util-title::before {content: "";display: inline-flex;width: 0.5rem;height: 0.5rem;border-radius: 10rem;background: #54fae8;}
+
+/* ==========================================================================
+대민 - 우측 아코디언 메뉴 영역
+========================================================================== */
+.main-right-area {position: absolute;right: 4rem;gap: 1rem;top: 14rem;width: 40%;display: flex;flex-direction: column;overflow: hidden;max-width: 80rem;height: calc(100% - 24rem);min-height: 50rem;opacity: 1;transform: translateX(100%);transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);z-index: 10;}
+.main-right-area.show-right { transform: translateX(0); }
+.acc-item {flex: 1;position: relative;overflow: hidden;transition: flex 0.6s cubic-bezier(0.4, 0, 0.2, 1);cursor: pointer;display: flex;align-items: center;padding: 0 5rem;border-radius: 2rem;opacity: 0;transform: translateX(10rem);}
+.acc-item:hover .acc-collapsed-title h3 { color: #54fae8; }
+.acc-item:last-child { border-bottom: none; }
+.acc-item.active { flex: 2.5; }
+.acc-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;}
+.acc-item.active .acc-bg { background-color: rgba(0, 0, 0, 0.5); background-blend-mode: multiply; }
+.acc-collapsed-title { position: absolute; width: 100%; left: 0; padding: 0 5rem; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; z-index: 1; transition: opacity 0.4s ease, transform 0.4s ease; }
+.acc-collapsed-title h3 { font-size: 2.2rem; font-weight: 600; margin: 0; color: rgb(255 255 255); transition: color 0.3s; }
+.acc-collapsed-title i { font-size: 2rem; color: rgba(255,255,255,0.5); display: none;}
+.acc-collapsed-title span {position: absolute;top: 63%;right: 6%;display: flex;background: #eeae42;border-radius: 10rem;padding: 0.2rem 1rem 0.2rem 1.5rem;transform: translate(0%, -50%);align-items: center;gap: 1rem;font-size: 1.5rem;}
+.acc-item.active .acc-collapsed-title { opacity: 0; transform: translateY(-2rem); pointer-events: none; }
+.acc-content { position: relative; z-index: 2; opacity: 0; transform: translateY(2rem); transition: all 0.5s ease; pointer-events: none; width: 100%; }
+.acc-item.active .acc-content { opacity: 1; transform: translateY(0); pointer-events: auto; transition-delay: 0.3s; }
+.acc-sub { display: block; color: #4b89ff; font-weight: 600; margin-bottom: 1.2rem; font-size: 1.1rem; letter-spacing: 0.1rem; }
+.acc-tit {font-size: 2.8rem;font-weight: 700;margin-bottom: 2rem;line-height: 1.2;}
+.acc-desc { font-size: 1.4rem; color: #c4cde0; line-height: 1.6; margin-bottom: 3rem; word-break: keep-all; }
+.btn-detail {display: inline-flex;align-items: center;padding: 1.2rem 4.5rem;background: #3c64ff;border-radius: 4rem;color: #fff;text-decoration: none;font-weight: 600;font-size: 1.6rem;transition: background 0.3s;}
+.btn-detail i {margin-left: 1rem;font-size: 1.56rem;}
+.btn-detail:hover { background: #2b4cd9; color: #54fae8; }
+
+/* ==========================================================================
+대민 - 인트로 시퀀스 상태 제어
+========================================================================== */
+.main-container.intro-mode { background-color: rgba(0, 0, 0, 0.61);}
+.main-container.intro-mode .main-title-box .mint-text, .main-container.intro-mode .main-title-box .main-tit {color: #fff;}
+.main-container.intro-mode ~ .main-footer-area { background-color: rgba(0, 0, 0, 0.61);}
+.main-container.is-moving {background: linear-gradient(
+188deg, rgb(0 0 0 / 52%) 0%, transparent 69%);}
+.main-container.intro-mode .main-title-box {left: 100%;transform: translateX(-42%);text-align: center;width: 80vw;max-width: 120rem;}
+.main-container.intro-mode .notice-rolling-box {left: 100%;transform: translateX(-37%);text-align: center;width: 80rem;}
+.main-container.intro-mode .btn-desc-util {left: 0%;}
+.main-footer-area .link_item {color: #fff;}
+.main-footer-area .link_item.bold {color: #e7eb36;}
+.main-container.is-moving .main-title-box, .main-container.is-moving .btn-desc-util, .main-container.is-moving .notice-rolling-box {transition: left 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);}
+.main-tit, .main-desc, .btn-desc-util, .notice-rolling-box { opacity: 0; top: 1.5rem; position: relative; }
+
+
+
+.intro-start .main-tit { animation: fadeInUp 1.2s forwards 0.2s; }
+.intro-start .main-desc { animation: fadeInUp 1.2s forwards 0.8s; }
+.intro-start .btn-desc-util {animation: fadeInUp 1.2s forwards 1.4s;max-width: 14.7rem;justify-content: center;}
+.intro-start .notice-rolling-box { animation: fadeInUp 1.2s forwards 2.0s; }
+.main-right-area.show-right .acc-item { animation: slideInLeft 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+.main-right-area.show-right .acc-item:nth-child(1) { animation-delay: 0.2s; }
+.main-right-area.show-right .acc-item:nth-child(2) { animation-delay: 0.5s; }
+.main-right-area.show-right .acc-item:nth-child(2) h3 {color: #ffffff;}
+.main-right-area.show-right .acc-item:nth-child(2) .acc-desc {color: #ffffff;}
+.main-right-area.show-right .acc-item:nth-child(3) { animation-delay: 0.8s; }
+
+/* ==========================================================================
+대민 - 키프레임 애니메이션 정의
+========================================================================== */
+@keyframes fadeInUp { 0% { opacity: 0; top: 1.5rem; } 100% { opacity: 1; top: 0; } }
+@keyframes slideInLeft { 0% { opacity: 0; transform: translateX(10rem); } 100% { opacity: 1; transform: translateX(0); } }
+
+/* ==========================================================================
+대민 - 하단 푸터 영역
+========================================================================== */
+.main-footer-area {position: relative;width: 100%;z-index: 90;background: linear-gradient(to top, rgba(0,5,20,0.5) 0%, transparent 100%);border-top: 0.1rem solid #1a2537;background-color: transparent;padding: 2rem 10rem;transition: background-color 0.5s ease-in-out;}
+.footer-inner { display: flex; justify-content: space-between; width: 100%; padding: 2.7rem 5%; align-items: center; background: #00000029; box-sizing: border-box; }
+.footer-info { color: rgba(255,255,255,0.4); font-size: 1.3rem; line-height: 1.6; }
+.footer-info p { margin: 0; }
+.footer-info .bar { margin: 0 1rem; color: rgba(255,255,255,0.15); }
+.footer-info .copyright { margin-top: 0.5rem; font-size: 1.2rem; color: rgba(255,255,255,0.3); }
+.footer-links ul { display: flex; gap: 3rem; margin: 0; padding: 0; list-style: none; }
+.footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 1.4rem; transition: color 0.3s; }
+.footer-links a:hover { color: #00d2b4; }
+.footer-links strong { color: rgba(255,255,255,0.8); font-weight: 600; }
+
+/* ==========================================================================
+대민 - 배경 이미지 및 툴팁
+========================================================================== */
+.main-right-area .acc-item { position: relative; z-index: 2; overflow: hidden; }
+.main-right-area .acc-item::before {content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;transition: background-size 0.5s ease, background-position 0.5s ease;transform: translateZ(0);will-change: background-size, background-position;opacity: 0.93;}
+.main-right-area .acc-item:nth-child(1)::before { background-image: url("../images/main/main-img1.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: #212630; }
+.main-right-area .acc-item:nth-child(2)::before { background-image: url("../images/main/main-img2.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.main-right-area .acc-item:nth-child(3)::before { background-image: url("../images/main/main-img3.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.main-right-area .acc-item.active::before { background-size: cover; background-position: center;}
+.tooltip_box { position: relative; display: inline-block; text-decoration: none; color: #333; margin: 1rem; }
+.tooltip_box i { font-size: 2.7rem; }
+.tooltip_txt { visibility: hidden; opacity: 0; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 1rem; background-color: #ffffff; color: #fff; text-align: center; padding: 0.8rem 1.2rem; border-radius: 0.4rem; font-size: 1.4rem; white-space: nowrap; transition: opacity 0.3s ease, visibility 0.3s ease; z-index: 1000; box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1); -webkit-text-fill-color: #000000; }
+.tooltip_txt::after { content: ""; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); border-width: 0.6rem; border-style: solid; border-color: transparent transparent #ffffff transparent; }
+.tooltip_box:hover .tooltip_txt { visibility: visible; opacity: 1; background: #fff; }
+.tooltip_box:focus .tooltip_txt { visibility: visible; opacity: 1; }
+.header-inner .tooltip_box .tooltip_txt::before { background: #fff !important; }
+.header-inner .tooltip_box:hover, .tooltip_box.list-tpye-active {background: none; color:#FFF23E;}
+
+
+/* ==========================================
+전화번호 팝업 스타일시트
+========================================== */
+.phonenum-popup-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgb(0 0 0 / 47%); z-index: 1000; align-items: center; justify-content: center; padding: 2rem; }
+.phonenum-popup-overlay.phonenum-is-active { display: flex; }
+.phonenum-popup-wrapper { position: relative; width: 100%; max-width: 80rem; max-height: 85vh; background-color: #ffffff; border-radius: 2rem; box-shadow: 0 2.5rem 5rem -1.2rem rgba(0, 0, 0, 0.15); display: flex; flex-direction: column; overflow: hidden; animation: phonenumFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.phonenum-popup-header { padding: 3rem 3.5rem 2rem 3.5rem; background-color: #ffffff; flex-shrink: 0; }
+.phonenum-popup-title { margin: 0; font-size: 2.4rem; font-weight: 800; color: #0f172a; letter-spacing: -0.05rem; text-align: center; }
+.phonenum-popup-body { padding: 0 3.5rem 3rem 3.5rem; overflow-y: auto; flex-grow: 1; }
+.phonenum-popup-notice-box { display: flex; align-items: flex-start; gap: 1.2rem; padding: 1.6rem 2rem 1.6rem 4.5rem; background: #f8fafc url("../images/icon/help-icon.png") 1.5% 50% no-repeat; border-radius: 1.2rem; border: 0.1rem solid #e2e8f0; margin-bottom: 3rem; background-size: 3rem;}
+.phonenum-popup-notice { margin: 0; font-size: 1.3rem; color: #475569; line-height: 1.5; font-weight: 500; }
+.phonenum-popup-section { margin-bottom: 3.5rem; }
+.phonenum-popup-section:last-child { margin-bottom: 0; }
+.phonenum-section-title { font-size: 1.6rem; font-weight: 700; color: #1e293b; margin: 0 0 1.6rem 0; display: flex; align-items: center; gap: 0.8rem; }
+.phonenum-section-title::before { content: ''; display: inline-block; width: 0.4rem; height: 1.4rem; background-color: #3b82f6; border-radius: 0.2rem; }
+.phonenum-card-list { display: flex; flex-direction: column; gap: 1.2rem; }
+.phonenum-contact-card {background-color: #ffffff;border: 0.1rem solid #f1f5f9;border-radius: 1.4rem;padding: 1rem 2.4rem;box-shadow: 0 0.4rem 0.6rem -0.1rem rgba(0, 0, 0, 0.02);transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;display: grid;grid-template-columns: 17rem 1.2fr 1fr;align-items: center;gap: 2rem;margin-bottom: 0.5rem;}
+.phonenum-contact-card:hover { transform: translateY(-0.2rem); box-shadow: 0 1rem 1.5rem -0.3rem rgba(0, 0, 0, 0.05); border-color: #e2e8f0; }
+.phonenum-highlight-card { background: linear-gradient(135deg, #eff6ff, #ffffff); border: 0.1rem solid #bfdbfe; }
+.phonenum-highlight-card:hover { border-color: #93c5fd; }
+.phonenum-card-head { display: flex; align-items: center; gap: 0.8rem; min-width: auto; flex-shrink: 0; }
+.phonenum-badge { background-color: #3b82f6; color: #ffffff; font-size: 1.1rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 0.4rem; }
+.phonenum-dept-title { margin: 0; font-size: 1.4rem; font-weight: 700; color: #0f172a; padding: 0rem; }
+.phonenum-card-body { display: contents; }
+.phonenum-info-item { display: flex; align-items: center; gap: 1.2rem; font-size: 1.3rem; }
+.phonenum-flex-grow { flex-grow: 1; }
+.phonenum-info-label { color: #64748b; font-weight: 500; flex-shrink: 0; }
+.phonenum-info-value { color: #334155; font-weight: 600; }
+.phonenum-phone-link {color: #2563eb;font-weight: 500;text-decoration: none;padding: 0.6rem 1.4rem;background-color: #f1f5f9;border-radius: 0.6rem;transition: background-color 0.2s, color 0.2s;white-space: nowrap;margin-left: auto;justify-self: end;font-size: 1.4rem;display: inline-flex;letter-spacing: 0.01rem;align-items: center;}
+.phonenum-phone-link:hover { background-color: #2563eb; color: #ffffff; }
+.phonenum-popup-footer { padding: 2rem 3.5rem; background-color: #ffffff; border-top: 0.1rem solid #f1f5f9; text-align: center; flex-shrink: 0; }
+.phonenum-btn-popup-close { display: inline-block; width: 100%; max-width: 20rem; padding: 1.4rem 0; background-color: #1e293b; color: #ffffff; border: none; border-radius: 1.2rem; font-size: 1.5rem; font-weight: 600; cursor: pointer; transition: background-color 0.2s; box-shadow: 0 0.4rem 1.2rem rgba(30, 41, 59, 0.15); }
+.phonenum-btn-popup-close:hover { background-color: #0f172a; }
+@keyframes phonenumFadeIn { from { opacity: 0; transform: scale(0.95) translateY(1rem); } to { opacity: 1; transform: scale(1) translateY(0); } }
+
+
+
+/* ==========================================================================
+대민 - 가로 반응형 영역 (140rem)
+========================================================================== */
+@media screen and (max-width: 1400px) {
+.main-title-box .main-tit { font-size: 4rem; }
+.main-title-box .mint-text { font-size: 2.4rem; }
+.acc-tit { font-size: 2.5rem; }
+.header-gnb ul { gap: 3rem; }
+}
+
+/* ==========================================================================
+대민 - 가로 반응형 영역 (120rem)
+========================================================================== */
+@media screen and (max-width: 1200px) {
+.header-gnb { display: none; }
+.main-title-box .main-tit { font-size: 3.5rem; }
+.acc-collapsed-title h3 { font-size: 1.8rem; }
+.main-bg-video { top: -17rem; position: absolute; height: 95rem; }
+.main-wrap { height: auto; min-height: 100vh; overflow: visible; position: relative; }
+.main-header-area { height: 8rem; }
+.main-container { flex-direction: column; padding-top: 8rem; }
+.main-left-area { width: 100%; padding: 6rem 5% 4rem; align-items: center; text-align: center; }
+.main-right-area { position: relative; width: 100%; top: 0; transform: none; min-height: 70rem; right: auto; margin: 0 auto; }
+.main-container.intro-mode .main-title-box { width: auto; }
+.main-container.intro-mode .notice-rolling-box { width: 100%; max-width: 80rem; }
+.main-container.intro-mode .main-title-box, .main-container.intro-mode .btn-desc-util, .main-container.intro-mode .notice-rolling-box { left: 0; transform: none; }
+.notice-rolling-box {justify-content: center;max-width: 80rem;}
+.notice-controls { position: relative; top: 0; margin-top: 1.5rem; justify-content: center; }
+.btn-more { right: 0; }
+.main-footer-area { background: #000a1e; }
+.footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 2rem; padding: 4rem 5%; }
+.footer-links ul { justify-content: center; }
+}
+
+/* ==========================================================================
+대민 - 가로 반응형 영역 (100rem)
+========================================================================== */
+@media screen and (max-width: 1000px) {
+.main-wrap { height: auto; min-height: 100vh; overflow: visible; position: relative; }
+.main-header-area { height: 8rem; }
+.main-container { flex-direction: column; padding-top: 8rem; }
+.main-left-area { width: 100%; padding: 6rem 5% 4rem; align-items: center; text-align: center; }
+.main-right-area {position: relative;width: 90%;top: 0;transform: none;min-height: 70rem;right: auto;margin: 0 auto;}
+.main-container.intro-mode .main-title-box { width: auto; }
+.main-container.intro-mode .notice-rolling-box { width: 100%; }
+.main-container.intro-mode .main-title-box, .main-container.intro-mode .btn-desc-util, .main-container.intro-mode .notice-rolling-box { left: 0; transform: none; }
+.notice-rolling-box { justify-content: center; }
+.notice-controls { position: relative; top: 0; margin-top: 1.5rem; justify-content: center; }
+.btn-more { right: 0; }
+.main-footer-area {background: #000a1e;padding: 3rem;}
+.footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 2rem; padding: 4rem 5%; }
+.footer-links ul { justify-content: center; }
+.main-container.is-moving {background: linear-gradient(111deg, rgb(46 58 79 / 93%) 0%, #000000a8 37%);}
+.main-desc-util{gap:1.5rem;max-width:80.0rem;}
+.btn-desc-util{min-height:9.0rem;padding:1.5rem 2.0rem;border-radius:1.6rem;gap:1.5rem;}
+.util-icon{width:5.2rem;height:5.2rem;font-size:2.4rem;}
+}
+
+/* ==========================================================================
+대민 - 가로 반응형 영역 (76.8rem)
+========================================================================== */
+@media screen and (max-width: 768px) {
+.main-tit .mint-text:nth-child(1) {font-size: 2.8rem;}
+.main-tit .mint-text:nth-child(2) {font-size: 2.8rem;}
+.main-tit .mint-text:nth-child(3) span {font-size: 1.8rem}
+.main-desc-util{gap:1.0rem;}
+.btn-desc-util{min-height:8.0rem;padding:1.2rem 1.5rem;border-radius:1.4rem;gap:1.2rem;}
+.util-icon{width:4.6rem;height:4.6rem;font-size:2.0rem;}
+.util-title{font-size:1.6rem;}
+
+.phonenum-popup-overlay { padding: 1.2rem; }
+.phonenum-popup-wrapper { max-height: 90vh; border-radius: 1.6rem; }
+.phonenum-popup-header { padding: 2.5rem 2rem 1.5rem 2rem; }
+.phonenum-popup-title { font-size: 2rem; }
+.phonenum-popup-body { padding: 0 2rem 2.5rem 2rem; }
+.phonenum-popup-notice-box { padding: 1.2rem 1.6rem; margin-bottom: 2rem; }
+.phonenum-popup-notice { font-size: 1.3rem; }
+.phonenum-popup-section { margin-bottom: 2.5rem; }
+.phonenum-contact-card { display: flex; flex-direction: column; align-items: flex-start; gap: 1.4rem; padding: 1.6rem; }
+.phonenum-card-head { min-width: 100%; }
+.phonenum-card-body { display: flex; flex-direction: column; align-items: stretch; gap: 0.8rem; width: 100%; }
+.phonenum-info-item { justify-content: space-between; }
+.phonenum-info-value { text-align: right; margin-left: auto; }
+.phonenum-phone-link { margin-left: auto; justify-self: auto; }
+.phonenum-popup-footer { padding: 1.5rem 2rem; }
+.phonenum-btn-popup-close { max-width: 100%; padding: 1.2rem 0; }	
+.main-desc br {display: none;}
+.main-right-area .acc-item {padding: 3rem;}
+
+}
+
+@media(max-width:500px){
+.main-desc-util{flex-direction:column;gap:1.0rem;max-width:100%;}
+.btn-desc-util{width:100%;min-height:7.5rem;padding:1.5rem 2.0rem;border-radius:1.2rem;gap:1.5rem;}
+.util-icon{width:4.8rem;height:4.8rem;font-size:2.2rem;}
+.intro-start .btn-desc-util {width: 100%; max-width: none; padding: 2rem; min-height:inherit;}
+.main-left-area,
+.main-right-area {padding: 2rem;width: 100%;}
+.acc-item {padding: 3rem;}
+.acc-collapsed-title h3 {font-size: 2rem;}
+.acc-desc br {display: none;}
+.main-footer-area {padding: 2rem;}
+.mint-text {font-size: 2.3rem !important;}
+.main-title-box .main-desc {font-size: 1.4rem;}
+.util-title {font-size: 1.4rem;}
+.acc-bg {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));}
+}
+
+@media(max-width:450px){
+.main-right-area .acc-item:nth-child(1)::before {background-position: 79%;}
+.main-right-area .acc-item:nth-child(2)::before {background-position: 99%;}
+.main-wrap .header-logo a {width: 8rem !important;}
+.sub-before_login a span {font-size: 1.3rem;}
+}
+

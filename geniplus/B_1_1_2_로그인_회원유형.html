@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GENIEPLUS 입니다.">
+    <meta name="author" content="시스템게이트">
+    <meta name="-csrf" content="b4d963cf-a117-4e04-9a4e-0bd906cefa2a">
+    <meta name="-csrf-header" content="X-CSRF-TOKEN">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>GENIEPLUS</title>
+    <!-- basic css -->
+    <link type="text/css" rel="stylesheet" href="css/basics-reset.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-common.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-layout.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-login.css">
+    <link type="text/css" rel="stylesheet" href="XEIcon-2.2.0/xeicon.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/basics-common.js"></script>
+    <script type="text/javascript" src="js/geniplus-common.js"></script>
+</head>
+<body class="main-wrapper login-wrap"> <!-- 20260619 회원가입 구성의 화면에 login-wrap 클래스 추가 -->
+     <div class="sub-wrap">
+        <div id="skip-nav">
+            <a href="#contents_container">본문 바로가기</a>
+        </div>
+        
+        <!-- 20260619 헤더 영역 수정 start -->
+        <div id="header-wrap" class="header-wrap">
+        <header class="sub-header-area">
+            <div class="header-inner">
+                <div class="header-logo">
+					<a href="#"><span>KETEP logo</span></a>
+					<a href="00_1_메인화면.html"><span class="sr-only">GENIE PLUS</span></a>
+				</div>
+            </div>
+			<nav>
+				<a href="#" class="">비R&#38;D 사업소개</a>
+				<a href="#">금융지원사업소개</a>
+				<a href="00_2_대민용목록.html">사업공고</a>
+			</nav>
+			<div class="sidebar-profile">
+				<div class="profile-info">
+					<div class="profile-time">
+						<span>59분 58초</span>
+						<button class="btn btn-xs btn-outline-gray btn-prolong">연장</button>
+						<button class="btn btn-xs btn-outline-gray">로그아웃</button>
+					</div>
+					<div class="profile-name">
+						<button type="button"><strong>이하연</strong><span>연구원님</span></button>
+						<div class="profile-name-util">
+							<button type="button" class="btn-pop-close"><span class="sr-only">팝업 닫기</span></button>
+							<div class="pop-profile-info">
+								<div class="pop-avatar"></div>
+								<div class="pop-meta">
+									<strong class="pop-name">이하연</strong>
+									<span class="pop-role">과장/연구원</span>
+								</div>
+							</div>
+							<div class="pop-profile-menu">
+								<a href="#none" class="btn-pop-menu icon-change btn-popup-open" data-target="modal-authority">권한 변경</a>
+								<a href="#" class="btn-pop-menu icon-edit">개인정보 수정</a>
+								<a href="#" class="btn-pop-menu icon-out">로그아웃</a>
+							</div>
+						</div>
+					</div>				
+					<!-- 20260619 로그인 하기 전 서브 로그인 버튼 start -->
+					<div class="sub-before_login">
+						<a href="#" aria-label="로그인">
+							<i class="xi-user-o" aria-hidden="true"></i>
+							<span>로그인</span>
+						</a>
+					</div>
+					<!-- 20260619 로그인 하기 전 서브 로그인 버튼 end -->
+				</div>
+			</div>
+        </header>
+	 </div>
+	<!-- 20260619 헤더 영역 수정 end -->
+
+        <div class="sub-container">
+            <!-- 로그인 콘텐츠 영역 -->
+            <main class="sub-main-content" id="contents_container">
+				<div id="container" class="root_container">
+
+				<div class="right_side">
+					<div class="content_area">					
+						<div class="contetns_container" id="contetns_container">
+						<!-- 콘텐츠 추가 영역 start -->
+							<div class="gne-signup-container">
+								<div class="gne-signup-inner">
+									<h2 class="gne-page-title">회원가입</h2>
+
+									<div class="gne-stepper-wrap">
+									<nav class="gne-stepper">
+										<div class="gne-step-item active">
+											<span class="gne-step-dot"></span>
+											<div class="gne-step-txt">
+												<span class="gne-step-num">1단계</span>
+												<strong class="gne-step-label">회원유형</strong>
+											</div>
+										</div>
+										<div class="gne-step-item">
+											<span class="gne-step-dot"></span>
+											<div class="gne-step-txt">
+												<span class="gne-step-num">2단계</span>
+												<strong class="gne-step-label">약관동의</strong>
+											</div>
+										</div>
+										<div class="gne-step-item">
+											<span class="gne-step-dot"></span>
+											<div class="gne-step-txt">
+												<span class="gne-step-num">3단계</span>
+												<strong class="gne-step-label">본인인증</strong>
+											</div>
+										</div>
+										<div class="gne-step-item">
+											<span class="gne-step-dot"></span>
+											<div class="gne-step-txt">
+												<span class="gne-step-num">4단계</span>
+												<strong class="gne-step-label">회원정보입력</strong>
+											</div>
+										</div>
+										<div class="gne-step-item">
+											<span class="gne-step-dot"></span>
+											<div class="gne-step-txt">
+												<span class="gne-step-num">5단계</span>
+												<strong class="gne-step-label">가입완료</strong>
+											</div>
+										</div>
+									</nav>
+								</div>
+
+									<div class="gne-sub-header">
+										<h3 class="gne-sub-title"><i class="xi-shield-checked-o"></i> 회원 유형 선택</h3>
+										<p class="gne-sub-desc">가입하시려는 <strong>회원 유형</strong>을 선택해 주세요. 유형에 따라 인증 절차가 다를 수 있습니다.</p>
+									</div>
+									<div class="gne-agree-list-wrap">
+										<div class="gne-signup-inner">
+											<div class="gne-user-type-list">
+												<div class="gne-user-type-area"> <!-- 20260622 gne-user-type-list > gne-user-type-area 변경 -->
+													<label class="gne-user-type-item">
+														<input type="radio" name="gne_user_type" value="normal" class="gne-user-type-input">
+														<div class="gne-user-type-box">
+															<div class="gne-user-type-visual e-user"><span class="sr-only">일반사용자 아이콘</span></div>
+															<div class="gne-user-type-content">
+																<strong class="gne-user-type-label">일반사용자</strong>
+																<div class="gne-user-type-desc">
+																	<p class="gne-user-type-txt">에너지연구개발사업의 수요조사서 제출, 과제신청 및 과제수행의 업무를 수행하실 연구자</p>
+																	<div class="gne-user-type-txt-util">
+																		<ul>
+																			<li>본 안내는 에너지기술개발사업의 차세대 혁신 성장을 주도할 수요조사서 제출, 신규 지원 과제 신청, 그리고 협약 및 과제 수행의 전 주기적 연구개발(R&D) 업무를 수행하시는 주관연구책임자, 공동연구책임자 및 기관 담당자분들을 위한 통합 지침입니다.</li>
+																			<li>공동연구책임자 및 기관 담당자분들을 위한 통합 지침입니다.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div class="gne-user-type-badge">선택됨</div>
+														</div>
+													</label>
+
+													<label class="gne-user-type-item">
+														<input type="radio" name="gne_user_type" value="institute" class="gne-user-type-input">
+														<div class="gne-user-type-box">
+															<div class="gne-user-type-visual i-user"><span class="sr-only">기관담당자 아이콘</span></div>
+															<div class="gne-user-type-content">
+																<strong class="gne-user-type-label">기관담당자</strong>
+																<div class="gne-user-type-desc">
+																	<p class="gne-user-type-txt">해당기관(기업, 학교, 연구소)을 대표하여 연구개발행정업무(전자협약업무 및 사후관리)를 담당하실 분</p>
+																	<div class="gne-user-type-txt-util">
+																		<ul>
+																			<li>설명영역</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div class="gne-user-type-badge">선택됨</div>
+														</div>
+													</label>
+												</div>
+													<div class="gne-user-type-box gen-u-expert ">
+														<div class="gne-user-type-content">
+															<strong class="gne-user-type-label">전문가 등록 설명</strong>
+															<div class="gne-user-type-desc">
+																<p class="gne-user-type-txt mb-sm">산업통상자원부는 '산업기술혁신사업공통운영요령'에 의해 지원분야의 발굴, 연구기획, 사업의 평가 및 관리 등의 업무에 전문가를 활용하기 위해 산/학/연 기술 및 경제/시장 전문가, 인문/사회과학 등 해당분야의 전문가로 산업기술혁신평가단을 구성하고 있습니다.</p>
+																<ul class="gne-user-type-notice">
+																	<li>산업통상자원부 전담기관의 전문가 공동활용을 위하여 전문가 등록을 "산업기술R&D종합정보시스템(http://itech.keit.re.kr)의 평가위원신청"에서 접수하고 있습니다.</li>
+																	<li>한국에너지기술평가원의 전문가로 활동하고자 하는 전문가께서는 "산업기술R&D종합정보시스템(http://itech.keit.re.kr)의 평가위원신청"에서 접수 해주시기 바랍니다.</li>
+																	<li class="notice-accent">(기존에 genie system을 통해 가입된 전문가께서도 산업기술R&D종합정보시스템에 평가위원신청이 필요)</li>
+																</ul>
+															</div>
+															<div class="gne-user-link">
+																<button class="btn btn-md btn-outline-blue icon-link-back">전문가 등록</button>
+															</div> 
+														</div>
+													</div>
+											</div>
+										</div>
+									</div>
+									<div class="gne-action-btn-wrap">
+										<a href="#" class="btn btn-lg btn-outline-gray"><i class="xi-angle-left-min"></i> 이전으로</a>
+										<a href="#" class="btn btn-lg btn-blue">다음으로 <i class="xi-angle-right-min"></i></a>
+									</div>
+								</div>
+							</div>
+							<!-- 콘텐츠 추가 영역 end -->
+						</div>
+					</div>
+					<!--
+					<div class="content_bottom">
+						<p>주요콘텐츠 하단영역</p>
+					</div>
+					-->
+					<!-- 우측 퀵메뉴 영역 start -->
+					<div class="quick-menu_wrap">
+						 <aside class="quick-menu">
+							<button type="button" class="btn-quick-toggle">
+								<i class="xi-plus"></i>
+								<span class="sr-only">퀵메뉴 열기</span>
+							</button>
+							<ul class="quick-list">
+								<li><a href="#"><i class="xi-comment"></i><span>테스트1</span></a></li>
+								<li><a href="#"><i class="xi-comment"></i><span>테스트2</span></a></li>
+								<li><a href="#skip-nav" class="btn-top"><i class="xi-arrow-up"></i><span>TOP</span></a></li>
+							</ul>
+						</aside>
+					</div>
+					<!-- 우측 퀵메뉴 영역 end -->
+				</div>
+			</div>
+			</main>
+			 <!-- 로그인 콘텐츠 영역 -->
+        </div>
+    </div>
+</body>
+</html>

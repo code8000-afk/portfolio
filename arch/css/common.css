@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+.hide {position: absolute !important; width: 0.1rem; height: 0.1rem; margin: -0.1rem; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0);} /* 텍스트 숨기기 */
+.just_center {justify-content: center !important;}
+.over_visible {overflow:visible;}
+select {cursor: pointer; font-size:1.6rem; appearance:none; padding:1.1rem 3rem 1.1rem 1rem; min-width: 12rem;}
+.select {position: relative;}
+.select:after {content: "\e942"; position: absolute; top:50%; right:3%; transform: translateY(-50%) rotate( 0deg); font-family: xeicon; font-size:1.8rem;}
+.btn_bg_white {background: #fff !important; border:0.1rem solid #111; color:#111 !important;}
+.btn_bg_black {background: #111 !important; border:0.1rem solid #111; color:#fff !important;}
+.btn_bg_blue {background: #4067e4 !important; border:0.1rem solid #4067e4; color:#fff !important;}
+.btn_bg_gray {background: #626262 !important; border:0.1rem solid #626262; color:#fff !important;}
+.btn_bg_white:hover {background: #E8E8E8 !important;}
+.btn_bg_black:hover {background: #8b4a4a !important;}
+.btn_bg_blue:hover {background: #2745A4 !important;}
+.btn_bg_gray:hover {background: #454545 !important;}
+
+/* more_btn */
+.more {font-size:3rem; transition: transform 1s ease-in-out;}
+.more:hover {transform: rotate(180deg); color: red; transition: all 1s;}
+
+/* 버튼 영역 */
+.btn_area {}
+.btn_box {display: flex; gap:1%; padding: 2rem 0rem;}
+.btn_box a {display: block; text-align: center; width: 100%; font-size:1.6rem; background: #fff; padding: 2rem 1rem; color:#111; font-weight: bold; border:0.1rem solid #595959;}
+.btn_box a:hover {background: #111; color:#fff;}
+.btn_area_pd0 {padding:0rem !important;}
+.sub_btn_area {display: flex;  padding: 3rem 0rem; justify-content: center; gap:1%;}
+.sub_btn_area a { padding: 2rem; font-size: 1.6rem; width: 100%; text-align: center;}
+.btn_type_base a{background: #fff; color:#111; border:0.1rem solid #595959; font-weight: bold;}
+.btn_type_base a:hover {background: #111; color:#fff;}
+.btn_base {background: #2D2C2C; color:#fff; padding: 0.7rem 1.5rem; font-size: 1.6rem; border-radius: 0.5rem; font-weight: 600; border:0.1rem solid #111;}
+.btn_base:hover {border:0.1rem solid #334d70 !important; background:#334d70;}
+
+/* 페이지네이션 */	
+.pagination_area {display: flex;justify-content: center;margin:2rem 0rem;align-items: center;}
+.pagination_area a {position: relative; padding: 1rem 2rem; font-size:1.6rem;}
+.pagination_area a span {z-index: 99; position: relative;}
+.pagination_area a:hover {color: #8b4a4a;text-decoration: underline;text-underline-offset: 10px;}
+.pagin_on {color: #fff;}
+.pagin_on:hover {color: #fff !important;}
+.pagination_area .pagin_on:after {content: ""; position: absolute; background: #2b2b2b; width: 3rem; height: 3rem; border-radius: 10rem; top:50%; left:50%; transform: translate(-50%,-50%);}
+.prev_page:before {content: "\e93b"; font-family:"xeicon"; vertical-align: top; margin-right:0.5rem;}
+.next_page:before {content: "\e93e"; font-family:"xeicon"; vertical-align: top; margin-right:0.5rem;}
+.first_page:before {content:"\e93b\e93b"; font-family:"xeicon"; vertical-align: top; margin-right:0.5rem;}
+.last_page:before {content: "\e93e\e93e"; font-family:"xeicon"; vertical-align: top; margin-right:0.5rem;}
+
+/* scroll_top */
+.scroll_top {position: fixed; width: 7rem; height: 7rem; bottom: 5%; right:5%; z-index: 99; transition:all 1s ease-in-out !important; opacity: 0;}
+.scroll_top button {position: relative;}
+.scrool_bot {bottom: 10rem; transition:all 1s ease-in-out !important;}
+.scroll_top.active {transition:all 0.5s ease-in-out !important; opacity: 1;}
+.circle_progress {transform: rotate(-90deg);}
+.frame, .bar {/*fill: none;*/ fill:#fff;}
+.frame {stroke: #e6e6e6;}
+.bar {stroke: #4067e4; stroke-linecap: round;}
+.scroll_top .value,
+.scroll_top p {position: absolute; left: 50%; top: 50%; text-align: center; color: #888; font-size: 2.5rem; font-weight: bold; transform: translate(-50%,-60%);}
+.scroll_top a {display: block;}
+
+@media screen and (max-width: 1023px){
+.circle_progress {width: 5rem !important;}
+}
+
+@media screen and (max-width: 769px){
+.pagination_area a {position: relative; padding: 1rem 1rem; font-size:1.6rem;}
+.mo_data_none {display: none !important;} /* 모바일에서 제거 하고 싶은 데이터 설정 */
+}
+
+@media screen and (max-width: 500px){
+.pagination_area a {position: relative;padding: 0.5rem 1.5%;font-size:1.4rem;}
+.pagination_area .pagin_on::after {width: 2rem;height: 2rem;top: 52%; left:51%;}
+.prev_page:before,
+.first_page:before,
+.next_page:before,
+.last_page:before {font-size: 1.2rem; padding-top: 0.1rem; display: flex; align-items: center;}
+.mo_data_none {display: none !important;} /* 모바일에서 제거 하고 싶은 데이터 설정 */
+}
