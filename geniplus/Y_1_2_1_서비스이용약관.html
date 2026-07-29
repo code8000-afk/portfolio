@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GENIEPLUS 입니다.">
+    <meta name="author" content="시스템게이트">
+    <meta name="-csrf" content="b4d963cf-a117-4e04-9a4e-0bd906cefa2a">
+    <meta name="-csrf-header" content="X-CSRF-TOKEN">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>GENIEPLUS</title>
+    <!-- basic css -->
+    <link type="text/css" rel="stylesheet" href="css/basics-reset.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-common.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-layout.css">
+    <link type="text/css" rel="stylesheet" href="XEIcon-2.2.0/xeicon.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/basics-common.js"></script>
+</head>
+<body class="sub-wrapper">
+     <div class="sub-wrap">
+        <div id="skip-nav">
+            <a href="#contents_container">본문 바로가기</a>
+        </div>
+        
+        <!-- 헤더 영역 -->
+        <header class="sub-header-area">
+            <div class="header-inner">
+                <div class="header-logo">
+					<a href="#"><span>KETEP logo</span></a>
+					<a href="#"><span>KETEP GENIEPLUS logo</span></a>
+				</div>
+            </div>
+			<!-- 20260526 프로필 메뉴 영역 수정 start -->
+			<div class="sidebar-profile">
+				<div class="profile-info">
+					<div class="profile-name">
+						<button type="button"><strong>이하연</strong><span>연구원님</span></button>
+						<div class="profile-name-util">
+							<button type="button" class="btn-pop-close"><span class="sr-only">팝업 닫기</span></button>
+							<div class="pop-profile-info">
+								<div class="pop-avatar"></div>
+								<div class="pop-meta">
+									<strong class="pop-name">이하연</strong>
+									<span class="pop-role">과장/연구원</span>
+								</div>
+							</div>
+							<div class="pop-profile-menu">
+								<a href="#none" class="btn-pop-menu icon-change btn-popup-open" data-target="modal-authority">권한 변경</a>
+								<a href="#" class="btn-pop-menu icon-edit">개인정보 수정</a>
+								<a href="#" class="btn-pop-menu icon-out">로그아웃</a>
+							</div>
+						</div>
+					</div>
+					<div class="profile-time">
+						<span>59분 58초</span>
+						<button class="btn btn-xs btn-outline-gray">연장</button>
+						<button class="btn btn-xs btn-outline-gray">로그아웃</button>
+					</div>
+				</div>
+			</div>
+			<!-- 20260526 프로필 메뉴 영역 수정 end -->
+			<!-- 20260526 사용자권한 변경 레이어 팝업 추가 start -->
+				<div id="modal-authority" class="common-modal_wrap">
+					<div class="common-modal_dimmed btn-popup-close"></div>
+					<div class="common-modal_content">
+						<div class="common-modal_header">
+							<h2 class="common-modal_title">사용자 권한 변경</h2>
+							<button type="button" class="common-btn_close btn-popup-close" title="닫기"></button>
+						</div>
+						<div class="common-modal_body">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg">
+									<div class="title-left">
+										<h2 class="title-text"><span>변경하실 권한을 선택해 주세요</span></h2>
+									</div>
+								</div>
+								<div class="auth-card-container">
+									<div class="auth-card-list">
+										<div class="auth-card-item auth-card-checked">
+											<input type="radio" name="auth_select" id="auth_1" checked>
+											<label for="auth_1">
+												<span class="auth-num">01</span>
+												<strong class="auth-title">사업 담당자</strong>
+												<span class="auth-badge">현재 권한</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_2">
+											<label for="auth_2">
+												<span class="auth-num">02</span>
+												<strong class="auth-title">과제 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_3">
+											<label for="auth_3">
+												<span class="auth-num">03</span>
+												<strong class="auth-title">관리 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_4">
+											<label for="auth_4">
+												<span class="auth-num">04</span>
+												<strong class="auth-title">평가 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="common-modal_footer">
+							<button type="button" class="btn btn-md btn-outline-gray common-btn_cancel btn-popup-close">취소</button>
+							<button type="button" class="btn btn-md btn-blue common-btn_confirm btn-popup-close">변경 적용</button>
+						</div>
+					</div>
+				</div>
+			<!-- 20260526 사용자권한 변경 레이어 팝업 추가 end -->
+        </header>
+
+        <div class="sub-container">
+            <!-- 사이드바 토글 버튼 -->
+            <button class="btn btn-outline-gray sidebar-toggle-btn" id="sidebarToggle" aria-label="메뉴 토글"><span class="hide">열기/닫기</span></button>
+
+            <!-- 사이드바 영역 -->
+            <aside class="sub-sidebar" id="sidebar">
+					<div class="sidebar-title">과제평가관리</div>
+					<nav class="sidebar-nav">
+						<!-- 1 Depth 시작 -->
+						<ul class="nav-menu depth-1">
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="xi-user-o menu-icon"></i><span class="nav-text">마이페이지</span>
+								</a>
+							</li>
+
+							<!-- 사업공고/접수 (하위 메뉴 있음) -->
+							<li class="nav-item has-sub open">
+								<a href="#" class="nav-link">
+									<i class="xi-document menu-icon"></i><span class="nav-text">사업공고/접수</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<!-- 2 Depth 시작 -->
+										<ul class="sub-menu depth-2">
+											<li class="nav-item">
+												<a href="#" class="sub-link">
+													<span class="nav-text">기술수요조사</span>
+												</a>
+											</li>
+											<li class="nav-item has-sub">
+												<a href="#" class="sub-link">
+													<span class="nav-text">사업공고</span><i class="xi-angle-down arrow"></i>
+												</a>
+												<div class="sub-menu-wrap">
+													<div class="sub-menu-inner">
+														<!-- 3 Depth 시작 -->
+														<ul class="sub-menu depth-3">
+															<li class="nav-item">
+																<a href="#" class="sub-link">
+																	<span class="nav-text">공고예고조회</span>
+																</a>
+															</li>
+															<li class="nav-item has-sub">
+																<a href="#" class="sub-link">
+																	<span class="nav-text">R&D 통합공고</span><i class="xi-angle-down arrow"></i>
+																</a>
+																<div class="sub-menu-wrap">
+																	<div class="sub-menu-inner">
+																		<!-- 4 Depth 시작 -->
+																		<ul class="sub-menu depth-4">
+																			<li class="nav-item"><a href="#" class="sub-link active"><span class="nav-text">공고상세조회</span></a></li>
+																			<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">신규과제 접수</span></a></li>
+																			<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">제출서류 다운로드</span></a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="nav-item">
+												<a href="#" class="sub-link">
+													<span class="nav-text">접수결과조회</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<!-- 과제평가관리 -->
+							<li class="nav-item has-sub">
+								<a href="#" class="nav-link">
+									<i class="xi-pen-o menu-icon"></i><span class="nav-text">과제평가관리</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<ul class="sub-menu depth-2">
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">평가위원 선정</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">온라인 평가시스템</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">평가결과 통보</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<!-- 협약 및 정산 -->
+							<li class="nav-item has-sub">
+								<a href="#" class="nav-link">
+									<i class="xi-receipt menu-icon"></i><span class="nav-text">협약 및 정산</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<ul class="sub-menu depth-2">
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">전자협약 체결</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">사업비 관리</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">정산결과 조회</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</aside>
+
+			
+			
+            <!-- 메인 콘텐츠 영역 -->
+            <main class="sub-main-content" id="contents_container">
+				<nav class="lnb">
+					<div class="lnb-inner">
+						<div class="lnb-left">
+							<span class="home">
+								<a href="#"><i class="xi-home"></i><span class="sr-only">홈(메인) 화면으로 이동</span></a>
+							</span>
+							<div class="fn-dropdown" id="lv1">
+								<button type="button">
+									<span>대메뉴 테스트 01</span>
+								</button>
+								<ul>
+									<li><a href="#">서브메뉴 테스트 01-01</a></li>
+									<li><a href="#">서브메뉴 테스트 01-02</a></li>
+									<li><a href="#">서브메뉴 테스트 01-03</a></li>
+									<li><a href="#">서브메뉴 테스트 01-04</a></li>
+									<li><a href="#">서브메뉴 테스트 01-05</a></li>
+								</ul>
+							</div>
+							<div class="fn-dropdown" id="lv2">
+								<button type="button">
+									<span>대메뉴 테스트 02</span>
+								</button>
+								<ul>
+									<li><a href="#">서브메뉴 테스트 02-01</a></li>
+								</ul>
+							</div>
+							<div class="fn-dropdown" id="lv3">
+								<button type="button">
+									<span>대메뉴 테스트 03</span>
+								</button>
+								<ul>
+									<li><a href="#">서브메뉴 테스트 03-01</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="title-name">
+							<h1>중요가이드</h1>
+						</div>
+						<div class="lnb-right">
+							<button class="btn btn-xs btn-outline-gray icon-minimize">축소</button>
+							<button class="btn btn-xs btn-outline-gray icon-maximize">확대</button>
+							<button class="btn btn-xs btn-outline-gray icon-view">원본보기</button>
+							<div class="scale-status">100%</div>
+						</div>
+					</div>
+					
+				</nav>
+				<div class="content-area-wrap">
+					<div class="content-area">
+						
+						
+						<div class="con-box-area">
+							<!-- 20260601 서비스이용약관 start -->
+							<div class="footer-policy">
+								<!-- 제 1장 총칙 -->
+								<div class="con-box-item">
+									<div class="title-box-area title-lg">
+										<div class="title-left">
+											<h2 class="title-text"><span>제 1장 총칙</span></h2>
+										</div>
+									</div>
+
+									<div class="con-box-area text-left">
+										<div class="title-box-area title-md">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 1 조 (목적)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li><p class="au-title"><span class="au-number">1</span> 이 약관은 한국에너지기술평가원(이하 '평가원'라 함)이 제공하는 에너지자원기술기획평가(이하 "서비스"라 합니다)를 이용함에 있어 평가원과 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.</p></li>
+											<li><p class="au-title"><span class="au-number">2</span> 이 약관은 KETEP 홈페이지(http://www.ketep.re.kr) 이용 기본 약관에 적용됩니다.</p></li>
+										</ul>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 2 조 (약관의 효력 및 변경)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li><p class="au-title"><span class="au-number">1</span> 이 약관은 KETEP 온라인 서비스 및 기타의 방법을 통하여 이를 공지함으로써 효력이 발생됩니다.</p></li>
+											<li><p class="au-title"><span class="au-number">2</span> 평가원은 사정상 중요한 사유가 발생될 경우 사전 고지 없이 이 약관의 내용을 변경할 수 있으며, 변경된 약관은 제1항과 같은 방법으로 공지함으로써 효력이 발생됩니다.</p></li>
+											<li><p class="au-title"><span class="au-number">3</span> 회원은 변경된 약관에 동의하지 않을 경우 회원 탈퇴를 요청할 수 있으며, 변경된 약관의 효력발생일 이후에도 서비스를 계속 사용할 경우 약관의 변경 사항에 동의한 것으로 간주됩니다.</p></li>
+										</ul>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 3 조 (약관 외 준칙)</span></h3>
+											</div>
+										</div>
+										<p class="au-pl-20 au-lh-18">본 약관에 명시되지 아니한 사항에 대해서는 전기통신기본법, 전기통신사업법, 정보통신망 이용촉진등에 관한 법률 및 기타 관련 법령의 규정에 따릅니다.</p>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 4 조 (용어의 정의)</span></h3>
+											</div>
+										</div>
+										<p class="au-pl-20 au-lh-18">이 약관에서 사용하는 주요한 용어의 정의는 다음과 같습니다.</p>
+										<ul class="list-disc">
+											<li>기본회원 : 평가원과 서비스 이용 계약을 체결하고 이용자 아이디(ID)를 부여 받은 자를 말합니다.</li>
+											<li>비회원 : 회원에 가입하지 않고 서비스를 이용하는 자를 말합니다.</li>
+											<li>운영자 : 서비스의 전반적인 관리와 원활한 운영을 위하여 평가원이 선정한 사람</li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- 제 2장 서비스 이용 계약 체결 -->
+								<div class="con-box-item">
+									<div class="title-box-area title-lg">
+										<div class="title-left">
+											<h2 class="title-text"><span>제 2장 서비스 이용 계약 체결</span></h2>
+										</div>
+									</div>
+
+									<div class="con-box-area text-left">
+										<div class="title-box-area title-md">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 5 조 (회원의 종류)</span></h3>
+											</div>
+										</div>
+										<p class="au-pl-20 au-lh-18">KETEP 온라인 서비스 회원에는 기본회원이 있습니다. 기본회원은 KETEP 사이트에 가입한 모든 회원을 말합니다. 기본회원은 KETEP 사이트 내의 모든 무료 서비스 이용이 가능합니다.</p>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 6 조 (이용 계약의 성립)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li><p class="au-title"><span class="au-number">1</span> 기본회원의 경우 회원이 "동의" 버튼을 누르면 이 약관에 동의하는 것으로 간주됩니다. 약관 변경 시에도 이와 동일하며, 변경된 약관에 동의하지 않을 경우 회원 등록 취소가 가능합니다.</p></li>
+											<li><p class="au-title"><span class="au-number">2</span> 이용계약은 서비스 이용희망자의 이용약관 동의 후 이용 신청에 대하여 평가원이 승낙함으로써 성립합니다.</p></li>
+										</ul>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 7 조 (이용 신청)</span></h3>
+											</div>
+										</div>
+										<p class="au-pl-20 au-lh-18">회원으로 가입하여 서비스를 이용하기를 희망하는 자는 평가원이 요청하는 소정의 가입신청 양식에서 요구하는 사항을 기록하여 신청합니다.</p>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 8 조 (이용 신청의 승낙)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li><p class="au-title"><span class="au-number">1</span> 평가원은 제 7 조에 따른 이용신청에 대하여 특별한 사정이 없는 한 접수 순서대로 이용 신청을 승낙합니다.</p></li>
+											<li>
+												<p class="au-title"><span class="au-number">2</span> 평가원은 다음 각 호에 해당하는 경우 이용신청에 대한 승낙을 제한할 수 있고, 그 사유가 해소될 때까지 승낙을 유보할 수 있습니다.</p>
+												<ul class="list-disc">
+													<li>서비스 관련 설비에 여유가 없는 경우</li>
+													<li>기술상 지장이 있는 경우</li>
+													<li>기타 평가원의 사정상 필요하다고 인정되는 경우</li>
+												</ul>
+											</li>
+											<li>
+												<p class="au-title"><span class="au-number">3</span> 평가원은 다음 각 호에 해당하는 사항을 인지하는 경우 동 이용계약 신청을 승낙하지 아니할 수 있습니다.</p>
+												<ul class="list-disc">
+													<li>본인의 실명으로 신청하지 않은 경우</li>
+													<li>다른 사람의 명의를 사용하여 신청한 경우</li>
+													<li>이용 신청 시 필요 사항을 허위로 기재하여 신청한 경우</li>
+													<li>사회의 안녕과 질서 혹은 미풍양속을 저해할 목적으로 신청한 경우</li>
+													<li>기타 평가원이 정한 이용 신청 요건이 미비 된 경우</li>
+												</ul>
+											</li>
+											<li><p class="au-title"><span class="au-number">4</span> 제 2 항 또는 3 항에 의하여 이용신청의 승낙을 유보하거나 승낙하지 아니하는 경우, 평가원은 이를 이용 신청자에게 알려야 합니다. 다만, 평가원의 귀책 사유없이 이용 신청자에게 통지할 수 없는 경우는 예외로 합니다.</p></li>
+										</ul>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 9 조 (개인정보의 보호)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li><p class="au-title"><span class="au-number">1</span> 평가원은 회원의 개인정보을 보호하고 존중합니다.</p></li>
+											<li><p class="au-title"><span class="au-number">2</span> 평가원은 회원이 서비스를 이용함에 있어서 온라인상에서 평가원에게 제공한 개인정보가 보호 받을 수 있도록 최선을 다하고 있습니다. 이에 통신비밀보호법, 전기통신사업법, 정보통신망이용촉진등에 관한 법률 등 정보통신 서비스 제공자가 준수하여야 할 관련법규를 바탕으로 개인정보 보호정책을 만들어 이를 준수하고 있습니다. 자세한 사항은 평가원의 개인정보 보호정책을 참고하시기 바랍니다.</p></li>
+											<li><p class="au-title"><span class="au-number">3</span> 평가원은 이용 신청 시 회원이 제공하는 정보, 커뮤니티 활동, 각종 이벤트 참가를 위하여 회원이 제공하는 정보, 기타 서비스 이용 과정에서 수집되는 정보 등을 통하여 회원에 관한 정보를 수집하며, 회원의 개인정보는 본 이용계약의 이행과 본 이용계약상의 서비스 제공을 위한 목적으로 사용됩니다.</p></li>
+											<li>
+												<p class="au-title"><span class="au-number">4</span> 평가원은 서비스 제공과 관련하여 취득한 회원의 신상정보를 본인의 승낙 없이 제3자에게 누설 또는 배포할 수 없으며 상업적 목적으로 사용할 수 없습니다. 다만, 다음의 각 호에 해당하는 경우에는 그러하지 아니합니다.</p>
+												<ul class="list-disc">
+													<li>정보통신서비스의 제공에 따른 요금 정산을 위하여 필요한 경우</li>
+													<li>통계작성, 학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 알아볼 수 없는 형태로 가공하여 제공하는 경우</li>
+													<li>관계 법령에 의하여 수사상 목적으로 정해진 절차와 방법에 따라 관계기관의 요구가 있는 경우</li>
+													<li>다른 법률에 특별한 규정이 있는 경우</li>
+													<li>정보통신윤리위원회의 요청이 있는 경우</li>
+												</ul>
+											</li>
+											<li><p class="au-title"><span class="au-number">5</span> 평가원은 서비스를 통해 회원의 컴퓨터에 쿠키를 전송할 수 있습니다. 회원은 쿠키 수신을 거부하거나 쿠키 수신에 대해 경고하도록 브라우저 설정을 변경할 수 있습니다.</p></li>
+										</ul>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 10 조 (계약 사항의 변경)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li><p class="au-title"><span class="au-number">1</span> 회원은 개인정보관리를 통해 언제든지 본인의 개인정보를 열람하고 수정할 수 있습니다.</p></li>
+											<li><p class="au-title"><span class="au-number">2</span> 회원은 이용신청 시 기재한 사항이 변경되었을 경우 온라인으로 수정을 해야 하며 회원정보를 변경하지 아니하여 발생되는 문제의 책임은 회원에게 있습니다.</p></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- 제 3장 의무 -->
+								<div class="con-box-item">
+									<div class="title-box-area title-lg">
+										<div class="title-left">
+											<h2 class="title-text"><span>제 3장 의무</span></h2>
+										</div>
+									</div>
+
+									<div class="con-box-area text-left">
+										<div class="title-box-area title-md">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 11 조 (평가원의 의무)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li>
+												<p class="au-title"><span class="au-number">1</span> 평가원은 다음 각 호의 사유가 발생한 경우를 제외하고 계속적, 안정적으로 서비스를 제공할 의무가 있습니다.</p>
+												<ul class="list-disc">
+													<li>서비스용 설비의 보수, 정기점검 또는 공사로 인한 부득이한 경우</li>
+													<li>전기통신사업법에 규정된 기간통신사업자가 전기통신 서비스를 중지한 경우</li>
+													<li>전시, 사변, 천재지변 또는 이에 준 하는 국가비상사태가 발생하거나 발생할 우려가 있는 경우</li>
+													<li>설비 장애 또는 이용 폭주 등으로 인하여 서비스 이용에 지장이 있는 경우</li>
+												</ul>
+											</li>
+											<li><p class="au-title"><span class="au-number">2</span> 평가원은 회원으로부터 소정의 절차에 의해 제기되는 의견에 대해서는 적절한 절차를 거처 처리하며, 처리시 일정 기간이 소요될 경우 회원에게 그 사유와 처리 일정을 알려주어야 합니다.</p></li>
+											<li>
+												<p class="au-title"><span class="au-number">3</span> 평가원은 회원의 정보를 철저히 보안 유지하며, 양질의 서비스로 KETEP 사이트를 운영하거나 개선하는 데에만 사용하고, 이외의 다른 목적으로 타 기관 및 개인에게 제공하지 않습니다. 단, 다음 각 호에 해당하는 경우에는 그러하지 아니합니다.</p>
+												<ul class="list-disc">
+													<li>관계 법령에 의하여 수사상의 목적으로 관계기관으로부터 요청이 있는 경우</li>
+													<li>기타 관계법령에서 정한 절차에 따른 요청이 있는 경우</li>
+												</ul>
+											</li>
+										</ul>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 12 조 (회원의 의무)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li><p class="au-title"><span class="au-number">1</span> 회원은 관계 법령, 본 약관의 규정, 이용안내 및 서비스 상에 공지한 주의사항, 평가원이 통지하는 사항을 준수하여야 하며, 기타 평가원의 업무에 방해되는 행위를 하여서는 안됩니다.</p></li>
+											<li><p class="au-title"><span class="au-number">2</span> 회원은 평가원의 사전 동의 없이 서비스를 이용하여 어떠한 영리행위도 할 수 없으며, 법에 저촉되는 자료를 배포 또는 게재할 수 없습니다.</p></li>
+											<li><p class="au-title"><span class="au-number">3</span> 회원은 자신의 ID와 비밀번호를 유지 관리할 책임이 있으며 자신의 ID와 비밀번호를 사용하여 발생하는 모든 결과에 대해 전적인 책임이 있습니다. 또한 자신의 ID와 비밀번호가 자신의 승낙 없이 사용되었을 경우 즉시 평가원에 통보하여야 합니다.</p></li>
+											<li>
+												<p class="au-title"><span class="au-number">4</span> 회원은 서비스와 관련하여 다음 사항을 하여서는 안됩니다.</p>
+												<ul class="list-disc">
+													<li>서비스를 이용하여 얻은 정보를 평가원의 사전 승낙 없이 복사, 복제, 변경, 번역, 출판, 방송 기타의 방법으로 사용하거나 이를 타인에게 제공하는 행위</li>
+													<li>자신의 홈페이지와 게시판에 음란물을 게재 또는 음란사이트를 링크하거나, 유포 등 사회질서를 해치는 행위</li>
+													<li>타인의 명예를 훼손하거나 모욕하는 행위, 타인의 지적재산권 등의 권리를 침해하는 행위</li>
+													<li>해킹 또는 컴퓨터 바이러스를 유포하는 일, 타인의 의사에 반하여 광고성 정보 등 일정한 내용을 지속적으로 전송하는 행위</li>
+													<li>다른 회원 ID를 부정 사용하는 행위</li>
+													<li>다른 사용자의 개인 정보를 수집, 저장하는 행위</li>
+													<li>평가원의 연구원, 운영자 등을 포함한 타인을 사칭하는 행위</li>
+													<li>서비스를 통해 전송된 콘텐트의 발신인을 위조하는 행위</li>
+													<li>타인을 스톡(stalk)하거나, 괴롭히는 행위</li>
+													<li>서비스의 운영에 지장을 주거나 줄 우려가 있는 일체의 행위, 기타 관계 법령에 위배되는 행위</li>
+												</ul>
+											</li>
+										</ul>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 13 조 (면책 조항)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li><p class="au-title"><span class="au-number">1</span> 평가원은 회원이 서비스를 통해 게재 또는 전송한 정보, 자료, 사실의 정확성, 신뢰성 등 내용에 관하여 어떠한 보증도 하지 아니하며 회원의 서비스 자료에 대한 취사선택 또는 이용으로 발생하는 손해 등에 대해 책임을 지지 아니합니다.</p></li>
+											<li><p class="au-title"><span class="au-number">2</span> 평가원은 회원이 서비스를 이용하여 기대하는 손익이나 서비스를 통하여 얻은 자료로 인한 손해에 관하여 책임을 지지 아니합니다.</p></li>
+											<li><p class="au-title"><span class="au-number">3</span> 평가원은 회원 상호간 또는 회원과 제 3자 상호간에 서비스를 매개로 발생한 분쟁에 대해서는 개입할 의무가 없으며 이로 인한 손해를 배상할 책임도 없습니다.</p></li>
+											<li><p class="au-title"><span class="au-number">4</span> 평가원은 회원의 귀책사유로 인하여 서비스 이용의 장애가 발생한 경우에는 책임이 면제 됩니다.</p></li>
+											<li><p class="au-title"><span class="au-number">5</span> 본 약관의 규정을 위반함으로 인하여 평가원에 손해가 발생하게 되는 경우, 이 약관을 위반한 회원은 평가원에 발생되는 모든 손해를 배상하여야 하며, 동 손해로부터 평가원을 면책 시켜야 합니다.</p></li>
+										</ul>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 14 조(손해배상)</span></h3>
+											</div>
+										</div>
+										<p class="au-pl-20 au-lh-18">평가원이 제공하는 서비스와 관련하여 회원에게 어떠한 손해가 발생하더라도 평가원의 중대한 과실에 의한 경우를 제외하고 이에 대하여 책임을 부담하지 않습니다.</p>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 15 조 (양도 금지)</span></h3>
+											</div>
+										</div>
+										<p class="au-pl-20 au-lh-18">회원은 서비스의 이용권한, 기타 이용 계약상 지위를 타인에게 양도, 증여할 수 없으며, 이를 담보로 제공할 수 없습니다.</p>
+									</div>
+								</div>
+
+								<!-- 제 4장 서비스 이용 -->
+								<div class="con-box-item">
+									<div class="title-box-area title-lg">
+										<div class="title-left">
+											<h2 class="title-text"><span>제 4장 서비스 이용</span></h2>
+										</div>
+									</div>
+
+									<div class="con-box-area text-left">
+										<div class="title-box-area title-md">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 16 조 (서비스 이용 범위)</span></h3>
+											</div>
+										</div>
+										<p class="au-pl-20 au-lh-18">회원은 평가원을 통한 가입 시 발급된 ID 하나로 KETEP 사이트 내에서 제공하는 서비스를 이용할 수 있습니다. 단, 별도로 제휴사에서 제공하는 컨텐츠의 경우 아니한 경우도 있습니다.</p>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 17 조 (정보의 제공)</span></h3>
+											</div>
+										</div>
+										<p class="au-pl-20 au-lh-18">평가원은 회원이 서비스 이용 중 필요가 있다고 인정되는 다양한 정보를 공지사항이나 전자우편 등의 방법으로 회원에게 제공할 수 있습니다.</p>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 18 조 (컨텐츠 이용 요금)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li><p class="au-title"><span class="au-number">1</span> 평가원이 제공하는 서비스는 기본적으로 무료입니다. 단, 유료 서비스 및 유료 정보에 대해서는 해당 정보에 명시된 요금을 지불하여야 사용 가능합니다.</p></li>
+											<li><p class="au-title"><span class="au-number">2</span> VOD 유료화할 경우 범위와 가격표를 별도 공지합니다.</p></li>
+										</ul>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 19 조 (회원의 게시물)</span></h3>
+											</div>
+										</div>
+										<p class="au-pl-20 au-lh-18">평가원은 회원이 게시하거나 등록하는 서비스내의 내용물이 다음 각 호에 해당한다고 판단되는 경우에 사전통지 없이 삭제할 수 있습니다.</p>
+										<ul class="list-disc">
+											<li>다른 회원 또는 제3자를 비방하거나 중상모략으로 명예를 손상시키는 내용인 경우</li>
+											<li>공공질서 및 미풍양속에 위반되는 내용인 경우</li>
+											<li>범죄적 행위에 결부된다고 인정되는 내용일 경우</li>
+											<li>평가원의 저작권, 제 3 자의 저작권 등 기타 권리를 침해하는 내용인 경우</li>
+											<li>평가원에서 규정한 게시기간이나 용량을 초과한 경우</li>
+											<li>회원이 자신의 홈페이지와 게시판에 음란물을 게재하거나 음란사이트를 링크하는 경우</li>
+											<li>게시판의 성격에 부합하지 않는 게시물의 경우</li>
+										</ul>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 20 조 (게시물의 저작권)</span></h3>
+											</div>
+										</div>
+										<ul class="list-disc">
+											<li>게시물에 대한 권리와 책임은 게시자에게 있으며 평가원은 게시자의 동의 없이는 이를 서비스 내 게재 이외에 영리적 목적으로 사용할 수 없습니다. 단, 비영리적인 경우에는 그러하지 아니하며 또한 평가원은 서비스 내의 게재권을 갖습니다.</li>
+											<li>회원은 서비스를 이용하여 얻은 정보를 가공, 판매하는 행위 등 서비스에 게재된 자료를 상업적으로 사용할 수 없습니다.</li>
+										</ul>
+
+										<div class="title-box-area title-md au-mt-20">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 21 조 (서비스의 이용 시간)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li><p class="au-title"><span class="au-number">1</span> 평가원은 회원의 이용신청을 승낙한 때부터 즉시 서비스를 개시합니다. 단 평가원의 업무상 또는 기술상의 장애로 인하여 서비스를 개시하지 못하는 경우, 서비스에 공지하거나 회원에게 즉시 이를 통지합니다.</p></li>
+											<li><p class="au-title"><span class="au-number">2</span> 서비스의 이용은 연중무휴 1일 24시간을 원칙으로 합니다. 다만 평가원이 업무상 또는 기술상의 이유로 서비스의 전부 또는 일부가 일시중지 되거나, 운영상의 목적으로 평가원이 정한 기간에는 서비스의 전부 또는 일시중지 될 수 있습니다. 이러한 경우 평가원은 사전 또는 사후 이를 공지합니다.</p></li>
+											<li><p class="au-title"><span class="au-number">3</span> 평가원은 서비스별로 이용 가능한 시간을 별도로 정할 수 있으며 이 경우 그 내용을 사전에 공지합니다.</p></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- 제 5장 계약 해지 및 서비스 이용 제한 -->
+								<div class="con-box-item">
+									<div class="title-box-area title-lg">
+										<div class="title-left">
+											<h2 class="title-text"><span>제 5장 계약 해지 및 서비스 이용 제한</span></h2>
+										</div>
+									</div>
+
+									<div class="con-box-area text-left">
+										<div class="title-box-area title-md">
+											<div class="title-left">
+												<h3 class="title-text"><span>제 22 조 (회원탈퇴 및 이용 제한)</span></h3>
+											</div>
+										</div>
+										<ul class="au-pl-20 au-lh-18">
+											<li><p class="au-title"><span class="au-number">1</span> 회원이 이용계약을 해지하고자 하는 때에는 회원 본인이 직접 KETEP 사이트 내 회원정보관리를 이용하여 회원탈퇴를 요청해야 합니다.</p></li>
+											<li>
+												<p class="au-title"><span class="au-number">2</span> 평가원은 회원이 다음 사항에 해당하는 행위를 하였을 경우, 사전 통지 없이 이용 계약을 해지하거나 또는 기간을 정하여 서비스 이용을 중지할 수 있습니다.</p>
+												<ul class="list-disc">
+													<li>공공 질서 및 미풍 양속에 반하는 경우</li>
+													<li>범죄적 행위에 관련되는 경우</li>
+													<li>국익 또는 사회적 공익을 저해할 목적으로 서비스 이용을 계획 또는 실행할 경우</li>
+													<li>타인의 ID 및 비밀번호를 도용한 경우</li>
+													<li>가입한 이름이 실명이 아닌 경우</li>
+													<li>타인의 명예를 손상시키거나 불이익을 주는 경우</li>
+													<li>같은 사용자가 다른 ID로 이중 등록을 한 경우</li>
+													<li>서비스에 위해를 가하는 등 건전한 이용을 저해하는 경우</li>
+													<li>기타 관련 법령이나 평가원이 정한 이용조건에 위배되는 경우</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>	
+							<!-- 20260601 서비스이용약관 end -->
+						</div>
+					</div>
+				</div>
+			</main>
+        </div>
+		 <!-- 20260601 푸터 start -->
+		 <footer class="krds_footer">
+			<div class="footer-quick">
+				<div class="layout">
+					<button type="button" title="소속기관 레이어" class="link footerlink1">소속기관</button>
+					<button type="button" title="관련사이트 레이어" class="link footerlink2">관련사이트</button>
+					<button type="button" title="정부기관 레이어" class="link footerlink3">정부기관</button>
+				</div>
+				<div class="popup-wrap" data-type="full" id="popFootLink1" tabindex="0">
+					<div class="popup-in">
+						<div class="popup">
+							<div class="popup-head">
+								<h1 class="pop-tit">소속기관</h1>
+							</div>
+							<div class="popup-body">
+								<ul class="pop-foot-links">
+									<li><a href="#" target="_blank" class="link" title="새창열림">한국에너지기술평가원</a></li>
+									<li><a href="#" target="_blank" class="link" title="새창열림">공공에너지R&#38;D포털</a></li>
+									<li><a href="#" target="_blank" class="link" title="새창열림">세계에너지기시장</a></li>
+								</ul>
+							</div>
+							<button type="button" class="popup-close"><span class="sr-only">소속기관 레이어 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="popup-wrap" data-type="full" id="popFootLink2" tabindex="0">
+					<div class="popup-in">
+						<div class="popup">
+							<div class="popup-head">
+								<h1 class="pop-tit">관련사이트</h1>
+							</div>
+							<div class="popup-body">
+								<ul class="pop-foot-links">
+									<li><a href="#" target="_blank" class="link" title="새창열림">국가과학기술지식정보서비스</a></li>
+									<li><a href="#" target="_blank" class="link" title="새창열림">RCMS</a></li>
+								</ul>
+							</div>
+							<button type="button" class="popup-close"><span class="sr-only">소속기관 레이어 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="popup-wrap" data-type="full" id="popFootLink3" tabindex="0">
+					<div class="popup-in">
+						<div class="popup">
+							<div class="popup-head">
+								<h1 class="pop-tit">정부기관</h1>
+							</div>
+							<div class="popup-body">
+								<ul class="pop-foot-links">
+									<li><a href="#" target="_blank" class="link" title="새창열림">기후에너지환경부</a></li>
+									<li><a href="#" target="_blank" class="link" title="새창열림">기획재정부</a></li>
+									<li><a href="#" target="_blank" class="link" title="새창열림">온라인행정심판</a></li>
+								</ul>
+							</div>
+							<button type="button" class="popup-close"><span class="sr-only">소속기관 레이어 닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_inner">
+				<nav class="footer_links">
+					<a href="#" class="link_item">서비스 이용약관</a>
+					<a href="#" class="link_item bold">개인정보처리방침</a>
+					<a href="#" class="link_item">이메일무단수집거부</a>
+				</nav>
+				<div class="footer_info">
+					<address class="info_address">
+						<span class="addr_item">(06175) 서울특별시강남구 테헤란로 114길 14 유니온빌딩</span>
+						<span class="addr_item">대표전화:02-3469-8400</span>
+						<span class="addr_item">팩스:02-555-2430</span>
+					</address>
+					<p class="info_copyright">copyright(C) 2026 korea institute of energy technology evaluation and planning. all rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+	 <!-- 20260601 푸터 end -->
+    </div>
+</body>
+</html>

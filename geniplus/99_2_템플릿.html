@@ -1,0 +1,1589 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GENIEPLUS 입니다.">
+    <meta name="author" content="시스템게이트">
+    <meta name="-csrf" content="b4d963cf-a117-4e04-9a4e-0bd906cefa2a">
+    <meta name="-csrf-header" content="X-CSRF-TOKEN">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>GENIEPLUS</title>
+    <!-- basic css -->
+    <link type="text/css" rel="stylesheet" href="css/basics-reset.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-common.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-layout.css">
+    <link type="text/css" rel="stylesheet" href="XEIcon-2.2.0/xeicon.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/basics-common.js"></script>
+</head>
+<body class="sub-wrapper">
+    <div class="sub-wrap">
+        <div id="skip-nav">
+            <a href="#contents_container">본문 바로가기</a>
+        </div>
+        
+    <!-- 헤더 영역 -->
+        <header class="sub-header-area">
+            <div class="header-inner">
+                <div class="header-logo">
+					<a href="#"><span>KETEP logo</span></a>
+					<a href="#"><span>KETEP GENIEPLUS logo</span></a>
+				</div>
+            </div>
+			<!-- 20260526 프로필 메뉴 영역 수정 start -->
+			<div class="sidebar-profile">
+				<div class="profile-info">
+					<div class="profile-name">
+						<button type="button"><strong>이하연</strong><span>연구원님</span></button>
+						<div class="profile-name-util">
+							<button type="button" class="btn-pop-close"><span class="sr-only">팝업 닫기</span></button>
+							<div class="pop-profile-info">
+								<div class="pop-avatar"></div>
+								<div class="pop-meta">
+									<strong class="pop-name">이하연</strong>
+									<span class="pop-role">과장/연구원</span>
+								</div>
+							</div>
+							<div class="pop-profile-menu">
+								<a href="#none" class="btn-pop-menu icon-change btn-popup-open" data-target="modal-authority">권한 변경</a>
+								<a href="#" class="btn-pop-menu icon-edit">개인정보 수정</a>
+								<a href="#" class="btn-pop-menu icon-out">로그아웃</a>
+							</div>
+						</div>
+					</div>
+					<div class="profile-time">
+						<span>59분 58초</span>
+						<button class="btn btn-xs btn-outline-gray">연장</button>
+						<button class="btn btn-xs btn-outline-gray">로그아웃</button>
+					</div>
+				</div>
+			</div>
+			<!-- 20260526 프로필 메뉴 영역 수정 end -->
+			<!-- 20260526 사용자권한 변경 레이어 팝업 추가 start -->
+				<div id="modal-authority" class="common-modal_wrap">
+					<div class="common-modal_dimmed btn-popup-close"></div>
+					<div class="common-modal_content">
+						<div class="common-modal_header">
+							<h2 class="common-modal_title">사용자 권한 변경</h2>
+							<button type="button" class="common-btn_close btn-popup-close" title="닫기"></button>
+						</div>
+						<div class="common-modal_body">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg">
+									<div class="title-left">
+										<h2 class="title-text"><span>변경하실 권한을 선택해 주세요</span></h2>
+									</div>
+								</div>
+								<div class="auth-card-container">
+									<div class="auth-card-list">
+										<div class="auth-card-item auth-card-checked">
+											<input type="radio" name="auth_select" id="auth_1" checked>
+											<label for="auth_1">
+												<span class="auth-num">01</span>
+												<strong class="auth-title">사업 담당자</strong>
+												<span class="auth-badge">현재 권한</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_2">
+											<label for="auth_2">
+												<span class="auth-num">02</span>
+												<strong class="auth-title">과제 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_3">
+											<label for="auth_3">
+												<span class="auth-num">03</span>
+												<strong class="auth-title">관리 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_4">
+											<label for="auth_4">
+												<span class="auth-num">04</span>
+												<strong class="auth-title">평가 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="common-modal_footer">
+							<button type="button" class="btn btn-md btn-outline-gray common-btn_cancel btn-popup-close">취소</button>
+							<button type="button" class="btn btn-md btn-blue common-btn_confirm btn-popup-close">변경 적용</button>
+						</div>
+					</div>
+				</div>
+			<!-- 20260526 사용자권한 변경 레이어 팝업 추가 end -->
+        </header>
+
+        <div class="sub-container">
+            <!-- 사이드바 토글 버튼 -->
+            <button class="btn btn-outline-gray sidebar-toggle-btn" id="sidebarToggle" aria-label="메뉴 토글"><span class="hide">열기/닫기</span></button>
+
+            <!-- 사이드바 영역 -->
+				<aside class="sub-sidebar" id="sidebar">
+					<div class="sidebar-title">과제평가관리</div>
+					<nav class="sidebar-nav">
+						<!-- 1 Depth 시작 -->
+						<ul class="nav-menu depth-1">
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="xi-user-o menu-icon"></i><span class="nav-text">마이페이지</span>
+								</a>
+							</li>
+
+							<!-- 사업공고/접수 (하위 메뉴 있음) -->
+							<li class="nav-item has-sub open">
+								<a href="#" class="nav-link">
+									<i class="xi-document menu-icon"></i><span class="nav-text">사업공고/접수</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<!-- 2 Depth 시작 -->
+										<ul class="sub-menu depth-2">
+											<li class="nav-item">
+												<a href="#" class="sub-link">
+													<span class="nav-text">기술수요조사</span>
+												</a>
+											</li>
+											<li class="nav-item has-sub">
+												<a href="#" class="sub-link">
+													<span class="nav-text">사업공고</span><i class="xi-angle-down arrow"></i>
+												</a>
+												<div class="sub-menu-wrap">
+													<div class="sub-menu-inner">
+														<!-- 3 Depth 시작 -->
+														<ul class="sub-menu depth-3">
+															<li class="nav-item">
+																<a href="#" class="sub-link">
+																	<span class="nav-text">공고예고조회</span>
+																</a>
+															</li>
+															<li class="nav-item has-sub">
+																<a href="#" class="sub-link">
+																	<span class="nav-text">R&D 통합공고</span><i class="xi-angle-down arrow"></i>
+																</a>
+																<div class="sub-menu-wrap">
+																	<div class="sub-menu-inner">
+																		<!-- 4 Depth 시작 -->
+																		<ul class="sub-menu depth-4">
+																			<li class="nav-item"><a href="#" class="sub-link active"><span class="nav-text">공고상세조회</span></a></li>
+																			<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">신규과제 접수</span></a></li>
+																			<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">제출서류 다운로드</span></a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="nav-item">
+												<a href="#" class="sub-link">
+													<span class="nav-text">접수결과조회</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<!-- 과제평가관리 -->
+							<li class="nav-item has-sub">
+								<a href="#" class="nav-link">
+									<i class="xi-pen-o menu-icon"></i><span class="nav-text">과제평가관리</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<ul class="sub-menu depth-2">
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">평가위원 선정</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">온라인 평가시스템</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">평가결과 통보</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<!-- 협약 및 정산 -->
+							<li class="nav-item has-sub">
+								<a href="#" class="nav-link">
+									<i class="xi-receipt menu-icon"></i><span class="nav-text">협약 및 정산</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<ul class="sub-menu depth-2">
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">전자협약 체결</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">사업비 관리</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">정산결과 조회</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</aside>
+
+            <!-- 메인 콘텐츠 영역 -->
+            <main class="sub-main-content" id="contents_container">
+				<nav class="lnb">
+					<div class="lnb-inner">
+						<div class="lnb-left">
+							<span class="home">
+								<a href="#"><i class="xi-home"></i><span class="sr-only">홈(메인) 화면으로 이동</span></a>
+							</span>
+							<div class="fn-dropdown" id="lv1">
+								<button type="button">
+									<span>대메뉴 테스트 01</span>
+								</button>
+								<ul>
+									<li><a href="#">서브메뉴 테스트 01-01</a></li>
+									<li><a href="#">서브메뉴 테스트 01-02</a></li>
+									<li><a href="#">서브메뉴 테스트 01-03</a></li>
+									<li><a href="#">서브메뉴 테스트 01-04</a></li>
+									<li><a href="#">서브메뉴 테스트 01-05</a></li>
+								</ul>
+							</div>
+							<div class="fn-dropdown" id="lv2">
+								<button type="button">
+									<span>대메뉴 테스트 02</span>
+								</button>
+								<ul>
+									<li><a href="#">서브메뉴 테스트 02-01</a></li>
+								</ul>
+							</div>
+							<div class="fn-dropdown" id="lv3">
+								<button type="button">
+									<span>대메뉴 테스트 03</span>
+								</button>
+								<ul>
+									<li><a href="#">서브메뉴 테스트 03-01</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="title-name">
+							<h1>화면 제목</h1>
+						</div>
+						<div class="lnb-right">
+							<button class="btn btn-xs btn-outline-gray icon-minimize">축소</button>
+							<button class="btn btn-xs btn-outline-gray icon-maximize">확대</button>
+							<button class="btn btn-xs btn-outline-gray icon-view">원본보기</button>
+							<div class="scale-status">100%</div>
+						</div>
+					</div>
+					
+				</nav>
+				<div class="content-area-wrap">
+					<div class="content-area">
+						<!-- 타이틀 -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg"> <!-- 대 타이틀 -->
+									<div class="title-left">
+										<h2 class="title-text"><span>타이틀 - 대 - 3단</span></h2>
+										<span class="total-count">총 건수 : <strong>2</strong> 건</span>
+										<span class="title-help-badge">도움말 영역입니다.</span>
+									</div>
+									<div class="title-right">
+										<button class="btn btn-sm btn-blue icon-register">등록</button>
+										<button class="btn btn-sm btn-outline-green icon-download"> 엑셀다운</button>
+									</div>
+								</div>
+								<div class="title-box-area title-lg"> <!-- 대 타이틀 -->
+									<div class="title-left">
+										<h2 class="title-text"><span>타이틀 - 대 - 2단</span></h2>
+										<span class="total-count">총 건수 : <strong>2</strong> 건</span>
+										<span class="title-help-badge">도움말 영역입니다.</span>
+									</div>
+									<div class="title-right">
+										<button class="btn btn-sm btn-blue icon-register">등록</button>
+										<button class="btn btn-sm btn-outline-green icon-download"> 엑셀다운</button>
+									</div>
+								</div>
+								<div class="title-box-area title-lg"> <!-- 대 타이틀 -->
+									<div class="title-left">
+										<h2 class="title-text"><span>타이틀 - 대 - 1단</span></h2>
+									</div>
+									<div class="title-center">
+										<button class="btn btn-sm btn-blue icon-register">등록</button>
+										<button class="btn btn-sm btn-blue icon-register">등록</button>
+									</div>
+									<div class="title-right">
+										<button class="btn btn-sm btn-blue icon-register">등록</button>
+										<button class="btn btn-sm btn-outline-green icon-download"> 엑셀다운</button>
+									</div>
+								</div>
+								<div class="title-box-area title-md"> <!-- 중 타이틀 -->
+									<div class="title-left">
+										<h3 class="title-text"><span>중 타이틀</span></h3>
+									</div>
+									<div class="title-right">
+										<button class="btn btn-sm btn-outline-blue">버튼C</button>
+									</div>
+								</div>
+								<div class="title-box-area title-sm"> <!-- 소 타이틀 -->
+									<div class="title-left">
+										<h4 class="title-text"><span>소 타이틀</span></h4>
+									</div>
+									<div class="title-right">
+										<button class="btn btn-xs btn-outline-blue">버튼C</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 탭 영역 -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg"> 
+									<div class="title-left">
+										<h2 class="title-text"><span>탭 영역</span></h2>
+									</div>
+								</div>
+							</div>
+							<div class="con-box-item">
+								<div class="title-box-area title-md">
+									<div class="title-left">
+										<h3 class="title-text"><span>대메뉴 탭1</span></h3>
+									</div>
+								</div>
+								<!-- 대메뉴 탭 (Depth 1) -->
+								<div class="tab-container tab-depth1">
+									<div class="tab-scroll-wrap">
+										<ul class="tab-menu-list" role="tablist">
+											<li class="tab-item active" role="tab" aria-selected="true"><button type="button" class="tab-btn">기본정보</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">수행계획</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">연구비내역</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">참여연구원</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">기반시설</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">성과지표</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">첨부파일</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">제출서류</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">변경이력</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">최종심사의견</button></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="con-box-item">
+								<div class="title-box-area title-md">
+									<div class="title-left">
+										<h3 class="title-text"><span>중메뉴 탭2</span></h3>
+									</div>
+								</div>
+								<!-- 중메뉴 탭 (Depth 2) -->
+								<div class="tab-container tab-depth2">
+									<div class="tab-scroll-wrap">
+										<ul class="tab-menu-list" role="tablist">
+											<li class="tab-item active" role="tab" aria-selected="true"><button type="button" class="tab-btn">세부항목 A</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">세부항목 B</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">세부항목 C</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">세부항목 D</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">세부항목 E</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">세부항목 F</button></li>
+											<li class="tab-item" role="tab" aria-selected="false"><button type="button" class="tab-btn">세부항목 G</button></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 검색 -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg"> 
+									<div class="title-left">
+										<h2 class="title-text"><span>검색 영역</span></h2>
+									</div>
+								</div>
+							</div>
+								<div class="search-section detail-box">
+									<div class="condition-area">
+										<div class="line">
+											<div class="block">
+												<p class="label word-4">기술분야</p>
+												<select id="energyTechCd" name="energyTechCd" title="기술분야 선택" class="select-box">
+													<option value="">전체</option>
+													<option value="11">태양광</option>
+													<option value="26">풍력</option>
+													<option value="27">수소·연료전지</option>
+													<option value="28">바이오에너지</option>
+													<option value="29">에너지저장(ESS)</option>
+													<option value="30">스마트그리드</option>
+													<option value="31">원자력</option>
+													<option value="36">청정화력</option>
+													<option value="41">에너지효율향상</option>
+													<option value="51">자원개발</option>
+													<option value="43">핵융합</option>
+													<option value="44">에너지안전</option>
+												</select>
+											</div>
+											<div class="block">
+												<p class="label word-5">공고구분</p>
+												<select id="pbpWayCd" name="pbpWayCd" title="공고구분 선택" class="select-box">
+													<option value="">전체</option>
+													<option value="10">일반공고</option>
+													<option value="20">지정공모</option>
+													<option value="30">품목지정</option>
+													<option value="40">자유공모</option>
+													<option value="50">국제공동연구</option>
+													<option value="60">다부처사업</option>
+												</select>
+											</div>
+											<div class="block">
+												<p class="label">수행기관유형</p>
+												<select id="instTypeCd" name="instTypeCd" title="수행기관유형 선택" class="select-box w-select-lg">
+													<option value="">전체</option>
+													<option value="10">주관연구기관</option>
+													<option value="20">공동연구기관</option>
+													<option value="30">위탁연구기관</option>
+													<option value="40">중소기업</option>
+													<option value="50">중견기업</option>
+													<option value="60">대기업</option>
+													<option value="70">국공립연구소</option>
+													<option value="80">정출연(정부출연연구기관)</option>
+													<option value="90">대학산학협력단</option>
+												</select>
+											</div>
+											<div class="block">
+												<p class="label">에너지원분류</p>
+												<select id="bdstMnUsgCd" name="bdstMnUsgCd" title="에너지원분류 선택" class="select-box w-select-lg">
+													<option value="">전체</option>
+													<option value="01000">신재생에너지</option>
+													<option value="02000">화석연료</option>
+													<option value="03000">전력·원자력</option>
+													<option value="04000">에너지효율</option>
+													<option value="05000">융복합에너지신산업</option>
+													<option value="06000">에너지안전·수용성</option>
+													<option value="99999">기타 인프라</option>
+												</select>
+											</div>
+										</div>
+										<div class="line detail-block on">
+											<div class="block">
+												<p class="label word-4">단계분류</p>
+												<select id="sBdstScale" name="sBdstScale" title="단계분류 선택" class="select-box">
+													<option value="">전체</option>
+													<option value="1">기초연구단계(TRL 1~2)</option>
+													<option value="2">실험단계(TRL 3~4)</option>
+													<option value="3">시제품단계(TRL 5~6)</option>
+													<option value="4">실증단계(TRL 7~8)</option>
+													<option value="5">사업화단계(TRL 9)</option>
+													<option value="9">분류정보 없음</option>
+												</select>
+											</div>
+											<div class="block">
+												<p class="label word-5">정부출연금</p>
+												<select id="sPrnmntDsco" name="sPrnmntDsco" title="정부출연금 선택" class="select-box">
+													<option value="">전체</option>
+													<option value="1">100억 이상</option>
+													<option value="2">50억 ~ 100억 미만</option>
+													<option value="3">30억 ~ 50억 미만</option>
+													<option value="4">10억 ~ 30억 미만</option>
+													<option value="5">5억 ~ 10억 미만</option>
+													<option value="6">3억 ~ 5억 미만</option>
+													<option value="7">1억 ~ 3억 미만</option>
+													<option value="8">1억 미만</option>
+												</select>
+											</div>
+											<div class="block">
+												<p class="label">사업성격</p>
+												<select id="archActCd" name="archActCd" title="사업성격 선택" class="select-box">
+													<option value="">전체</option>
+													<option value="10">기술개발(R&D)</option>
+													<option value="20">인력양성</option>
+													<option value="30">기반구축</option>
+													<option value="40">국제협력</option>
+													<option value="50">표준화·실증</option>
+												</select>
+											</div>
+										</div>
+										<div class="line search-bottom-line">
+											<div class="block search-input-group">
+												<p class="label word-4">입력검색</p>
+												<select id="searchCondition" name="searchCondition" title="검색 조건 선택" class="select-box">
+													<option value="DESIGN_PBP_NM">연구과제명</option>
+													<option value="ORDER_INST_NM">주관기관명</option>
+													<option value="ANN_NO">공고번호</option>
+												</select>
+												<input id="searchKeyword" name="searchKeyword" title="검색어 입력" onkeypress="javascript:if(window.event.keyCode==13){fnSearch()}" placeholder="연구과제명 또는 기관명을 입력해주세요" class="input-text mw100" type="text" value="">
+											</div>
+										</div>
+									</div>
+									<div class="button-more flex-wrap-wrap">
+										<div class="flex-wrap">
+											<button type="button" class="btn btn-md btn-outline-gray icon-refresh" onclick="fnReset();">초기화</button>
+										</div>
+										<button type="button" class="btn btn-md btn-blue icon-search" onclick="fnSearch();">검색</button>
+									</div>
+								</div>
+								<div class="search-section detail-box">
+									<div class="condition-area">
+										<div class="line detail-block on">
+											<div class="block">
+												<p class="label word-4">단계분류</p>
+												<select id="sBdstScale" name="sBdstScale" title="단계분류 선택" class="select-box">
+													<option value="">전체</option>
+													<option value="1">기초연구단계(TRL 1~2)</option>
+													<option value="2">실험단계(TRL 3~4)</option>
+													<option value="3">시제품단계(TRL 5~6)</option>
+													<option value="4">실증단계(TRL 7~8)</option>
+													<option value="5">사업화단계(TRL 9)</option>
+													<option value="9">분류정보 없음</option>
+												</select>
+											</div>
+											<div class="block">
+												<p class="label word-5">정부출연금</p>
+												<select id="sPrnmntDsco" name="sPrnmntDsco" title="정부출연금 선택" class="select-box">
+													<option value="">전체</option>
+													<option value="1">100억 이상</option>
+													<option value="2">50억 ~ 100억 미만</option>
+													<option value="3">30억 ~ 50억 미만</option>
+													<option value="4">10억 ~ 30억 미만</option>
+													<option value="5">5억 ~ 10억 미만</option>
+													<option value="6">3억 ~ 5억 미만</option>
+													<option value="7">1억 ~ 3억 미만</option>
+													<option value="8">1억 미만</option>
+												</select>
+											</div>
+											<div class="block">
+												<p class="label">사업성격</p>
+												<select id="archActCd" name="archActCd" title="사업성격 선택" class="select-box">
+													<option value="">전체</option>
+													<option value="10">기술개발(R&D)</option>
+													<option value="20">인력양성</option>
+													<option value="30">기반구축</option>
+													<option value="40">국제협력</option>
+													<option value="50">표준화·실증</option>
+												</select>
+											</div>
+										</div>
+										<!-- 이 부분의 클래스를 확인해주세요 -->
+										<div class="line search-bottom-line">
+											<div class="block search-input-group">
+												<p class="label word-4">입력검색</p>
+												<select id="searchCondition" name="searchCondition" title="검색 조건 선택" class="select-box">
+													<option value="DESIGN_PBP_NM">연구과제명</option>
+													<option value="ORDER_INST_NM">주관기관명</option>
+													<option value="ANN_NO">공고번호</option>
+												</select>
+												<input id="searchKeyword" name="searchKeyword" title="검색어 입력" onkeypress="javascript:if(window.event.keyCode==13){fnSearch()}" placeholder="연구과제명 또는 기관명을 입력해주세요" class="input-text mw100" type="text" value="">
+											</div>
+										</div>
+									</div>
+										<div class="button-more flex-wrap-wrap">
+											<div class="flex-wrap">
+												<button type="button" class="btn btn-md btn-outline-gray icon-refresh" onclick="fnReset();">초기화</button>
+											</div>
+											<button type="button" class="btn btn-md btn-blue icon-search" onclick="fnSearch();">검색</button>
+										</div>
+									</div>
+								<div class="search-section detail-box">
+									<div class="condition-area">
+										<!-- 이 부분의 클래스를 확인해주세요 -->
+										<div class="line search-bottom-line">
+											<div class="block search-input-group">
+												<p class="label word-4">입력검색</p>
+												<select id="searchCondition" name="searchCondition" title="검색 조건 선택" class="select-box">
+													<option value="DESIGN_PBP_NM">연구과제명</option>
+													<option value="ORDER_INST_NM">주관기관명</option>
+													<option value="ANN_NO">공고번호</option>
+												</select>
+												<input id="searchKeyword" name="searchKeyword" title="검색어 입력" onkeypress="javascript:if(window.event.keyCode==13){fnSearch()}" placeholder="연구과제명 또는 기관명을 입력해주세요" class="input-text mw100" type="text" value="">
+											</div>
+										</div>
+									</div>
+									<div class="button-more flex-wrap-wrap">
+										<div class="flex-wrap">
+											<button type="button" class="btn btn-md btn-outline-gray icon-refresh" onclick="fnReset();">초기화</button>
+										</div>
+										<button type="button" class="btn btn-md btn-blue icon-search" onclick="fnSearch();">검색</button>
+									</div>
+							</div>
+						</div>
+
+
+						<!-- 목록 화면 -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg">
+									<div class="title-left">
+										<h2 class="title-text"><span>목록화면</span></h2>
+										<span class="total-count">총 건수 : <strong>3</strong> 건</span>
+									</div>
+									<div class="title-right">
+										<button class="btn btn-sm btn-blue icon-register">등록</button>
+									</div>
+								</div>
+								<div class="table-container table-col-type">
+									<table class="custom-table notice-board-table">
+										<caption>공지사항 목록으로 번호, 소식유형, 제목, 작성일자, 조회수를 제공합니다.</caption>
+										<colgroup>
+											<col style="width:8%;">
+											<col style="width:14%;">
+											<col style="width:auto;">
+											<col style="width:16%;">
+											<col style="width:10%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">번호</th>
+												<th scope="col">소식유형</th>
+												<th scope="col">제목</th>
+												<th scope="col">작성일자</th>
+												<th scope="col">조회수</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-label="번호" class="td-num"><div class="data-group">1</div></td>
+												<td data-label="소식유형" class="td-type"><div class="data-group">새로운 소식</div></td>
+												<td data-label="제목" class="td-subject"><div class="data-group"><a href="#none" class="title-link">[한국에너지기술평가원] 에너지 R&D 혁신 플랫폼 '지니(Genie)' 서비스 개선 안내</a></div></td>
+												<td data-label="작성일자" class="td-date"><div class="data-group">2026-05-18</div></td>
+												<td data-label="조회수" class="td-count"><div class="data-group">124</div></td>
+											</tr>
+											<tr>
+												<td data-label="번호" class="td-num"><div class="data-group">2</div></td>
+												<td data-label="소식유형" class="td-type"><div class="data-group">새로운 소식</div></td>
+												<td data-label="제목" class="td-subject"><div class="data-group"><a href="#none" class="title-link">[KETEP] 지니(Genie) 데이터 개방 및 이용 활성화를 위한 만족도 조사 실시</a></div></td>
+												<td data-label="작성일자" class="td-date"><div class="data-group">2026-04-22</div></td>
+												<td data-label="조회수" class="td-count"><div class="data-group">345</div></td>
+											</tr>
+											<tr>
+												<td data-label="번호" class="td-num"><div class="data-group">3</div></td>
+												<td data-label="소식유형" class="td-type"><div class="data-group">플랫폼공모</div></td>
+												<td data-label="제목" class="td-subject"><div class="data-group"><a href="#none" class="title-link">2026년도 에너지기술정보 서비스 지니(Genie) 활용 우수사례 공모전 안내</a></div></td>
+												<td data-label="작성일자" class="td-date"><div class="data-group">2026-03-11</div></td>
+												<td data-label="조회수" class="td-count"><div class="data-group">512</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="pagination-wrap">
+									<a href="#none" class="page-btn page-first" title="첫 페이지로 이동"><i class="xi-hamburger-back"></i></a>
+									<a href="#none" class="page-btn page-prev" title="이전 페이지로 이동"><i class="xi-angle-left"></i></a>
+									<ul class="page-number-list">
+										<li class="active"><a href="#none" class="page-link">1</a></li>
+										<li><a href="#none" class="page-link">2</a></li>
+										<li><a href="#none" class="page-link">3</a></li>
+										<li><a href="#none" class="page-link">4</a></li>
+										<li><a href="#none" class="page-link">5</a></li>
+									</ul>
+									<a href="#none" class="page-btn page-next" title="다음 페이지로 이동"><i class="xi-angle-right"></i></a>
+									<a href="#none" class="page-btn page-last" title="마지막 페이지로 이동"><i class="xi-hamburger-out"></i></a>
+								</div>
+							</div>
+							</div>
+					
+
+
+
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg"> <!-- 대 타이틀 -->
+									<div class="title-left">
+										<h2 class="title-text"><span>기본 테이블 - 가로형</span></h2>
+										<span class="total-count">총 건수 : <strong>2</strong> 건</span>
+										<span class="title-help-badge">도움말 영역입니다.</span>
+									</div>
+									<div class="title-center">중앙영역</div>
+									<div class="title-right">
+										<button class="btn btn-sm btn-blue icon-register">등록</button>
+										<button class="btn btn-sm btn-outline-green icon-download"> 엑셀다운</button>
+									</div>
+								</div>
+								<div class="table-container table-col-type">
+									<table class="custom-table">
+										<colgroup>
+											<col style="width:30%;">
+											<col style="width:32%;">
+											<col style="width:16%;">
+											<col style="width:32%;">
+											<col style="width:16%;">
+											<col style="width:32%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>기술분야</th>
+												<th colspan="2">전략품목 A</th>
+												<th colspan="2">전략품목 B</th>
+												<th>비고</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td rowspan="3" data-label="기술분야">
+													<div class="data-group">신재생에너지</div>
+												</td>
+												<td colspan="4" data-label="전체내용">
+													<div class="data-group">고효율 태양광 모듈 및 풍력 발전 시스템 고도화</div>
+												</td>
+												<td rowspan="3" data-label="비고">
+													<div class="data-group">중점관리</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2" rowspan="2" data-label="전략품목 A">
+													<div class="data-group">페로브스카이트 태양전지</div>
+												</td>
+												<td colspan="2" data-label="전략품목 B">
+													<div class="data-group">페로브스카이트 태양전지</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-label="상세 품목 1">
+													<div class="data-group">탠덤 구조</div>
+												</td>
+												<td data-label="상세 품목 2">
+													<div class="data-group">대면적화 공정</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- 가로형 테이블 스크롤 -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg"> <!-- 대 타이틀 -->
+									<div class="title-left">
+										<h2 class="title-text"><span>스크롤 테이블 - 가로형</span></h2>
+										<span class="total-count">총 건수 : <strong>2</strong> 건</span>
+										<span class="title-help-badge">도움말 영역입니다.</span>
+									</div>
+									<div class="title-center">중앙영역</div>
+									<div class="title-right">
+										<button class="btn btn-sm btn-blue icon-register">등록</button>
+										<button class="btn btn-sm btn-outline-green icon-download"> 엑셀다운</button>
+									</div>
+								</div>
+								<div class="table-container table-scroll-tpye">
+									<table class="custom-table">
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th colspan="2">항목 A</th>
+												<th colspan="2">항목 B</th>
+												<th>항목 C</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td rowspan="3">
+													<div class="data-group">
+														111111
+													</div>
+												</td>
+												<td colspan="4"><div class="data-group">데이터 2</div></td>
+												<td rowspan="3"><div class="data-group">데이터 2</div></td>
+											</tr>
+											<tr>
+												<td colspan="2" rowspan="2"><div class="data-group">데이터 2</div></td>
+												<td colspan="2"><div class="data-group">데이터 2</div></td>
+											</tr>
+											<tr>
+												<td><div class="data-group">데이터 2</div></td>
+												<td><div class="data-group">데이터 2</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- 세로형 테이블 -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg"> <!-- 대 타이틀 -->
+									<div class="title-left">
+										<h2 class="title-text"><span>기본 테이블 - 세로형</span></h2>
+										<span class="total-count">총 건수 : <strong>1</strong> 건</span>
+										<span class="title-help-badge">수행기관의 필수 입력 항목입니다.</span>
+									</div>
+									<div class="title-right">
+										<button class="btn btn-sm btn-blue icon-save">저장하기</button>
+										<button class="btn btn-sm btn-outline-red icon-delete">삭제</button>
+										<button class="btn btn-sm btn-outline-gray icon-list">목록</button>
+									</div>
+								</div>
+								<div class="title-box-area title-md"> <!-- 중 타이틀 -->
+									<div class="title-left">
+										<h3 class="title-text"><span>과제정보</span></h3>
+									</div>
+									<div class="title-right">
+										<button class="btn btn-sm btn-outline-blue">버튼C</button>
+									</div>
+								</div>
+								<div class="table-container table-row-type">
+									<table class="custom-table">
+										<colgroup>
+											<col style="width:16%;">
+											<col style="width:32%;">
+											<col style="width:16%;">
+											<col style="width:32%;">
+										</colgroup>
+										<tbody>
+											<!-- 1행: 기본 텍스트 및 읽기전용 인풋 (제공해주신 원본) -->
+											<tr>
+												<th scope="row" data-label="공고번호">
+													<div class="data-group">공고번호</div>
+												</th>
+												<td data-label="공고번호 내용">
+													<div class="data-group">KETEP-2026-R001</div>
+												</td>
+												<th scope="row" data-label="공고연도">
+													<div class="data-group">
+														<label for="biz_year">공고연도</label>
+														<span class="required">*</span>
+													</div>
+												</th>
+												<td data-label="공고연도 내용">
+													<div class="data-group">
+														<input type="text" id="biz_year" class="input-text" value="2026" readonly>
+													</div>
+												</td>
+											</tr>
+											<!-- 2행: 기본 텍스트 인풋 가변 제어 (is-success / is-error) -->
+											<tr>
+												<th scope="row" data-label="담당자명">
+													<div class="data-group">
+														<label for="mgr_name">담당자명</label>
+														<span class="required">*</span>
+													</div>
+												</th>
+												<td data-label="담당자명 내용">
+													<div class="data-group">
+														<input type="text" id="mgr_name" class="input-text is-success" value="홍길동">
+													</div>
+													<div class="data-util">
+														<p class="util_msg">사용 가능합니다</p>
+													</div>
+												</td>
+												<th scope="row" data-label="직위">
+													<div class="data-group">
+														<label for="mgr_pos">직위</label>
+														<span class="required">*</span>
+													</div>
+												</th>
+												<td data-label="직위 내용">
+													<div class="data-group">
+														<input type="text" id="mgr_pos" class="input-text is-error" value="오타입력값">
+													</div>
+													<div class="data-util">
+														<p class="util_msg">중복된 데이터입니다</p>
+													</div>
+												</td>
+											</tr>
+											<!-- 3행: 셀렉트 박스 및 라디오 그룹 -->
+											<tr>
+												<th scope="row" data-label="제출구분">
+													<div class="data-group">
+														<label for="submit_type">제출구분</label>
+														<span class="required">*</span>
+													</div>
+												</th>
+												<td data-label="제출구분 내용">
+													<div class="data-group">
+														<select id="submit_type" class="select-box">
+															<option value="">선택</option>
+															<option value="1" selected>최초제출</option>
+															<option value="2">수정제출</option>
+														</select>
+													</div>
+												</td>
+												<th scope="row" data-label="보안과제 여부">
+													<div class="data-group">
+														보안과제 여부
+														<span class="required">*</span>
+													</div>
+												</th>
+												<td data-label="보안과제 여부 내용">
+													<div class="radio-group">
+														<label class="radio-label"><input type="radio" name="sec_yn" checked> <span>일반</span></label>
+														<label class="radio-label"><input type="radio" name="sec_yn"> <span>보안</span></label>
+													</div>
+												</td>
+											</tr>
+											<!-- 4행: 3단 분할 인풋 박스 및 체크박스 그룹 -->
+											<tr>
+												<th scope="row" data-label="연락처">
+													<div class="data-group">
+														<label for="tel_div_1">연락처</label>
+														<span class="required">*</span>
+													</div>
+												</th>
+												<td data-label="연락처 내용">
+													<div class="data-group">
+														<input type="text" id="tel_div_1" class="input-text w-small text-center" value="02" maxlength="3">
+														<span>-</span>
+														<input type="text" id="tel_div_2" class="input-text w-small text-center" value="123" maxlength="4">
+														<span>-</span>
+														<input type="text" id="tel_div_3" class="input-text w-small text-center" value="4567" maxlength="4">
+													</div>
+												</td>
+												<th scope="row" data-label="동의항목">
+													<div class="data-group">동의항목</div>
+												</th>
+												<td data-label="동의항목 내용">
+													<div class="checkbox-group">
+														<label class="checkbox-label"><input type="checkbox" name="agree_items" checked> <span>문자알림</span></label>
+														<label class="checkbox-label"><input type="checkbox" name="agree_items"> <span>이메일 수신</span></label>
+													</div>
+												</td>
+											</tr>
+											<!-- 5행: 날짜 기간 선택 인풋 -->
+											<tr>
+												<th scope="row" data-label="사업수행기간">
+													<div class="data-group">
+														사업수행기간
+														<span class="required">*</span>
+													</div>
+												</th>
+												<td colspan="3" data-label="사업수행기간 내용">
+													<div class="data-group">
+														<input type="date" class="date-input" title="시작일" value="2026-06-01">
+														<span>~</span>
+														<input type="date" class="date-input" title="종료일" value="2026-12-31">
+														<span>총 개월 수</span>
+														<input type="text" class="input-text w-small text-center" value="7" readonly>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- 입력 화면 -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="extra_area_wrap">
+									<div class="board-view-area">
+										<div class="board-view-header">
+											<div class="board-view-meta">
+												<span class="board-view-category">공지사항</span>
+												<span class="board-view-date">2026.05.18</span>
+											</div>
+											<div class="board-view-title">상세화면 입니다.</div>
+										</div>
+										<div class="board-view-detail">
+											<div class="board-view-row">
+												<div class="board-view-label">작성자</div>
+												<div class="board-view-value">관리자</div>
+											</div>
+											<div class="board-view-row">
+												<div class="board-view-label">조회수</div>
+												<div class="board-view-value">1,234</div>
+											</div>
+											<div class="board-view-row full">
+												<div class="board-view-label">첨부파일</div>
+												<div class="board-view-value">
+													<a href="#" class="ext-file_link" download="">가이드라인_최종본.pdf (1.2MB)</a>
+												</div>
+											</div>
+										</div>
+										<div class="board-view-text">
+											본문 내용이 들어가는 영역입니다. 충분한 행간과 가독성을 확보했습니다. <br><br>
+											모든 구조를 div로 변경하여 범용성을 높였으며, 클래스 기반으로 스타일이 적용됩니다.
+										</div>
+										<div class="board-view-bottom">
+											<button type="button" class="btn btn-lg btn-outline-gray">목록으로</button>
+											<div class="btn-group">
+												<button type="button" class="btn btn-lg btn-outline-blue ">수정</button>
+												<button type="button" class="btn btn-lg btn-outline-red ">삭제</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- 작성 화면 -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg">
+									<div class="title-left">
+										<h2 class="title-text"><span>과제신청 등록</span></h2>
+										<span class="title-help-badge">GENIE AI 기반 고도화 구축 사업 신청 양식입니다.</span>
+									</div>
+									<div class="title-right">
+										<p class="required-txt">필수항목</p>
+									</div>
+								</div>
+
+								<table class="board-write-area">
+									<caption>GENIE 고도화 과제신청 서식: 공고 정보 확인, 연구개발기관 정보, 과제 기본정보 및 계획서 첨부 정보 제공</caption>
+									<colgroup>
+										<col style="width: 20%;">
+										<col style="width: 80%;">
+									</colgroup>
+									<tbody>
+										<!-- 공고 매칭 확인 (읽기 전용) -->
+										<tr>
+											<th scope="row"><label>선택 공고명</label></th>
+											<td>
+												<div class="table_group txt-value f-bold">
+													한국에너지기술평가원 통합형 R&D 플랫폼(GENIE) AI 기반 고도화 구축
+												</div>
+											</td>
+										</tr>
+										<!-- 연구개발기관 정보 -->
+										<tr>
+											<th scope="row"><label for="inst_name">주관연구개발기관</label><span class="required-mark">*</span></th>
+											<td>
+												<div class="table_group">
+													<input type="text" id="inst_name" class="input-text w-half" placeholder="기관명을 입력해주세요.">
+													<button type="button" class="btn btn-md btn-outline-gray icon-search">검색</button>
+												</div>
+											</td>
+										</tr>
+										<!-- 라디오 버튼 예시 영역 -->
+										<tr>
+											<th scope="row"><label>연구분야 구분</label><span class="required-mark">*</span></th>
+											<td>
+												<div class="table_group">
+													<div class="radio-group">
+														<label class="radio-label"><input type="radio" name="research_type" checked> <span>인공지능(AI)</span></label>
+														<label class="radio-label"><input type="radio" name="research_type"> <span>빅데이터</span></label>
+														<label class="radio-label"><input type="radio" name="research_type"> <span>클라우드</span></label>
+														<label class="radio-label"><input type="radio" name="research_type"> <span>기타 블록체인</span></label>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<!-- 3단 셀렉트 박스 예시 영역 -->
+										<tr>
+											<th scope="row"><label for="sel_region_1">주요수행 지역 선택</label><span class="required-mark">*</span></th>
+											<td>
+												<div class="table_group">
+													<select id="sel_region_1" class="select-box">
+														<option value="">시/도 선택</option>
+														<option value="1" selected>대전광역시</option>
+														<option value="2">서울특별시</option>
+													</select>
+													<select id="sel_region_2" class="select-box">
+														<option value="">시/군/구 선택</option>
+														<option value="1" selected>유성구</option>
+														<option value="2">서구</option>
+													</select>
+													<select id="sel_region_3" class="select-box">
+														<option value="">읍/면/동 선택</option>
+														<option value="1" selected>가정동</option>
+														<option value="2">덕명동</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<!-- 과제 기본 정보 (is-error 적용 예시) -->
+										<tr>
+											<th scope="row"><label for="project_title_ko">제안 과제명(국문)</label><span class="required-mark">*</span></th>
+											<td>
+												<div class="table_group">
+													<input type="text" id="project_title_ko" class="input-text mw100 is-error" value="기존 등록된 중복 과제명 예시 분기용 데이터">
+												</div>
+												<div class="data-util">
+													<p class="util_msg">중복된 데이터입니다</p>
+												</div>
+											</td>
+										</tr>
+										<!-- 과제 기본 정보 (is-success 적용 예시) -->
+										<tr>
+											<th scope="row"><label for="project_title_en">제안 과제명(영문)</label><span class="required-mark">*</span></th>
+											<td>
+												<div class="table_group">
+													<input type="text" id="project_title_en" class="input-text mw100 is-success" value="Optimization of Green Hydrogen Production Systems">
+												</div>
+												<div class="data-util">
+													<p class="util_msg">사용 가능합니다</p>
+												</div>
+											</td>
+										</tr>
+										<!-- 3단 인풋 박스 예시 영역 -->
+										<tr>
+											<th scope="row"><label for="tel_1">실무담당자 연락처</label><span class="required-mark">*</span></th>
+											<td>
+												<div class="table_group">
+													<input type="text" id="tel_1" class="input-text w-small text-center" value="010" maxlength="3">
+													<span>-</span>
+													<input type="text" id="tel_2" class="input-text w-small text-center" value="0000" maxlength="4">
+													<span>-</span>
+													<input type="text" id="tel_3" class="input-text w-small text-center" value="0000" maxlength="4">
+												</div>
+											</td>
+										</tr>
+										<!-- 연구비 및 기간 -->
+										<tr>
+											<th scope="row"><label for="total_budget">신청 총사업비</label><span class="required-mark">*</span></th>
+											<td>
+												<div class="table_group">
+													<input type="text" id="total_budget" class="input-text" placeholder="0">
+													<span>원</span>
+													<span class="byte-count">(지원 한도: 4.5억 원 이내)</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label>연구수행기간</label><span class="required-mark">*</span></th>
+											<td>
+												<div class="table_group">
+													<input type="date" class="date-input" title="시작일" value="2026-07-01">
+													<span>~</span>
+													<input type="date" class="date-input" title="종료일" value="2027-02-28">
+													<span>총 개월 수</span>
+													<input type="text" class="input-text w-small" value="8" readonly>
+												</div>
+											</td>
+										</tr>
+										<!-- 체크박스 예시 영역 -->
+										<tr>
+											<th scope="row"><label>기술 가점 항목 증빙</label></th>
+											<td>
+												<div class="table_group">
+													<div class="checkbox-group">
+														<label class="checkbox-label"><input type="checkbox" name="add_point"> <span>우수연구자 포상 소지</span></label>
+														<label class="checkbox-label"><input type="checkbox" name="add_point" checked> <span>에너지 신기술 인증(NET)</span></label>
+														<label class="checkbox-label"><input type="checkbox" name="add_point"> <span>중소·벤처기업 증빙</span></label>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<!-- 핵심 개발 기술 요약 -->
+										<tr>
+											<th scope="row"><label for="project_summary">핵심 기술 개발요약</label><span class="required-mark">*</span></th>
+											<td>
+												<div class="table_group">
+													<div class="textarea_wrap">
+														<textarea id="project_summary" class="input_text" maxlength="2000" placeholder="GENIE AI 엔진 및 빅데이터 정제 솔루션 등 본 과제에서 개발할 핵심 연계 기술의 요약 정보를 입력해주세요."></textarea>
+														<div class="count_group">
+															<span class="current_count">0</span>/<span class="total_count">2000</span>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" data-label="연구책임자">
+												<div class="data-group">
+													연구책임자
+													<span class="required">*</span>
+												</div>
+											</th>
+											<td colspan="3">
+												<table class="nested-table">
+													<thead>
+														<tr>
+															<th>성명</th>
+															<th>소속</th>
+															<th>직위</th>
+															<th>휴대전화</th>
+															<th>전자우편</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-label="성명">
+																<div class="data-group">
+																	<input type="text" class="input-text" value="홍길동" readonly>
+																	<button type="button" class="btn btn-md btn-outline-gray">검색</button>
+																</div>
+															</td>
+															<td data-label="소속">공과대학</td>
+															<td data-label="직위">정교수</td>
+															<td data-label="휴대전화">010-0000-0000</td>
+															<td data-label="전자우편">energy@kentech.ac.kr</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+
+										<!-- 서류 및 파일 업로드 컴포넌트 -->
+										<tr>
+											<th scope="row"><label>신청 서류 첨부</label><span class="required-mark">*</span></th>
+											<td>
+												<div class="table_group">
+													<div class="krds-file-upload">
+														<div class="file-upload-drag">
+															<input type="file" id="file_add" class="real-file-input" multiple="">
+															<div class="file-upload-inner">
+																<i class="xi-cloud-upload"></i>
+																<p class="upload-guide">제출서류 서식을 이 위로 끌어다 놓거나 <strong>파일 선택</strong> 버튼을 클릭하세요.</p>
+																<label for="file_add" class="btn-file-select">파일 선택</label>
+															</div>
+														</div>
+
+														<div class="file-list-container">
+															<ul class="file-list">
+																<li class="file-item">
+																	<span class="file-name">01_주관연구개발기관_신청서_및_수행계획서_확정본.pdf (1.8MB)</span>
+																	<button type="button" class="btn-file-delete" title="삭제"><i class="xi-close"></i></button>
+																</li>
+																<li class="file-item">
+																	<span class="file-name">02_과제_참여_의사확약서_서명완료.pdf (920KB)</span>
+																	<button type="button" class="btn-file-delete" title="삭제"><i class="xi-close"></i></button>
+																</li>
+															</ul>
+														</div>
+
+														<p class="info-msg-group">
+															<span class="info-txt">* 필수 제출서류(01~04번) 누락 시 접수 대상에서 제외될 수 있습니다.</span>
+															<span class="info-txt">* 허용 확장자: jpg, png, pdf, zip, hwpx</span>
+														</p>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="content-bottom-util">
+								<button type="button" class="btn btn-lg btn-outline-gray"><span>목록보기</span></button>
+								<button type="button" class="btn btn-lg btn-outline-blue"><span>임시저장</span></button>
+								<button type="button" class="btn btn-lg btn-blue"><span>제출완료</span></button>
+							</div>
+						</div>
+
+						<!-- 도움말 영역 추가 start -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg">
+									<div class="title-left">
+										<h2 class="title-text"><span>도움말 영역</span></h2>
+									</div>
+								</div>
+								<div class="basics-helpbox">
+									<i class="icon"><span class="sr-only">도움말</span></i>
+									<div class="text">
+										<h4>한국에너지기술평가원</h4>
+										<p>(이하 ‘에기평’이라 함)이 취급하는 모든 개인정보는 「개인정보보호법」 및 관련법령에 근거하여 수집·보유 및 처리하는 개인정보를 공공업무의 적절한 수행과 이용자의 권익을 보호하기 위해 적법하고 적정하게 취급할 것입니다. <br>
+										에기평은 개인정보보호법 제 30조에 따라 정보주체의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 개인정보 처리방침을 수립 · 공개하고 있습니다.</p>
+									</div>
+								</div>
+							</div>
+							<div class="con-box-item">
+								<div class="title-box-area title-md">
+									<div class="title-left">
+										<h2 class="title-text"><span>보조 설명 영역</span></h2>
+									</div>
+								</div>
+								<ul class="list-disc">
+									<li>정보주체(본인)인 경우에는 신분을 증명할 수 있는 증명서 (주민등록증, 운전면허증 등 행정기관에 의해 공인된 것으로 쉽게 변조 및 도용을 할 수 없는 것)제출</li>
+									<li>정보주체의 법정대리인이나 위임을 받은 자는 개인정보 보호법 시행규칙 별지 제11호 서식에 따른 위임장과 위임자와 대리인의 주민등록증 등 신분을 확인할 수 있는 증명서제출</li>
+									<li>웹사이트나 휴대폰, i-PIN을 통해 확인</li>
+								</ul>
+							</div>
+							<div class="con-box-item">
+								<div class="title-box-area title-md">
+									<div class="title-left">
+										<h2 class="title-text"><span>한줄 도움말</span></h2>
+									</div>
+								</div>
+								<div class="box-help-text">
+									<h4>도움말</h4>
+									<div>
+										<p>접수공고 접수일로부터 공고접수종료일까지 미등록시 신규평가분과 생성시부터 평가결과 등록시까지</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<!-- 도움말 영역 추가 end -->
+						
+						<!-- 데이터없음 영역 추가 start -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg">
+									<div class="title-left">
+										<h2 class="title-text"><span>데이터없음 영역</span></h2>
+									</div>
+								</div>
+								<div class="empty-state">
+									<div class="empty-icon"><i class="xi-folder-remove-o"><span class="sr-only">데이터없음</span></i></div>
+									<p>진행중인 내역이 없습니다</p>
+									<span>새로운 업무가 배정되면 이곳에서 확인하실 수 있습니다.</span>
+								</div>
+							</div>
+						</div>
+						<!-- 데이터없음 영역 추가 end -->
+						
+						
+						
+						<!-- 버튼 샘플 영역 -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg"> <!-- 대 타이틀 -->
+									<div class="title-left">
+										<h2 class="title-text"><span>버튼 영역</span></h2>
+									</div>
+									<div class="title-right">
+										<button class="btn btn-sm btn-blue">버튼A</button>
+										<button class="btn btn-sm btn-outline-red"> 버튼B</button>
+									</div>
+								</div>
+							</div>
+							<div class="con-box-item">
+								<div class="title-box-area title-md"> <!-- 중 타이틀 -->
+									<div class="title-left">
+										<h3 class="title-text"><span>색상 형태 버튼</span></h3>
+									</div>
+								</div>
+								<div class="data-group">
+									<button class="btn btn-md btn-blue"><span>Blue</span></button>
+									<button class="btn btn-md btn-green"><span>Green</span></button>
+									<button class="btn btn-md btn-red"><span>Red</span></button>
+									<button class="btn btn-md btn-gray"><span>Gray</span></button>
+									<button class="btn btn-md btn-pink"><span>Pink</span></button>
+									<button class="btn btn-md btn-orange"><span>Orange</span></button>
+									<button class="btn btn-md btn-skyblue"><span>Skyblue</span></button>
+									<button class="btn btn-md btn-purple"><span>Purple</span></button>
+								</div>
+							</div>
+							<div class="con-box-item">
+								<div class="title-box-area title-md"> <!-- 중 타이틀 -->
+									<div class="title-left">
+										<h3 class="title-text"><span>라인 형태 버튼</span></h3>
+									</div>
+								</div>
+								<div class="data-group">
+									<button class="btn btn-md btn-outline-blue"><span>Blue Line</span></button>
+									<button class="btn btn-md btn-outline-green"><span>Green Line</span></button>
+									<button class="btn btn-md btn-outline-red"><span>Red Line</span></button>
+									<button class="btn btn-md btn-outline-purple"><span>Purple Line</span></button>
+									<button class="btn btn-md btn-outline-opaque"><span>opaque</span></button>
+								</div>
+							</div>
+
+							<div class="con-box-item">
+								<div class="title-box-area title-md"> <!-- 중 타이틀 -->
+									<div class="title-left">
+										<h3 class="title-text"><span>아이콘 형태 버튼</span></h3>
+									</div>
+								</div>
+							   <div class="data-group">
+									 <!-- 입력 및 저장 관련 -->
+									<button class="btn btn-sm btn-blue icon-register">등록</button>
+									<button class="btn btn-sm btn-blue icon-save">저장하기</button>
+									<button class="btn btn-sm btn-blue icon-load">불러오기</button>
+
+									<!-- 수정 및 변경 관련 -->
+									<button class="btn btn-sm btn-blue icon-edit">수정</button>
+									<button class="btn btn-sm btn-blue icon-change">변경</button>
+									<button class="btn btn-sm btn-blue icon-reorder">순서변경</button>
+
+									<!-- 파일 및 데이터 송수신 -->
+									<button class="btn btn-sm btn-blue icon-upload">업로드</button>
+									<button class="btn btn-sm btn-blue icon-download">다운로드</button>
+									<button class="btn btn-sm btn-blue icon-send">전송</button>
+									<button class="btn btn-sm btn-blue icon-link">링크</button>
+									<button class="btn btn-sm btn-blue icon-link-back">링크</button>
+
+									<!-- 조회 및 뷰어 관련 -->
+									<button class="btn btn-sm btn-blue icon-search">돋보기</button>
+									<button class="btn btn-sm btn-blue icon-view">보기</button>
+									<button class="btn btn-sm btn-blue icon-preview">미리보기</button>
+									<button class="btn btn-sm btn-blue icon-list">목록</button>
+									<button class="btn btn-sm btn-blue icon-new-window">새창열림</button>
+
+									<!-- 선택 및 상태 체크 -->
+									<button class="btn btn-sm btn-blue icon-check">선택</button>
+									<button class="btn btn-sm btn-blue icon-pick">픽</button>
+									<button class="btn btn-sm btn-blue icon-all">전체</button>
+
+									<!-- 문서 및 데이터 관리 -->
+									<button class="btn btn-sm btn-blue icon-document">문서</button>
+									<button class="btn btn-sm btn-blue icon-folder">폴더</button>
+									<button class="btn btn-sm btn-blue icon-report-card">평가표</button>
+									<button class="btn btn-sm btn-blue icon-evaluate">평가</button>
+									<button class="btn btn-sm btn-blue icon-settlement">정산</button>
+									<button class="btn btn-sm btn-blue icon-impo">중요</button>
+
+									<!-- 수치 및 크기 제어 -->
+									<button class="btn btn-sm btn-blue icon-plus">추가</button>
+									<button class="btn btn-sm btn-blue icon-minus">빼기</button>
+									<button class="btn btn-sm btn-blue icon-minimize">축소</button>
+									<button class="btn btn-sm btn-blue icon-maximize ">확대</button>
+
+									<!-- 시간 및 시스템 액션 -->
+									<button class="btn btn-sm btn-blue icon-calendar">캘린더</button>
+									<button class="btn btn-sm btn-blue icon-clock">시계</button>
+									<button class="btn btn-sm btn-blue icon-refresh">새로고침</button>
+									<button class="btn btn-sm btn-blue icon-close">종료</button>
+									<button class="btn btn-sm btn-blue icon-cancel">취소</button>  
+									<button class="btn btn-sm btn-blue icon-delete">삭제</button>  
+									<button class="btn btn-sm btn-blue icon-delete">아웃</button>  
+									<button class="btn btn-sm btn-blue icon-delete">인</button>  
+								</div>
+							</div>
+							<div class="con-box-item">
+								<div class="title-box-area title-md"> <!-- 중 타이틀 -->
+									<div class="title-left">
+										<h3 class="title-text"><span>크기별 형태 버튼</span></h3>
+									</div>
+								</div>
+								<div class="data-group">
+									<button class="btn btn-xs btn-gray"><span>Extra Small</span></button>
+									<button class="btn btn-sm btn-gray"><span>Small</span></button>
+									<button class="btn btn-md btn-gray"><span>Medium</span></button>
+									<button class="btn btn-lg btn-gray"><span>Large</span></button>
+								</div>
+							</div>
+						</div>
+
+						<!-- 팝업 -->
+						<div class="con-box-area">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg"> <!-- 대 타이틀 -->
+									<div class="title-left">
+										<h2 class="title-text"><span>팝업 영역</span></h2>
+									</div>
+								</div>
+							</div>
+
+							<div class="con-box-item">
+								<div class="title-box-area title-md"> <!-- 중 타이틀 -->
+									<div class="title-left">
+										<h3 class="title-text"><span>팝업 선택</span></h3>
+									</div>
+								</div>
+								<div class="data-group">
+									<!-- 팝업 오픈 버튼 영역 -->
+									<button type="button" class="btn btn-md btn-outline-gray icon-new-window btn-popup-open" data-target="popup-normal"><span>일반 팝업</span></button>
+									<button type="button" class="btn btn-md btn-outline-gray icon-new-window btn-popup-open" data-target="popup-alert"><span>경고 팝업</span></button>
+									<button type="button" class="btn btn-md btn-outline-gray icon-new-window btn-popup-open" data-target="modal-detail"><span>모달 팝업</span></button>
+									<a href="P_1_1_1_새창팝업.html" target="_blank" title="새창열림" class="btn btn-md btn-outline-gray icon-new-window"><span>새창 팝업</span></a>
+
+									<!-- 1-1. 일반 알림 팝업 (soe_overlay) -->
+									<div id="popup-normal" class="soe_overlay" style="display: none;">
+										<div class="soe_container soe_blue">
+											<div class="soe_header">
+												<i class="soe_icon_alert xi-info"></i>
+												<h2 class="soe_title">일반 알림 안내</h2>
+											</div>
+											<div class="soe_content">
+												<div class="soe_warning_box">
+													<p class="soe_text_important">PMIS 시스템 내부 알림 사항입니다.</p>
+												</div>
+											</div>
+											<div class="soe_actions">
+												<button type="button" class="soe_btn_submit btn-popup-close">확인</button>
+												<button type="button" class="soe_btn_skip btn-popup-close">닫기</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- 1-2. 경고/알림 팝업 (soe_overlay) -->
+									<div id="popup-alert" class="soe_overlay" style="display: none;">
+										<div class="soe_container">
+											<div class="soe_header">
+												<i class="soe_icon_alert xi-warning"></i>
+												<h2 class="soe_title">시스템 정기 점검 안내</h2>
+											</div>
+											<div class="soe_content">
+												<div class="soe_warning_box">
+													<p class="soe_text_important">안정적인 서비스 제공을 위해 <strong>시스템 점검</strong>이 진행될 예정입니다.</p>
+													<span class="soe_text_notice">점검 일시: 2026년 06월 01일 00:00 ~ 04:00</span>
+												</div>
+												<label class="soe_check_area">
+													<input type="checkbox" class="soe_checkbox">
+													<span class="soe_check_label">오늘 하루 이 창을 열지 않음</span>
+												</label>
+											</div>
+											<div class="soe_actions">
+												<button type="button" class="soe_btn_submit btn-popup-close">확인</button>
+												<button type="button" class="soe_btn_skip btn-popup-close">닫기</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- 2. 모달 대형 팝업 (common-modal_wrap) -->
+									<div id="modal-detail" class="common-modal_wrap">
+										<div class="common-modal_dimmed btn-popup-close"></div> <!-- 딤드 클릭 시에도 닫히도록 클래스 추가 -->
+										<div class="common-modal_content">
+											<div class="common-modal_header">
+												<h2 class="common-modal_title">상세 내역 조회</h2>
+												<button type="button" class="common-btn_close btn-popup-close" title="닫기"></button>
+											</div>
+											<div class="common-modal_body">
+
+
+												<div class="con-box-item">
+													<div class="title-box-area title-lg"> <!-- 대 타이틀 -->
+														<div class="title-left">
+															<h2 class="title-text"><span>내역 조회</span></h2>
+														</div>
+													</div>
+													<div class="table-container table-col-type">
+														<table class="custom-table">
+															<thead>
+																<tr>
+																	<th>기술분야</th>
+																	<th colspan="2">전략품목 A</th>
+																	<th colspan="2">전략품목 B</th>
+																	<th>비고</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td rowspan="3" data-label="기술분야">
+																		<div class="data-group">신재생에너지</div>
+																	</td>
+																	<td colspan="4" data-label="전체내용">
+																		<div class="data-group">고효율 태양광 모듈 및 풍력 발전 시스템 고도화</div>
+																	</td>
+																	<td rowspan="3" data-label="비고">
+																		<div class="data-group">중점관리</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2" rowspan="2" data-label="전략품목 A">
+																		<div class="data-group">페로브스카이트 태양전지</div>
+																	</td>
+																	<td colspan="2" data-label="전략품목 B">
+																		<div class="data-group">페로브스카이트 태양전지</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td data-label="상세 품목 1">
+																		<div class="data-group">탠덤 구조</div>
+																	</td>
+																	<td data-label="상세 품목 2">
+																		<div class="data-group">대면적화 공정</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+											<div class="common-modal_footer">
+												<button type="button" class="btn btn-md btn-outline-gray common-btn_cancel btn-popup-close">취소</button>
+												<button type="button" class="btn btn-md btn-blue common-btn_confirm btn-popup-close">확인</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 하단 유틸리티 -->
+						<div class="content-bottom-util">
+							<button class="btn btn-lg btn-outline-gray"><span>목록보기</span></button>
+							<button class="btn btn-lg btn-outline-blue"><span>임시저장</span></button>
+							<button class="btn btn-lg btn-blue"><span>제출완료</span></button>
+						</div>
+					</div>
+			</div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

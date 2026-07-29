@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GENIEPLUS 입니다.">
+    <meta name="author" content="시스템게이트">
+    <meta name="-csrf" content="b4d963cf-a117-4e04-9a4e-0bd906cefa2a">
+    <meta name="-csrf-header" content="X-CSRF-TOKEN">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>GENIEPLUS</title>
+    <!-- basic css -->
+    <link type="text/css" rel="stylesheet" href="css/basics-reset.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-common.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-layout.css">
+    <link type="text/css" rel="stylesheet" href="XEIcon-2.2.0/xeicon.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/basics-common.js"></script>
+    <script type="text/javascript" src="js/geniplus-common.js"></script>
+</head>
+<body class="sub-wrapper auto-logout-wrapper"> <!-- 20260629 자동 로그아웃 시 auto-logout-wrapper 클래스 추가 -->
+     <div class="sub-wrap">
+        <div id="skip-nav">
+            <a href="#contents_container">본문 바로가기</a>
+        </div>
+
+        <div class="sub-container">
+            <main class="sub-main-content general-wrap" id="contents_container">
+				<div class="content-area-wrap">
+				<div class="content-area auto-logout-wrap"> <!-- 20260629 자동 로그아웃 시 auto-logout-wrap 클래스 추가 -->
+						<div class="con-box-area">
+							<!-- 20260629 자동 로그아웃 콘텐츠 구성 start -->
+							<div class="auto-logout-area">
+									<div class="a-logout-box-header header-logo">
+										<a href="/pms/uat/uia/egovLoginUsr.do"><span>KETEP logo</span></a>
+										<a href="/pms/uat/uia/egovLoginUsr.do"><span>KETEP GENIEPLUS logo</span></a>
+									</div>
+								<div class="a-logout-box">
+									<div class="a-logout-box-con">
+										<h2 class="gne-card-title"><strong>로그인 유지 시간이 만료되어<br>자동으로<span>로그아웃</span>되었습니다.</strong></h2>
+										<p>에너지기술평가원 지니플러스를 이용해 주셔서 감사합니다.<br>로그인이 필요한 경우 '다시 로그인하기' 버튼을 눌러주세요.</p>
+										<div class="a-logout-util">
+											<button type="button" onclick="location.href='/pms/main/index.do'">메인화면 바로가기</button>
+											<button type="button" onclick="location.href='/pms/main/index.do'">다시 로그인하기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 20260629 자동 로그아웃 콘텐츠 구성 end -->
+					 	</div>					
+					</div>
+				</div>
+			</main>
+        </div>
+    </div>
+</body>
+</html>

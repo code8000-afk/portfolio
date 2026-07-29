@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="11년차 경력 UI/UX 디자이너 이지수 포트폴리오 입니다.">
+    <meta name="author" content="UI/UX 디자이너 이지수">
+    <link rel="shortcut icon" href="images/icon/favicon-jisu.svg" type="image/x-icon"> 
+    <title>11년차 경력 UI/UX 디자이너 이지수 포트폴리오</title>
+    <link rel="stylesheet" href="css/basics-reset.css">
+    <link rel="stylesheet" href="css/basic-contents.css">
+    <link rel="stylesheet" href="XEIcon-2.2.0/xeicon.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+
+    <!-- 고정 뒤로가기 버튼 -->
+    <a href="index.html" class="btn-back-floating" title="목록으로 돌아가기">
+        <i class="xi-arrow-left"></i>
+        <span>목록으로</span>
+    </a>
+
+    <!-- 퀵 메뉴 영역 -->
+    <nav class="quick-menu">
+        <ul>
+            <li><a href="#sec-info" class="active"><span class="label">정보</span><span class="dot"></span></a></li>
+            <li><a href="#sec-main"><span class="label">메인</span><span class="dot"></span></a></li>
+            <li><a href="#sec-sub"><span class="label">공모목록</span><span class="dot"></span></a></li>
+            <li><a href="#sec-archiving"><span class="label">아카이빙</span><span class="dot"></span></a></li>
+            <li><a href="#sec-mobile"><span class="label">모바일</span><span class="dot"></span></a></li>
+            <li><a href="#sec-detail-system"><span class="label">상세보기</span><span class="dot"></span></a></li>
+            <li class="top-item"><a href="#sec-info" class="btn-top" title="최상단으로 이동"><span class="label">TOP</span><span class="dot"><i class="xi-arrow-up"></i></span></a></li>
+        </ul>
+    </nav>
+
+    <!-- 스크롤 시 고정 표시될 미니 헤더 바 -->
+    <div class="mini-header-bar" id="miniHeader">
+        <h3 class="mini-header-title">인천광역시교육청 설계공모 심사시스템 구축</h3>
+        <ul class="mini-header-info">
+            <li><span class="info-label">작업 기간</span>2023.08.01 ~ 2024.01.20</li>
+            <li><span class="info-label">담당 범위</span>디자인 100%, 퍼블리싱 100%</li>
+            <li><span class="info-label">작업 환경</span>Photoshop, Illustrator, HTML5, CSS3, JS, jQuery</li>
+        </ul>
+    </div>
+
+    <!-- 상단 꽉 찬 히어로 요약 섹션 (정보) -->
+    <header id="sec-info" class="portfolio-header scroll-section">
+        <div class="portfolio-header-inner">
+            <div class="hero-info-area">
+                <span class="hero-category">MOBILE & WEB DESIGN</span>
+                <p class="hero-subtitle">UI/UX 디자이너 이지수</p>
+                <h2 class="project-title">인천광역시교육청 설계공모 심사시스템 구축</h2>
+                
+                <div class="hero-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">작업 기간</span>
+                        <span class="meta-value">2023.08.01 ~ 2024.01.20</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">담당 범위</span>
+                        <span class="meta-value">디자인<strong>100%</strong>, 퍼블리싱<strong>100%</strong></span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">작업 환경</span>
+                        <span class="meta-value">Photoshop, Illustrator, HTML5, CSS3, JS, jQuery</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">적용 표준</span>
+                        <span class="meta-value">웹 접근성 지침(WAH), 반응형 웹</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">홈페이지</span>
+                        <span class="meta-value">
+                            <a href="https://eduarchi.ice.go.kr/index.jsp" target="_blank" title="홈페이지 링크">홈페이지 바로가기 🔗</a>
+                        </span> 
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="hero-visual-area">
+                <!-- 뒤쪽: PC 형태 -->
+                <div class="mockup-device primary-device">
+                    <div class="pc-screen">
+                        <img src="images/sub/Incheon-main.png" alt="PC 메인">
+                    </div>
+                    <div class="pc-stand"></div>
+                </div>
+                <!-- 앞쪽: 모바일 형태 -->
+                <div class="mockup-device secondary-device">
+                    <div class="mobile-screen">
+                        <img src="images/sub/Incheon-main-mobile.png" alt="모바일 메인">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="portfolio-container">
+        <!-- 개선 사항 리스트 -->
+        <div class="improvement-list">
+            
+            <!-- 콘텐츠 2 (메인) -->
+            <div id="sec-main" class="improvement-item scroll-section">
+                <div class="item-text">
+                    <span class="item-category">WEB DESIGN</span>
+                    <span class="item-badge">HOME</span>
+                    <h3 class="item-title">D-day 카운트다운 중심의,<br><strong>직관적인 공모현황 대시보드 UI</strong></h3>
+                    <p class="item-desc">메인 화면 좌측에 진행 중인 설계공모의 접수 기간과 D-day 잔여일을 대형 레드 뱃지로 강조하여 핵심 일정을 한눈에 파악할 수 있도록 구성했습니다. 우측에는 라이브 심사 중계(YouTube) 배너, 매뉴얼 다운로드, 공지사항을 배치하고, 하단에는 대표 당선작 조감도 슬라이드를 탑재하여 신뢰감 높은 공공 심사 platform 이미지를 연출했습니다.</p>
+                </div>
+                <div class="item-image">
+                    <div class="device-frame">
+                        <img src="images/sub/Incheon-main.png" alt="인천광역시교육청 설계공모 심사시스템 메인 대시보드 UI">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 콘텐츠 3 (공모목록) -->
+            <div id="sec-sub" class="improvement-item scroll-section">
+                <div class="item-text">
+                    <span class="item-category">WEB DESIGN</span>
+                    <span class="item-badge">NOTICE LIST</span>
+                    <h3 class="item-title">단계별 접수 일정을 한눈에,<br><strong>정교한 공모현황 테이블 UI</strong></h3>
+                    <p class="item-desc">참가등록부터 질의접수, 질의회신, 공모안 제출, 심사일까지 복잡한 전 진행 과정을 한 줄의 테이블 구조로 정돈했습니다. 상단 통합 검색 영역(연도, 공모명, 발주기관)을 통해 원하는 공모를 신속하게 찾을 수 있으며, D-day 뱃지 노출로 마감 임박 건을 즉시 인지할 수 있도록 설계했습니다.</p>
+                </div>
+                <div class="item-image">
+                    <div class="device-frame">
+                        <img src="images/sub/Incheon-sub.png" alt="설계공모 목록 및 일정 테이블 UI">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 콘텐츠 4 (아카이빙) -->
+            <div id="sec-archiving" class="improvement-item scroll-section">
+                <div class="item-text">
+                    <span class="item-category">WEB DESIGN</span>
+                    <span class="item-badge">ARCHIVING</span>
+                    <h3 class="item-title">당선작 3D 조감도 중심의,<br><strong>시각적 카드형 아카이빙 갤러리</strong></h3>
+                    <p class="item-desc">역대 교육시설 설계공모 당선작을 시각적으로 감상할 수 있는 갤러리형 아카이빙 페이지입니다. 건축 조감도 썸네일을 상단에 크게 배치하고, 하단에는 발주기관, 업체명, 참가등록 건수, 입상작 수 등 핵심 실적 데이터를 명확히 표기하여 고품질 건축 정보의 시독성을 극대화했습니다.</p>
+                </div>
+                <div class="item-image">
+                    <div class="device-frame">
+                        <img src="images/sub/Incheon-archiving.png" alt="건축설계공모 아카이빙 카드형 그리드 UI">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 콘텐츠 5 (모바일) -->
+            <div id="sec-mobile" class="improvement-item scroll-section">
+                <div class="item-text">
+                    <span class="item-category">MOBILE DESIGN</span>
+                    <span class="item-badge">MOBILE</span>
+                    <h3 class="item-title">모든 디바이스 환경을 고려한,<br><strong>유연하고 정교한 반응형 UI/UX</strong></h3>
+                    <p class="item-desc">다양한 모바일 및 태블릿 해상도에서도 깨짐 없는 인터페이스를 제공합니다. 메인 대시보드의 D-day 현황 카드와 아카이빙의 그리드 레이아웃이 모바일 화면에 맞춰 1열 구조로 유연하게 재배치되며, 터치 친화적인 UI 요소를 적용하여 스마트폰 환경에서도 편리하게 공모 정보를 조회할 수 있습니다.</p>
+                </div>
+                <div class="item-image" style="background: transparent; border: none;">
+                    <div class="mobile-screens-container">
+                        <div class="mobile-screen-wrapper">
+                            <img src="images/sub/Incheon-main-mobile.png" alt="모바일 메인 화면">
+                        </div>
+                        <div class="mobile-screen-wrapper">
+                            <img src="images/sub/Incheon-archiving-mobile.png" alt="모바일 아카이빙 서브 화면">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 하단 데이터 시각화 상세 섹션 (공모 상세 아카이빙) -->
+        <section id="sec-detail-system" class="concept-section scroll-section">
+            <div class="section-header">
+                <span class="section-tag">DETAIL ARCHIVING</span>
+                <h3 class="section-title">공모 개요부터 심사평·도면까지, <strong>원스톱 데이터 시각화 상세 UI</strong></h3>
+                <p class="section-desc">개별 공모의 종합 결과를 투명하게 제공하기 위한 원스톱 상세 조회 페이지입니다.<br>공모 개요부터 심사위원 명단, 종합 심사평, 당선작/입상작 3D 조감도 및 도면 데이터까지 체계적으로 정돈되어 있습니다.</p>
+            </div>
+            <div class="concept-grid">
+                <!-- 공모 상세 보기 카드 -->
+                <article class="concept-card" style="grid-column: span 2;">
+                    <div class="concept-image" style="height: 50rem;">
+                        <img src="images/sub/Incheon-detail.png" alt="설계공모 상세 아카이빙 종합 정보 화면">
+                    </div>
+                    <div class="concept-body">
+                        <span class="concept-badge">FULL DATA SYSTEM</span>
+                        <h4 class="concept-title">체계적인 데이터 분할 및 심사 결과 투명화 UI</h4>
+                        <p class="concept-desc">상단 공모 개요 및 메타정보 표를 시작으로 심사위원 명단, 종합 심사평, 입상 결과, 당선작 배치도·배면도 및 3D 조감도 갤러리를 세로 스크롤 흐름으로 배치했습니다. 방대한 건축 정보와 심사 결과를 시각적으로 명확하게 구분하여 사용자가 원하는 데이터를 빠르게 탐색할 수 있도록 유저 경험을 최적화했습니다.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- 우측 하단 고정 컨택트 플로팅 버튼 그룹 -->
+    <aside class="contact-floating-group">
+        <a href="https://open.kakao.com/o/gWnybxFi" target="_blank" rel="noopener noreferrer" class="btn-floating btn-kakao" title="카카오톡 1:1 오픈채팅 열기">
+            <i class="xi-speech-o"></i>
+            <span class="floating-label">카카오톡 문의</span>
+        </a>
+    </aside>
+
+</body>
+</html>
