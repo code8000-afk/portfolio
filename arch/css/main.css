@@ -110,6 +110,8 @@
 .banner_utils div {width: 100% !important;}
 .banner_util_news p:first-child,
 .banner_util_reference p:first-child {padding:2rem 0rem;}
+.compe_list_box h3 {font-size: 2rem !important;}
+.compe_list ul li a p {font-size: 2.5rem !important;}
 }
 @media screen and (max-width: 490px){
 .compe_list_box h3 {font-size: 2rem;}
