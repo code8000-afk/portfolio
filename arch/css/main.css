@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+
+.sub_tit_h4 {font-size:2.3rem;}
+.competition_area {display: flex; border-bottom: 0.1rem solid #000000;}
+.competition_left {position: relative; width: 50%; padding:5rem 5rem 5rem 0rem;}
+.competition_left:after {content: ""; position: absolute; top:0rem; right:0rem; width:0.1rem; height: 100%; background: #000000;}
+.competition_right {width: 50%; padding:5rem 0rem 5rem 5rem;}
+.sec_title {display: flex; padding: 3rem 0rem;}
+.sub_tit h2 {font-size:3.2rem;}
+.sub_tit span {font-size:1.6rem; display: flex ;align-items: flex-end; padding:0rem 1rem 0.5rem 1rem; color:#636361;}
+.sub_tit {display: flex; width: 80%;}
+.sub_tit_util {display: flex; justify-content:flex-end; width: 20%; align-items: center;}
+
+.line_hover_active {position: relative; display: inline-block;}
+.line_hover_active:after {content: ""; width: 0%;}
+.line_hover_active:hover:after {content: ""; position:absolute; bottom:0rem; left:0rem; width: 100%; height: 0.2rem; background: #000000; transition: all 1s;}
+
+.compe_list > ul > li {display: flex; border-top:0.1rem solid #232323;}
+.compe_list ul li a {display: flex; width: 100%; padding: 1.7rem 1.5rem; transition: all 0.5s;}
+.compe_list ul li a:hover {background: #f4f4f4;}
+.compe_list ul li a:hover h3:after {content: ""; position:absolute; bottom:0rem; left:0rem; width: 100%; height: 0.2rem; background: #000000; transition: all 1s;}
+.compe_list_box {width: 80%;}
+.compe_list_box h3 {font-size:2.3rem;padding: 1rem 0rem;position: relative;word-break: keep-all;display: inline-block;}
+.compe_list_box h3:after {content: ""; width: 0%;}
+.compe_list_box ul {display: flex; padding: 1rem 0rem;}
+.compe_list_box ul li {font-size:1.7rem; color:#63636c; display: flex; align-items: center; padding:0rem 1rem; font-weight: 500;}
+.compe_list_box ul li:first-child {display: flex; background: #666666; min-width: 7rem; align-items: center;justify-content: center; padding:0.5rem 1rem; color:#eeeeee;}
+.compe_list_box ul li span:before {content: "~"; padding:0rem 0.5rem}
+.compe_list ul li .compe_deadline {color:#f04040;}
+.compe_list ul li a p {width: 20%; display: flex; align-items: center; justify-content: center; font-size:3rem; color:#666666; font-weight: bold;}
+.compe_list .receiving ul li:first-child {color: #fff; background: #d74b4b;}
+.compe_list .receiving ul li span {color: #f04040;}
+.compe_list .receiving .compe_deadline {color:#FF2327;}
+
+.compe_annual_text {display: flex;}
+.compe_annual_text div {padding: 0rem 1rem;}
+.compe_annual_text div h3 {font-size:2.3rem; padding: 1rem 0rem;}
+.compe_annual_text div p {font-size:1.6rem; line-height: 2.5rem;}
+.compe_annual_text div a {font-size:1.6rem; display: inline-block; padding: 1rem 0rem; margin:1rem 0rem;}
+.compe_annual_text div a i {margin-left:1rem;}
+
+.compe_status {margin-top: 3.7rem; border-top:0.1rem solid #000000;}
+.compe_status_content {display: flex; flex-wrap: wrap;}
+.compe_status_content a {width: 50%;}
+.compe_status_content a:hover div {background: #E8E8E8;}
+.compe_status_content a div {padding: 1.5rem; background: #f4f4f4; margin:0.5rem;}
+.compe_status_content a div p {font-size:2rem;}
+.compe_status_content a div p:last-child {padding-top:4rem; text-align: right; color:#f04040; font-size:2.3rem;}
+.compe_status_content a div p:first-child {position: relative; display: inline-block;}
+.compe_status_content a div p:first-child:after {content: ""; width: 0%;}
+.compe_status_content a:hover div p:first-child:after {content: ""; position:absolute; bottom:-0.5rem; left:0rem; width: 100%; height: 0.2rem; background: #000000; transition: all 1s; }
+
+.archiving_area {padding:3rem 0rem}
+.archiving_con {}
+.archiving_list {display: flex; flex-wrap: wrap; border-top:0.1rem solid #000000;}
+.archiving_list div {position: relative; width: 50%; padding: 5rem; border-bottom:0.1rem solid #000000;}
+.archiving_list div:nth-child(odd):after {content: ""; position: absolute; top:0rem; right:0rem; width: 0.1rem; height: 100%; background:#000000;}
+.archiving_list div a {display: block;}
+.archiving_list div a:hover img {transform:scale(1.1); filter: brightness(70%);}
+.archiving_list div h4 {position: relative;display: inline-block;padding: 1rem 0rem;word-break: keep-all;font-weight: 500;}
+.archiving_list div a h4:after {content: ""; width: 0%;}
+.archiving_list div a:hover h4:after {content: ""; position:absolute; bottom:0rem; left:0rem; width: 100%; height: 0.2rem; background: #000000; transition: all 1s;}
+.archiving_list div p {font-size:1.6rem; color:#111111; margin: 1rem 0rem; overflow: hidden;}
+.archiving_list div p img {width: 100%; height: 35rem; object-fit:cover; transform:scale(1); transition: transform 1s ease-in-out;}
+
+.archiving_viewbtn {text-align: center;}
+.archiving_viewbtn a {padding: 1rem; display: inline-block; font-size:2.5rem; margin:3rem 0rem;}
+.archiving_viewbtn a i {margin-left:1rem;}
+.banner_utils {display: flex; border-top:0.1rem solid #000000;}
+.banner_utils div {width: 100%;}
+.banner_utils div:nth-child(1) {width: 50%;}
+.banner_utils div:nth-child(2) {width: 25%;}
+.banner_utils div:nth-child(3) {width: 25%;}
+.banner_utils div video {filter: brightness(40%); width: 100%; height: 300px; object-fit: cover;}
+
+.banner_util_news {}
+.banner_util_news a {display: block; height: 100%; padding: 3rem; box-sizing: border-box;}
+.banner_util_news a:hover {background: #f4f4f4;}
+.banner_util_news h4 {font-size:2rem;}
+.banner_util_news p:first-child {font-size:2.3rem; padding: 2rem 0rem; font-weight: bold;}
+.banner_util_news p:last-child {font-size:1.6rem; padding: 2rem 0rem;}
+.banner_util_news p:last-child:after {content: "\e90b"; font-family : xeicon; display: block; padding: 1rem 0rem; font-size: 3rem; color:#cecece;}
+.banner_util_reference {}
+.banner_util_reference a {display: block; height: 100%; padding: 3rem; box-sizing: border-box; color:#fff; background: #004b9e;}
+.banner_util_reference a:hover {background: #003877;}
+.banner_util_reference h4 {font-size:2rem;}
+.banner_util_reference p:first-child {font-size:2.3rem; padding: 2rem 0rem; font-weight: bold;}
+.banner_util_reference p:last-child {font-size:1.6rem; padding: 2rem 0rem;}
+.banner_util_reference p:last-child:after {content: "\e90b"; font-family : xeicon; display: block; padding: 1rem 0rem; font-size: 3rem; color:#4d7eb3;}
+@media screen and (max-width: 1023px){
+.competition_area {flex-direction: column;}
+.competition_left,
+.competition_right {width: 100%; padding:3rem 0rem;}
+.competition_left:after {display: none;}
+.compe_annual_text div {width: 50%;}
+.compe_annual_text div:first-child {text-align: center;}
+.banner_util_news p:first-child,
+.banner_util_reference p:first-child {padding:0rem 0rem;}
+}
+@media screen and (max-width: 769px){
+.compe_annual_text {flex-direction: column;}
+.compe_annual_text div {width: 100%; text-align: center}
+.title_text_box {top:13rem; bottom: auto;}
+#main_slide .sect_visual .slide_box {bottom: 5rem;}
+.archiving_list {flex-direction: column;}
+.archiving_list div {width: 100%;padding: 2rem;}
+.archiving_list div:nth-child(odd):after {display: none;}
+.banner_utils {flex-direction: column;}
+.banner_utils div {width: 100% !important;}
+.banner_util_news p:first-child,
+.banner_util_reference p:first-child {padding:2rem 0rem;}
+.compe_list_box h3 {font-size: 2rem !important;}
+.compe_list ul li a p {font-size: 2.5rem !important;}
+}
+@media screen and (max-width: 490px){
+.compe_list_box h3 {font-size: 2rem;}
+.compe_list ul li a p {width: 25%; font-size: 2.5rem;}
+.sub_tit span {display: none;}
+.compe_list ul li a {padding:1.7rem 0rem;}
+.archiving_list div {padding: 2rem 0rem;}
+.archiving_list div p img {height: 20rem;}
+.banner_util_reference a {margin-bottom: 5rem;}
+}

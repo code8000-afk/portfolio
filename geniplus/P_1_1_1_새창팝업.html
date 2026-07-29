@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GENIEPLUS 입니다.">
+    <meta name="author" content="시스템게이트">
+    <meta name="-csrf" content="b4d963cf-a117-4e04-9a4e-0bd906cefa2a">
+    <meta name="-csrf-header" content="X-CSRF-TOKEN">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>GENIEPLUS</title>
+    <!-- basic css -->
+    <link type="text/css" rel="stylesheet" href="css/basics-reset.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-common.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-layout.css">
+    <link type="text/css" rel="stylesheet" href="XEIcon-2.2.0/xeicon.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/basics-common.js"></script>
+</head>
+<body class="detail-popup_page">
+
+<div id="popup-detail-view" class="detail-popup_window">
+	<div class="detail-popup_header">
+		<h2 class="detail-popup_title">상세 내역 조회</h2>
+		<button type="button" class="detail-popup_close" onclick="window.close();" title="닫기"></button>
+	</div>
+	<div class="detail-popup_body">
+		<div class="con-box-item">
+			<div class="title-box-area title-lg">
+				<div class="title-left">
+					<h2 class="title-text"><span>내역 조회</span></h2>
+				</div>
+			</div>
+			<div class="table-container table-col-type">
+				<table class="custom-table">
+					<thead>
+						<tr>
+							<th>기술분야</th>
+							<th colspan="2">전략품목 A</th>
+							<th colspan="2">전략품목 B</th>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="3" data-label="기술분야"><div class="data-group">신재생에너지</div></td>
+							<td colspan="4" data-label="전체내용"><div class="data-group">고효율 태양광 모듈 및 풍력 발전 시스템 고도화</div></td>
+							<td rowspan="3" data-label="비고"><div class="data-group">중점관리</div></td>
+						</tr>
+						<tr>
+							<td colspan="2" rowspan="2" data-label="전략품목 A"><div class="data-group">페로브스카이트 태양전지</div></td>
+							<td colspan="2" data-label="전략품목 B"><div class="data-group">페로브스카이트 태양전지</div></td>
+						</tr>
+						<tr>
+							<td data-label="상세 품목 1"><div class="data-group">탠덤 구조</div></td>
+							<td data-label="상세 품목 2"><div class="data-group">대면적화 공정</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="detail-popup_footer">
+		<button type="button" class="btn btn-md btn-outline-gray" onclick="window.close();">취소</button>
+		<button type="button" class="btn btn-md btn-blue" onclick="window.close();">확인</button>
+	</div>
+</div>
+
+</body>
+</html>

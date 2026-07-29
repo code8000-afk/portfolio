@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GENIEPLUS 입니다.">
+    <meta name="author" content="시스템게이트">
+    <meta name="-csrf" content="b4d963cf-a117-4e04-9a4e-0bd906cefa2a">
+    <meta name="-csrf-header" content="X-CSRF-TOKEN">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>GENIEPLUS</title>
+    <!-- basic css -->
+    <link type="text/css" rel="stylesheet" href="css/basics-reset.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-common.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-layout.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-login.css">
+    <link type="text/css" rel="stylesheet" href="XEIcon-2.2.0/xeicon.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/basics-common.js"></script>
+	<script type="text/javascript" src="js/geniplus-common.js"></script>
+</head>
+<body class="main-wrapper login-wrap"> <!-- 20260619 회원가입 구성의 화면에 login-wrap 클래스 추가 -->
+     <div class="sub-wrap">
+        <div id="skip-nav">
+            <a href="#contents_container">본문 바로가기</a>
+        </div>
+        
+        <!-- 20260619 헤더 영역 수정 start -->
+        <div id="header-wrap" class="header-wrap">
+        <header class="sub-header-area">
+            <div class="header-inner">
+                <div class="header-logo">
+					<a href="#"><span>KETEP logo</span></a>
+					<a href="00_1_메인화면.html"><span class="sr-only">GENIE PLUS</span></a>
+				</div>
+            </div>
+			<nav>
+				<a href="#" class="">비R&#38;D 사업소개</a>
+				<a href="#">금융지원사업소개</a>
+				<a href="00_2_대민용목록.html">사업공고</a>
+			</nav>
+			<div class="sidebar-profile">
+				<div class="profile-info">
+					<div class="profile-time">
+						<span>59분 58초</span>
+						<button class="btn btn-xs btn-outline-gray btn-prolong">연장</button>
+						<button class="btn btn-xs btn-outline-gray">로그아웃</button>
+					</div>
+					<div class="profile-name">
+						<button type="button"><strong>이하연</strong><span>연구원님</span></button>
+						<div class="profile-name-util">
+							<button type="button" class="btn-pop-close"><span class="sr-only">팝업 닫기</span></button>
+							<div class="pop-profile-info">
+								<div class="pop-avatar"></div>
+								<div class="pop-meta">
+									<strong class="pop-name">이하연</strong>
+									<span class="pop-role">과장/연구원</span>
+								</div>
+							</div>
+							<div class="pop-profile-menu">
+								<a href="#none" class="btn-pop-menu icon-change btn-popup-open" data-target="modal-authority">권한 변경</a>
+								<a href="#" class="btn-pop-menu icon-edit">개인정보 수정</a>
+								<a href="#" class="btn-pop-menu icon-out">로그아웃</a>
+							</div>
+						</div>
+					</div>				
+					<!-- 20260619 로그인 하기 전 서브 로그인 버튼 start -->
+					<div class="sub-before_login">
+						<a href="#" aria-label="로그인">
+							<i class="xi-user-o" aria-hidden="true"></i>
+							<span>로그인</span>
+						</a>
+					</div>
+					<!-- 20260619 로그인 하기 전 서브 로그인 버튼 end -->
+				</div>
+			</div>
+        </header>
+	 </div>
+	<!-- 20260619 헤더 영역 수정 end -->
+
+        <div class="sub-container">
+            <!-- 로그인 콘텐츠 영역 -->
+            <main class="sub-main-content" id="contents_container">
+				<div id="container" class="root_container">
+
+				<div class="right_side">
+					<div class="content_area">					
+						<div class="gne-signup-container">
+							<div class="gne-signup-inner">
+								<h2 class="gne-page-title">회원가입<span class="selected-user-type">선택된 유형<strong>기관담당자</strong></span></h2> <!-- 20260526 selected-user-type 선택된 유형 영역 추가 -->
+
+								<div class="gne-stepper-wrap">
+									<nav class="gne-stepper">
+										<div class="gne-step-item complete">
+											<span class="gne-step-dot"></span>
+											<div class="gne-step-txt">
+												<span class="gne-step-num">1단계</span>
+												<strong class="gne-step-label">회원유형</strong>
+											</div>
+										</div>
+										<div class="gne-step-item complete">
+											<span class="gne-step-dot"></span>
+											<div class="gne-step-txt">
+												<span class="gne-step-num">2단계</span>
+												<strong class="gne-step-label">약관동의</strong>
+											</div>
+										</div>
+										<div class="gne-step-item complete">
+											<span class="gne-step-dot"></span>
+											<div class="gne-step-txt">
+												<span class="gne-step-num">3단계</span>
+												<strong class="gne-step-label">본인인증</strong>
+											</div>
+										</div>
+										<div class="gne-step-item active">
+											<span class="gne-step-dot"></span>
+											<div class="gne-step-txt">
+												<span class="gne-step-num">4단계</span>
+												<strong class="gne-step-label">회원정보입력</strong>
+											</div>
+										</div>
+										<div class="gne-step-item">
+											<span class="gne-step-dot"></span>
+											<div class="gne-step-txt">
+												<span class="gne-step-num">5단계</span>
+												<strong class="gne-step-label">가입완료</strong>
+											</div>
+										</div>
+									</nav>
+								</div>
+
+								<div class="gne-sub-header">
+									<h3 class="gne-sub-title"><i class="xi-shield-checked-o"></i> 회원정보 입력</h3>
+									<p class="gne-sub-desc">회원가입을 진행하기 위해서는 <strong>회원정보 항목을</strong>확인 후 작성해 주세요.</p>
+								</div>
+
+								<div class="gne-auth-container">
+									<div class="con-box-area">
+										<div class="con-box-item">
+											<!-- 중 타이틀 -->
+											<div class="title-box-area title-md">
+												<div class="title-left">
+													<h3 class="title-text"><span>기본 정보</span></h3>
+												</div>
+											</div>
+
+											<!-- 테이블 컨테이너 (한 줄로 떨어지는 세로형 1열 구조) -->
+											<div class="table-container table-row-type">
+												<table class="custom-table table-full-column">
+													<caption>회원 정보 입력 양식: 아이디, 비밀번호, 비밀번호 확인, 성명, 성별, 생년월일, 휴대전화번호, 메일주소 제공</caption>
+													<colgroup>
+													<col style="width: 20%;">
+													<col style="width: 80%;">
+												</colgroup>
+													<tbody>
+														<!-- 1행: 아이디 -->
+														<tr>
+															<th scope="row" data-label="아이디">
+																<div class="data-group">
+																	<label for="user_id">아이디</label>
+																	<span class="required">*</span>
+																</div>
+															</th>
+															<td data-label="아이디 내용">
+																<div class="data-group">
+																	<input type="text" id="user_id" class="input-text is-error w-half" placeholder="아이디를 입력하세요">
+																	<button type="button" class="btn btn-md btn-outline-blue">중복체크</button>
+																</div>
+																<div class="data-util">
+																	<p class="util_msg is-error-msg">중복된 아이디입니다.</p>
+																	<p class="util_help">4~16자 까지 영문 숫자만 허용 가능합니다.</p> <!-- 20260526 util_help 기본 도움말 추가 -->
+																</div>
+															</td>
+														</tr>
+														<!-- 2행: 비밀번호 -->
+														<tr>
+															<th scope="row" data-label="비밀번호">
+																<div class="data-group">
+																	<label for="user_pw">비밀번호</label>
+																	<span class="required">*</span>
+																</div>
+															</th>
+															<td data-label="비밀번호 내용">
+																<div class="data-group">
+																	<input type="password" id="user_pw" class="input-text w-half" placeholder="비밀번호 입력">
+																</div>
+																<div class="data-util">
+																	<p class="util_msg is-error-msg"></p>
+																	<p class="util_help">9~12자 영문, 숫자, 특수문자 조합 (단, &lt;, &gt;, _, ", ' 제외)</p>
+																</div>
+															</td>
+														</tr>
+														<!-- 3행: 비밀번호 확인 -->
+														<tr>
+															<th scope="row" data-label="비밀번호 확인">
+																<div class="data-group">
+																	<label for="user_pw_chk">비밀번호 확인</label>
+																	<span class="required">*</span>
+																</div>
+															</th>
+															<td data-label="비밀번호 확인 내용">
+																<div class="data-group">
+																	<input type="password" id="user_pw_chk" class="input-text is-error w-half" placeholder="비밀번호 재입력">
+																</div>
+																<div class="data-util">
+																	<p class="util_msg is-error-msg">비밀번호가 일치하지 않습니다.</p>
+																</div>
+															</td>
+														</tr>
+														<!-- 4행: 성명 -->
+														<tr>
+															<th scope="row" data-label="성명">
+																<div class="data-group">
+																	<label for="user_name">성명</label>
+																	<span class="required">*</span>
+																</div>
+															</th>
+															<td data-label="성명 내용">
+																<div class="data-group">
+																	<input type="text" id="user_name" class="input-text w-half" placeholder="홍길동" readonly>
+																</div>
+															</td>
+														</tr>
+														<!-- 5행: 성별 -->
+														<tr>
+															<th scope="row" data-label="성별">
+																<div class="data-group">
+																	성별
+																	<span class="required">*</span>
+																</div>
+															</th>
+															<td data-label="성별 내용">
+																<div class="radio-group">
+																	<label class="radio-label"><input type="radio" name="gender" checked> <span>남자</span></label>
+																	<label class="radio-label"><input type="radio" name="gender"> <span>여자</span></label>
+																</div>
+															</td>
+														</tr>
+														<!-- 6행: 생년월일 -->
+														<tr>
+															<th scope="row" data-label="생년월일">
+																<div class="data-group">
+																	<label for="user_birth">생년월일</label>
+																	<span class="required">*</span>
+																</div>
+															</th>
+															<td data-label="생년월일 내용">
+																<div class="data-group">
+																	<input type="text" id="user_birth" class="input-text w-half" placeholder="YYYYMMDD">
+																</div>
+															</td>
+														</tr>
+														<!-- 7행: 휴대전화번호 -->
+														<tr>
+															<th scope="row" data-label="휴대전화번호">
+																<div class="data-group">
+																	<label for="user_phone">휴대전화번호</label>
+																	<span class="required">*</span>
+																</div>
+															</th>
+															<td data-label="휴대전화번호 내용">
+																<div class="data-group">
+																	<input type="text" id="user_phone" class="input-text w-half" placeholder="'-' 제외하고 입력">
+																</div>
+															</td>
+														</tr>
+														<!-- 8행: 메일주소 -->
+														<tr>
+															<th scope="row" data-label="메일주소">
+																<div class="data-group">
+																	메일주소
+																	<span class="required">*</span>
+																</div>
+															</th>
+															<td data-label="메일주소 내용">
+																<div class="data-group">
+																	<input type="text" class="input-text" title="이메일 아이디" placeholder="이메일">
+																	<span>@</span>
+																	<input type="text" class="input-text" title="이메일 도메인">
+																	<select class="select-box">
+																		<option value="">직접입력</option>
+																		<option value="naver.com">naver.com</option>
+																		<option value="gmail.com">gmail.com</option>
+																		<option value="daum.net">daum.net</option>
+																	</select>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+
+										<div class="con-box-item">
+											<!-- 중 타이틀 -->
+											<div class="title-box-area title-md">
+												<div class="title-left">
+													<h3 class="title-text"><span>기관 정보</span></h3>
+												</div>
+											</div>
+
+											<!-- 테이블 컨테이너 (한 줄로 떨어지는 세로형 1열 구조) -->
+											<div class="table-container table-row-type">
+												<table class="custom-table table-full-column">
+													<caption>기관 정보 입력 양식: 소속기관명, 부서(학과), 직급 정보 제공</caption>
+													<colgroup>
+														<col style="width: 20%;">
+														<col style="width: 80%;">
+													</colgroup>
+													<tbody>
+														<!-- 1행: 소속기관명 -->
+														<tr>
+															<th scope="row" data-label="소속기관명">
+																<div class="data-group">
+																	<label for="org_name">소속기관명</label>
+																	<span class="required">*</span>
+																</div>
+															</th>
+															<td data-label="소속기관명 내용">
+																<div class="data-group">
+																	<input type="text" id="org_name" class="input-text w-half" placeholder="기관명을 검색하세요">
+																	<button type="button" class="btn btn-md btn-outline-blue">기관검색</button>
+																</div>
+															</td>
+														</tr>
+														<!-- 2행: 부서(학과) -->
+														<tr>
+															<th scope="row" data-label="부서(학과)">
+																<div class="data-group">
+																	<label for="dept_name">부서(학과)</label>
+																	<span class="required">*</span>
+																</div>
+															</th>
+															<td data-label="부서(학과) 내용">
+																<div class="data-group">
+																	<input type="text" id="dept_name" class="input-text w-half" placeholder="부서 또는 학과명 입력">
+																</div>
+															</td>
+														</tr>
+														<!-- 3행: 직급 -->
+														<tr>
+															<th scope="row" data-label="직급">
+																<div class="data-group">
+																	<label for="job_title">직급</label>
+																	<span class="required">*</span>
+																</div>
+															</th>
+															<td data-label="직급 내용">
+																<div class="data-group">
+																	<input type="text" id="job_title" class="input-text w-half" placeholder="직급 입력">
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="gne-action-btn-wrap">
+									<a href="#" class="btn btn-lg btn-outline-gray"><i class="xi-angle-left-min"></i> 이전으로</a>
+									<a href="#" class="btn btn-lg btn-blue">다음으로 <i class="xi-angle-right-min"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--
+					<div class="content_bottom">
+						<p>주요콘텐츠 하단영역</p>
+					</div>
+					-->
+					<!-- 우측 퀵메뉴 영역 start -->
+					<div class="quick-menu_wrap">
+						 <aside class="quick-menu">
+							<button type="button" class="btn-quick-toggle">
+								<i class="xi-plus"></i>
+								<span class="sr-only">퀵메뉴 열기</span>
+							</button>
+							<ul class="quick-list">
+								<li><a href="#"><i class="xi-comment"></i><span>테스트1</span></a></li>
+								<li><a href="#"><i class="xi-comment"></i><span>테스트2</span></a></li>
+								<li><a href="#skip-nav" class="btn-top"><i class="xi-arrow-up"></i><span>TOP</span></a></li>
+							</ul>
+						</aside>
+					</div>
+					<!-- 우측 퀵메뉴 영역 end -->
+				</div>
+			</div>
+			</main>
+			 <!-- 로그인 콘텐츠 영역 -->
+        </div>
+    </div>
+</body>
+</html>

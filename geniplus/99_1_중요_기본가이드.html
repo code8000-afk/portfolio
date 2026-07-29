@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GENIEPLUS 입니다.">
+    <meta name="author" content="시스템게이트">
+    <meta name="-csrf" content="b4d963cf-a117-4e04-9a4e-0bd906cefa2a">
+    <meta name="-csrf-header" content="X-CSRF-TOKEN">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>GENIEPLUS</title>
+    <!-- basic css -->
+    <link type="text/css" rel="stylesheet" href="css/basics-reset.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-common.css">
+    <link type="text/css" rel="stylesheet" href="css/basics-layout.css">
+    <link type="text/css" rel="stylesheet" href="XEIcon-2.2.0/xeicon.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/basics-common.js"></script>
+</head>
+<body class="sub-wrapper">
+     <div class="sub-wrap">
+        <div id="skip-nav">
+            <a href="#contents_container">본문 바로가기</a>
+        </div>
+        
+        <!-- 헤더 영역 -->
+        <div id="header-wrap" class="header-wrap"> <!-- 20260615 header-warp 감싸는 영역 추가 start -->
+        <header class="sub-header-area">
+            <div class="header-inner">
+                <div class="header-logo">
+					<a href="#"><span>KETEP logo</span></a>
+					<a href="00_1_메인화면.html"><span class="sr-only">GENIE PLUS</span></a>
+				</div>
+            </div>
+			<nav>
+				<a href="00_3_마이페이지.html">마이페이지</a>
+				<a href="00_2_대민용목록.html" class="active">사업공고</a>
+				<a href="#">온라인 사전검토</a>
+				<a href="#">온라인 평가</a>
+				<a href="#">온라인 메타순환기획</a>
+			</nav>
+			<div class="sidebar-profile">
+				<div class="profile-info">
+					<div class="profile-time">
+						<span>59분 58초</span>
+						<button class="btn btn-xs btn-outline-gray btn-prolong">연장</button>
+						<button class="btn btn-xs btn-outline-gray">로그아웃</button>
+					</div>
+					<div class="profile-name">
+						<button type="button"><strong>이하연</strong><span>연구원님</span></button>
+						<div class="profile-name-util">
+							<button type="button" class="btn-pop-close"><span class="sr-only">팝업 닫기</span></button>
+							<div class="pop-profile-info">
+								<div class="pop-avatar"></div>
+								<div class="pop-meta">
+									<strong class="pop-name">이하연</strong>
+									<span class="pop-role">과장/연구원</span>
+								</div>
+							</div>
+							<div class="pop-profile-menu">
+								<a href="#none" class="btn-pop-menu icon-change btn-popup-open" data-target="modal-authority">권한 변경</a>
+								<a href="#" class="btn-pop-menu icon-edit">개인정보 수정</a>
+								<a href="#" class="btn-pop-menu icon-out">로그아웃</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+				<div id="modal-authority" class="common-modal_wrap">
+					<div class="common-modal_dimmed btn-popup-close"></div>
+					<div class="common-modal_content">
+						<div class="common-modal_header">
+							<h2 class="common-modal_title">사용자 권한 변경</h2>
+							<button type="button" class="common-btn_close btn-popup-close" title="닫기"></button>
+						</div>
+						<div class="common-modal_body">
+							<div class="con-box-item">
+								<div class="title-box-area title-lg">
+									<div class="title-left">
+										<h2 class="title-text"><span>변경하실 권한을 선택해 주세요</span></h2>
+									</div>
+								</div>
+								<div class="auth-card-container">
+									<div class="auth-card-list">
+										<div class="auth-card-item auth-card-checked">
+											<input type="radio" name="auth_select" id="auth_1" checked>
+											<label for="auth_1">
+												<span class="auth-num">01</span>
+												<strong class="auth-title">사업 담당자</strong>
+												<span class="auth-badge">현재 권한</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_2">
+											<label for="auth_2">
+												<span class="auth-num">02</span>
+												<strong class="auth-title">과제 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_3">
+											<label for="auth_3">
+												<span class="auth-num">03</span>
+												<strong class="auth-title">관리 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+										<div class="auth-card-item">
+											<input type="radio" name="auth_select" id="auth_4">
+											<label for="auth_4">
+												<span class="auth-num">04</span>
+												<strong class="auth-title">평가 담당자</strong>
+												<span class="auth-badge">권한 변경</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="common-modal_footer">
+							<button type="button" class="btn btn-md btn-outline-gray common-btn_cancel btn-popup-close">취소</button>
+							<button type="button" class="btn btn-md btn-blue common-btn_confirm btn-popup-close">변경 적용</button>
+						</div>
+					</div>
+				</div>
+        </header>
+	 </div>
+
+        <div class="sub-container">
+            <!-- 사이드바 토글 버튼 -->
+            <button class="btn btn-outline-gray sidebar-toggle-btn" id="sidebarToggle" aria-label="메뉴 토글"><span class="hide">열기/닫기</span></button>
+
+            <!-- 사이드바 영역 -->
+            <aside class="sub-sidebar" id="sidebar">
+					<div class="sidebar-title">과제평가관리</div>
+					<nav class="sidebar-nav">
+						<!-- 1 Depth 시작 -->
+						<ul class="nav-menu depth-1">
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="xi-user-o menu-icon"></i><span class="nav-text">마이페이지</span>
+								</a>
+							</li>
+
+							<!-- 사업공고/접수 (하위 메뉴 있음) -->
+							<li class="nav-item has-sub open">
+								<a href="#" class="nav-link">
+									<i class="xi-document menu-icon"></i><span class="nav-text">사업공고/접수</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<!-- 2 Depth 시작 -->
+										<ul class="sub-menu depth-2">
+											<li class="nav-item">
+												<a href="#" class="sub-link">
+													<span class="nav-text">기술수요조사</span>
+												</a>
+											</li>
+											<li class="nav-item has-sub">
+												<a href="#" class="sub-link">
+													<span class="nav-text">사업공고</span><i class="xi-angle-down arrow"></i>
+												</a>
+												<div class="sub-menu-wrap">
+													<div class="sub-menu-inner">
+														<!-- 3 Depth 시작 -->
+														<ul class="sub-menu depth-3">
+															<li class="nav-item">
+																<a href="#" class="sub-link">
+																	<span class="nav-text">공고예고조회</span>
+																</a>
+															</li>
+															<li class="nav-item has-sub">
+																<a href="#" class="sub-link">
+																	<span class="nav-text">R&D 통합공고</span><i class="xi-angle-down arrow"></i>
+																</a>
+																<div class="sub-menu-wrap">
+																	<div class="sub-menu-inner">
+																		<!-- 4 Depth 시작 -->
+																		<ul class="sub-menu depth-4">
+																			<li class="nav-item"><a href="#" class="sub-link active"><span class="nav-text">공고상세조회</span></a></li>
+																			<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">신규과제 접수</span></a></li>
+																			<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">제출서류 다운로드</span></a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="nav-item">
+												<a href="#" class="sub-link">
+													<span class="nav-text">접수결과조회</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<!-- 과제평가관리 -->
+							<li class="nav-item has-sub">
+								<a href="#" class="nav-link">
+									<i class="xi-pen-o menu-icon"></i><span class="nav-text">과제평가관리</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<ul class="sub-menu depth-2">
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">평가위원 선정</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">온라인 평가시스템</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">평가결과 통보</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<!-- 협약 및 정산 -->
+							<li class="nav-item has-sub">
+								<a href="#" class="nav-link">
+									<i class="xi-receipt menu-icon"></i><span class="nav-text">협약 및 정산</span><i class="xi-angle-down arrow"></i>
+								</a>
+								<div class="sub-menu-wrap">
+									<div class="sub-menu-inner">
+										<ul class="sub-menu depth-2">
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">전자협약 체결</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">사업비 관리</span></a></li>
+											<li class="nav-item"><a href="#" class="sub-link"><span class="nav-text">정산결과 조회</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</aside>
+
+			
+			
+            <!-- 메인 콘텐츠 영역 -->
+            <main class="sub-main-content" id="contents_container">
+			<nav class="lnb">
+					<div class="lnb-inner">
+						<div class="title-name">
+							<h1>사업공고</h1>
+						</div>
+						<div class="lnb-right">
+							<div class="lnb-left">
+								<span class="home">
+									<a href="#"><i class="xi-home"></i><span class="sr-only">홈(메인) 화면으로 이동</span></a>
+								</span>
+								<div class="fn-dropdown" id="lv1">
+									<button type="button">
+										<span>사업공고</span>
+									</button>
+									<ul>
+										<li><a href="#">서브메뉴 테스트 01-01</a></li>
+										<li><a href="#">서브메뉴 테스트 01-02</a></li>
+										<li><a href="#">서브메뉴 테스트 01-03</a></li>
+										<li><a href="#">서브메뉴 테스트 01-04</a></li>
+										<li><a href="#">서브메뉴 테스트 01-05</a></li>
+									</ul>
+								</div>
+							</div>
+							<button class="btn btn-xs btn-outline-gray icon-xi-zoom-out"><span class="sr-only">축소</span></button>
+							<button class="scale-status">100%</button>
+							<button class="btn btn-xs btn-outline-gray icon-xi-zoom-in"><span class="sr-only">확대</span></button>
+						</div>
+					</div>
+				</nav>				
+				<div class="content-area-wrap">
+					<div class="content-area">
+						
+						
+						<div class="con-box-area"> <!-- 중요 - 전체를 감싸는 영역 -->
+							
+							
+							<!-- 중요 - con-box-item 각 영역을 감싸는 영역 start -->
+							<div class="con-box-item">
+								<div class="title-box-area title-lg">
+									<div class="title-left">
+										<h2 class="title-text"><span>html 파일 열어보시면 "중요" 주석처리 하였습니다 참고해주세요  영역을 나누는 방법입니다.</span></h2>
+									</div>
+									<div class="title-right">
+										<p class="required-txt">필수항목</p>
+									</div>
+								</div>
+							</div>
+							<!-- 중요 - con-box-item 각 영역을 감싸는 영역 end -->
+							
+							<!-- 중요 - con-box-item 각 영역을 감싸는 영역 start -->
+							<div class="con-box-item">
+								<div class="table-container table-col-type">
+									<table class="custom-table">
+										<colgroup>
+											<col style="width:20%;">
+											<col style="width:80%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>기술분야</th>
+												<th>비고</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-label="상세 품목 1">
+													<div class="data-group">탠덤 구조</div>
+												</td>
+												<td data-label="상세 품목 2">	
+													<div class="data-group">대면적화 공정</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- 중요 - con-box-item 각 영역을 감싸는 영역 end -->
+
+							<!-- 중요 - 하단 버튼 유틸은 제외 -->
+							<div class="content-bottom-util">
+								<button type="button" class="btn btn-lg btn-outline-gray"><span>목록보기</span></button>
+								<button type="button" class="btn btn-lg btn-outline-blue"><span>임시저장</span></button>
+								<button type="button" class="btn btn-lg btn-blue"><span>제출완료</span></button>
+							</div>
+						</div>					
+					</div>
+				</div>
+			</main>
+        </div>
+		 <!-- 20260601 푸터 start -->
+		 <footer class="krds_footer">
+			<div class="footer-quick">
+				<div class="layout">
+					<button type="button" title="소속기관 레이어" class="link footerlink1">소속기관</button>
+					<button type="button" title="관련사이트 레이어" class="link footerlink2">관련사이트</button>
+					<button type="button" title="정부기관 레이어" class="link footerlink3">정부기관</button>
+				</div>
+				<div class="popup-wrap" data-type="full" id="popFootLink1" tabindex="0">
+					<div class="popup-in">
+						<div class="popup">
+							<div class="popup-head">
+								<h1 class="pop-tit">소속기관</h1>
+							</div>
+							<div class="popup-body">
+								<ul class="pop-foot-links">
+									<li><a href="#" target="_blank" class="link" title="새창열림">한국에너지기술평가원</a></li>
+									<li><a href="#" target="_blank" class="link" title="새창열림">공공에너지R&#38;D포털</a></li>
+									<li><a href="#" target="_blank" class="link" title="새창열림">세계에너지기시장</a></li>
+								</ul>
+							</div>
+							<button type="button" class="popup-close"><span class="sr-only">소속기관 레이어 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="popup-wrap" data-type="full" id="popFootLink2" tabindex="0">
+					<div class="popup-in">
+						<div class="popup">
+							<div class="popup-head">
+								<h1 class="pop-tit">관련사이트</h1>
+							</div>
+							<div class="popup-body">
+								<ul class="pop-foot-links">
+									<li><a href="#" target="_blank" class="link" title="새창열림">국가과학기술지식정보서비스</a></li>
+									<li><a href="#" target="_blank" class="link" title="새창열림">RCMS</a></li>
+								</ul>
+							</div>
+							<button type="button" class="popup-close"><span class="sr-only">소속기관 레이어 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="popup-wrap" data-type="full" id="popFootLink3" tabindex="0">
+					<div class="popup-in">
+						<div class="popup">
+							<div class="popup-head">
+								<h1 class="pop-tit">정부기관</h1>
+							</div>
+							<div class="popup-body">
+								<ul class="pop-foot-links">
+									<li><a href="#" target="_blank" class="link" title="새창열림">기후에너지환경부</a></li>
+									<li><a href="#" target="_blank" class="link" title="새창열림">기획재정부</a></li>
+									<li><a href="#" target="_blank" class="link" title="새창열림">온라인행정심판</a></li>
+								</ul>
+							</div>
+							<button type="button" class="popup-close"><span class="sr-only">소속기관 레이어 닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_inner">
+				<nav class="footer_links">
+					<a href="#" class="link_item">서비스 이용약관</a>
+					<a href="#" class="link_item bold">개인정보처리방침</a>
+					<a href="#" class="link_item">이메일무단수집거부</a>
+				</nav>
+				<div class="footer_info">
+					<address class="info_address">
+						<span class="addr_item">(06175) 서울특별시강남구 테헤란로 114길 14 유니온빌딩</span>
+						<span class="addr_item">대표전화:02-3469-8400</span>
+						<span class="addr_item">팩스:02-555-2430</span>
+					</address>
+					<p class="info_copyright">copyright(C) 2026 korea institute of energy technology evaluation and planning. all rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+	 <!-- 20260601 푸터 end -->
+    </div>
+</body>
+</html>

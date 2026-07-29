@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="11년차 경력 UI/UX 디자이너 이지수 포트폴리오 메인 목록입니다.">
+    <meta name="author" content="UI/UX 디자이너 이지수">
+    <link rel="shortcut icon" href="images/icon/favicon-jisu.svg" type="image/x-icon"> 
+    <title>UI/UX 디자이너 이지수 - Portfolio List</title>
+    <link rel="stylesheet" href="css/basics-reset.css">
+    <link rel="stylesheet" href="css/basic-contents.css">
+    <link rel="stylesheet" href="XEIcon-2.2.0/xeicon.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body id="index-wrap">
+
+    <!-- 메인 프로필/히어로 섹션 -->
+    <header class="list-hero">
+        <div class="list-hero-inner">
+            <span class="hero-tag">UI/UX & PUBLISHING PORTFOLIO</span>
+            <h1 class="hero-title">디자인과 코드의 균형으로<br>최적의 사용자 경험을 만드는 <strong>이지수</strong>입니다.</h1>
+            <p class="hero-desc">사용자 중심의 UI/UX 설계부터 웹 접근성 준수 및 반응형 웹 퍼블리싱까지 완벽히 수행합니다.</p>
+            
+            <!-- 상단 정보 바 -->
+            <div class="hero-status-bar">
+                <div class="status-item"><span class="label">경력</span><span class="val">11년차</span></div>
+                <div class="status-item"><span class="label">전문 분야</span><span class="val">웹 UI/UX 디자인, 반응형 퍼블리싱</span></div>
+                <div class="status-item"><span class="label">이메일</span><span class="val"><a href="mailto:code8000@naver.com">code8000@naver.com</a></span></div>
+                <div class="status-item"><span class="label">문의</span><span class="val"><a href="https://open.kakao.com/o/gWnybxFi" target="_blank">카카오톡 1:1 오픈채팅 🔗</a></span></div>
+                <div class="status-item"><span class="label">상태</span><span class="val badge-active">즉시 합류 가능</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 포트폴리오 프로젝트 목록 섹션 -->
+    <main class="list-container">
+        <div class="list-header">
+            <h2 class="list-section-title">PROJECTS <span>(12)</span></h2>
+            
+            <!-- 필터 카테고리 탭 -->
+            <ul class="filter-tabs">
+                <li><button type="button" class="tab-btn active" data-filter="all">전체보기</button></li>
+                <li><button type="button" class="tab-btn" data-filter="website">웹사이트</button></li>
+                <li><button type="button" class="tab-btn" data-filter="proposal">제안서</button></li>
+            </ul>
+        </div>
+
+        <div class="project-grid">
+            <!-- ==========================================
+            [웹사이트 그룹 (1~8) - 최신 작업기간 순 정렬]
+            ========================================== -->
+            
+            <!-- [웹사이트 1] 한국에너지기술평가원 GENIE PLUS 리뉴얼 -->
+            <article class="project-card" id="project-geniplus" data-category="website">
+                <a href="1-3-geniplus.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/sub/geniplus-main.png" alt="한국에너지기술평가원 GENIE PLUS 리뉴얼 썸네일">
+                        <span class="card-badge">WEB / MOBILE</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">웹사이트 구축</span>
+                            <span class="period">2026.06.01 - 2026.07.10</span>
+                        </div>
+                        <h3 class="card-title">GENIE PLUS 리뉴얼</h3>
+                        <p class="card-desc">친환경 에너지를 상징하는 비주얼과 온라인 수요조사, 평가 시스템을 직관적인 UI 구조로 개편했습니다.</p>
+                        <div class="card-tags">
+                            <span>디자인 100%</span>
+                            <span>퍼블리싱 100%</span>
+                            <span>웹 접근성 준수</span>
+                            <span>반응형 웹</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- [웹사이트 2] 건축설계공모심사시스템 -->
+            <article class="project-card" id="project-arch" data-category="website">
+                <a href="1-5-arch.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/sub/arch-main.JPG" alt="건축설계공모심사시스템 썸네일">
+                        <span class="card-badge">WEB / MOBILE</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">자체 기획 웹사이트</span>
+                            <span class="period">2026.05.01 - 2026.05.30</span>
+                        </div>
+                        <h3 class="card-title">건축설계공모심사시스템</h3>
+                        <p class="card-desc">공모현황, 당선작 아카이빙을 한눈에 파악할 수 있는 대형 메인 비주얼 중심의 반응형 웹 시스템입니다.</p>
+                        <div class="card-tags">
+                            <span>기획 100%</span>
+                            <span>디자인 100%</span>
+                            <span>퍼블리싱 100%</span>
+                            <span>웹 접근성 준수</span>
+                            <span>반응형 웹</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- [웹사이트 3] 우주항공청 사업정보시스템 PIMS -->
+            <article class="project-card" id="project-kasa" data-category="website">
+                <a href="1-2-kasa.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/sub/kasa-main.png" alt="우주항공청 사업정보시스템 PIMS 썸네일">
+                        <span class="card-badge">WEB / MOBILE</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">웹사이트 구축</span>
+                            <span class="period">2025.12.01 - 2026.05.30</span>
+                        </div>
+                        <h3 class="card-title">우주항공청 사업정보시스템 PIMS</h3>
+                        <p class="card-desc">KRDS 가이드라인을 완벽 준수하고, 공고 및 평가위원 신청 등 복잡한 기능을 단순화한 통합 관리 UI입니다.</p>
+                        <div class="card-tags">
+                            <span>디자인 100%</span>
+                            <span>퍼블리싱 100%</span>
+                            <span>KRDS 준수</span>
+                            <span>웹 접근성 준수</span>
+                            <span>반응형 웹</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- [웹사이트 4] 한국과학창의재단 과제관리시스템 -->
+            <article class="project-card" id="project-kosac" data-category="website">
+                <a href="1-6-kosac.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/sub/kosac-main.png" alt="한국과학창의재단 과제관리시스템 썸네일">
+                        <span class="card-badge">WEB / MOBILE</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">웹사이트 구축</span>
+                            <span class="period">2025.08.01 - 2026.03.30</span>
+                        </div>
+                        <h3 class="card-title">한국과학창의재단 과제관리시스템</h3>
+                        <p class="card-desc">사업공고, 접수, 원스톱 시스템 문의 카드 레이아웃 적용으로 높은 가독성과 사용성을 제공합니다.</p>
+                        <div class="card-tags">
+                            <span>디자인 100%</span>
+                            <span>퍼블리싱 100%</span>
+                            <span>웹 접근성 준수</span>
+                            <span>반응형 웹</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- [웹사이트 5] 데이터바우처 웹사이트 리뉴얼 -->
+            <article class="project-card" id="project-datavoucher" data-category="website">
+                <a href="1-1-datavoucher.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/sub/datavoucher-main.png" alt="데이터바우처 웹사이트 리뉴얼 썸네일">
+                        <span class="card-badge">WEB / MOBILE</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">웹사이트 구축</span>
+                            <span class="period">2025.09.01 - 2025.11.30</span>
+                        </div>
+                        <h3 class="card-title">데이터바우처 웹사이트 리뉴얼</h3>
+                        <p class="card-desc">통합 검색 상단 배치와 카테고리 직관화를 통해 데이터 탐색 동선을 최소화한 국가 데이터 플랫폼입니다.</p>
+                        <div class="card-tags">
+                            <span>디자인 100%</span>
+                            <span>퍼블리싱 100%</span>
+                            <span>웹 접근성 준수</span>
+                            <span>반응형 웹</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- [웹사이트 6] 한국방송통신전파진흥원 사업관리시스템 메인 리뉴얼 -->
+            <article class="project-card" id="project-kca" data-category="website">
+                <a href="1-8-kca.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/sub/kca-main-after.png" alt="한국방송통신전파진흥원 사업관리시스템 메인 썸네일">
+                        <span class="card-badge">WEB / MOBILE</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">웹사이트 구축</span>
+                            <span class="period">2025.05.04 - 2025.06.04</span>
+                        </div>
+                        <h3 class="card-title">KCA 사업관리시스템 메인 리뉴얼</h3>
+                        <p class="card-desc">로그인 영역과 대형 안내 배너, 공지사항 및 AI Advisor 퀵메뉴를 효율적으로 분할 배치했습니다.</p>
+                        <div class="card-tags">
+                            <span>디자인 100%</span>
+                            <span>퍼블리싱 100%</span>
+                            <span>웹 표준 준수</span>
+                            <span>반응형 웹</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- [웹사이트 7] 경기도교육청 에듀플랜 설계공모 심사시스템 -->
+            <article class="project-card" id="project-eduplan" data-category="website">
+                <a href="1-7-eduplan.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/sub/eduplan-main.png" alt="경기도교육청 에듀플랜 설계공모 심사시스템 썸네일">
+                        <span class="card-badge">WEB / MOBILE</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">웹사이트 구축</span>
+                            <span class="period">2023.10.01 - 2024.02.28</span>
+                        </div>
+                        <h3 class="card-title">에듀플랜 설계공모 심사시스템</h3>
+                        <p class="card-desc">공모 현황 D-day 카운트다운과 라이브 심사 중계 영역을 통해 공정성과 가독성을 한층 높였습니다.</p>
+                        <div class="card-tags">
+                            <span>디자인 100%</span>
+                            <span>퍼블리싱 70%</span>
+                            <span>웹 접근성 준수</span>
+                            <span>반응형 웹</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- [웹사이트 8] 인천설계공모심사시스템 -->
+            <article class="project-card" id="project-incheon" data-category="website">
+                <a href="1-4-Incheon.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/sub/Incheon-main.png" alt="인천설계공모심사시스템 썸네일">
+                        <span class="card-badge">WEB / MOBILE</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">웹사이트 구축</span>
+                            <span class="period">2023.08.01 - 2024.01.20</span>
+                        </div>
+                        <h3 class="card-title">인천설계공모심사시스템</h3>
+                        <p class="card-desc">라이브 심사 진행 알림 및 하단 당선작 아카이빙 카러셀을 통해 투명한 정보 전달 체계를 다졌습니다.</p>
+                        <div class="card-tags">
+                            <span>디자인 100%</span>
+                            <span>퍼블리싱 100%</span>
+                            <span>웹 접근성 준수</span>
+                            <span>반응형 웹</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- ==========================================
+            [제안서 그룹 (1~4)]
+            ========================================== -->
+
+            <!-- [제안서 1] 우주항공청 사업관리시스템 구축 -->
+            <article class="project-card" id="ppt-kasa" data-category="proposal">
+                <a href="2-1-ppt-kasa.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/ppt/우주항공청-표지-가로.png" alt="우주항공청 사업관리시스템 구축 제안서 썸네일">
+                        <span class="card-badge">PROPOSAL</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">UI/UX 제안서</span>
+                            <span class="period">2025.10.15 - 2025.10.25</span>
+                        </div>
+                        <h3 class="card-title">KASA 사업관리시스템 구축 제안서</h3>
+                        <p class="card-desc">우주항공청의 첨단 이미지와 거버넌스 특성을 담아낸 미래지향적 비주얼 톤앤매너 및 시스템 UI/UX 설계안을 제시했습니다.</p>
+                        <div class="card-tags">
+                            <span>디자인 100%</span>
+                            <span>내용 정돈 70%</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- [제안서 2] 보건의료기술 종합정보시스템 -->
+            <article class="project-card" id="ppt-khidi" data-category="proposal">
+                <a href="2-2-ppt-khidi.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/ppt/보건산업진흥원-표지-가로.png" alt="보건의료기술 종합정보시스템 제안서 썸네일">
+                        <span class="card-badge">PROPOSAL</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">UI/UX 제안서</span>
+                            <span class="period">2026.06.15 - 2026.06.18</span>
+                        </div>
+                        <h3 class="card-title">보건의료기술 종합정보시스템 인프라 및 응용환경 통합 업그레이드</h3>
+                        <p class="card-desc">복잡한 보건의료 데이터와 응용 환경 통합을 위한 시각화 인포그래픽 중심의 구조적 제안서를 완성했습니다.</p>
+                        <div class="card-tags">
+                            <span>비주얼 디자인 100%</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- [제안서 3] 키스텝 국가R&D 지원서비스 -->
+            <article class="project-card" id="ppt-kistep" data-category="proposal">
+                <a href="2-3-ppt-kistep.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/ppt/키스텝-메인-가로.png" alt="국가R&D 기획·관리 지원서비스 제안서 썸네일">
+                        <span class="card-badge">PROPOSAL</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">UI/UX 제안서</span>
+                            <span class="period">2026.05.08 - 2026.05.12</span>
+                        </div>
+                        <h3 class="card-title">2026년 국가R&D 기획·관리 지원서비스 운영 및 유지관리</h3>
+                        <p class="card-desc">국가 연구개발 기획 및 지원 업무의 연속성과 가독성을 높이기 위한 사용자 친화적 UI 디자인 컨셉을 기획·정리했습니다.</p>
+                        <div class="card-tags">
+                            <span>비주얼 디자인 100%</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- [제안서 4] GH 기술평가 통합 관리시스템 -->
+            <article class="project-card" id="ppt-gh" data-category="proposal">
+                <a href="2-4-ppt-GH.html" class="card-link">
+                    <div class="card-thumb">
+                        <img src="images/ppt/경기도주택공사-표지-가로.png" alt="GH 기술평가 통합 관리시스템 구축 용역 제안서 썸네일">
+                        <span class="card-badge">PROPOSAL</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="category">UI/UX 제안서</span>
+                            <span class="period">2026.04.06 - 2026.04.09</span>
+                        </div>
+                        <h3 class="card-title">GH 기술평가 통합 관리시스템 구축 용역 제안서</h3>
+                        <p class="card-desc">공공기관 심사/평가 프로세스의 투명성과 신뢰성을 극대화하기 위한 전략적 인포그래픽 및 비주얼 제안서 파트를 제작했습니다.</p>
+                        <div class="card-tags">
+                            <span>비주얼 디자인 100%</span>
+                        </div>
+                        <div class="card-more">
+                            <span>상세보기</span>
+                            <i class="xi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </main>
+
+    <!-- 우측 하단 고정 컨택트 플로팅 버튼 그룹 -->
+    <aside class="contact-floating-group">
+        <a href="https://open.kakao.com/o/gWnybxFi" target="_blank" rel="noopener noreferrer" class="btn-floating btn-kakao" title="카카오톡 1:1 오픈채팅 열기">
+            <i class="xi-speech-o"></i>
+            <span class="floating-label">카카오톡 문의</span>
+        </a>
+        <a href="#index-wrap" class="btn-floating btn-top" title="최상단으로 이동">
+            <i class="xi-arrow-up"></i>
+            <span class="floating-label">TOP</span>
+        </a>
+    </aside>
+
+    <!-- 푸터 -->
+    <footer class="list-footer">
+        <p>© 2026 LEE JI SU. All Rights Reserved.</p>
+    </footer>
+
+
+
+</body>
+</html>
