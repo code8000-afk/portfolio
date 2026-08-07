@@ -14,82 +14,97 @@
     <script src="js/common.js"></script>
 </head>
 <body>
-<div id="skip-nav">
-    <a href="#sec-info">본문 바로가기</a>
-</div>
-    <!-- 고정 뒤로가기 버튼 -->
-    <a href="index.html" class="btn-back-floating" title="목록으로 돌아가기">
+    <div id="skip-nav">
+        <a href="#sec-info">본문 바로가기</a>
+    </div>
+
+    <!-- 스크롤 전 최상단에만 위치하는 뒤로가기 버튼 -->
+    <a href="index.html" class="btn-back-hero" title="목록으로 돌아가기">
         <i class="xi-arrow-left"></i>
         <span>목록으로</span>
     </a>
 
-    <!-- 퀵 메뉴 영역 -->
-    <nav class="quick-menu">
-        <ul>
-            <li><a href="#sec-info" class="active"><span class="label">정보</span><span class="dot"></span></a></li>
-            <li><a href="#sec-main"><span class="label">메인</span><span class="dot"></span></a></li>
-            <li><a href="#sec-online"><span class="label">온라인접수</span><span class="dot"></span></a></li>
-            <li><a href="#sec-mypage"><span class="label">마이페이지</span><span class="dot"></span></a></li>
-            <li><a href="#sec-mobile"><span class="label">모바일</span><span class="dot"></span></a></li>
-            <li><a href="#sec-concept"><span class="label">내부 관리 UI</span><span class="dot"></span></a></li>
-            <li class="top-item"><a href="#sec-info" class="btn-top" title="최상단으로 이동"><span class="label">TOP</span><span class="dot"><i class="xi-arrow-up"></i></span></a></li>
-        </ul>
-    </nav>
-
     <!-- 스크롤 시 고정 표시될 미니 헤더 바 -->
     <div class="mini-header-bar" id="miniHeader">
-        <h3 class="mini-header-title">한국과학창의재단 과제관리시스템</h3>
+        <div class="header-left">
+            <a href="index.html" class="mini-back-btn" title="목록으로 돌아가기"><i class="xi-arrow-left"></i>목록으로</a>
+            <h3 class="mini-header-title">한국과학창의재단 과제관리시스템</h3>
+        </div>
         <ul class="mini-header-info">
             <li><span class="info-label">작업 기간</span>2025.08.01 ~ 2026.03.30</li>
             <li><span class="info-label">담당 범위</span>디자인 100%, 퍼블리싱 100%</li>
-            <li><span class="info-label">작업 환경</span>Photoshop, Illustrator, HTML5, CSS3, JS, jQuery</li>
+            <li><a href="https://pmsnew.kosac.re.kr/index.do" target="_blank" class="site-link">사이트 방문 🔗</a></li>
         </ul>
     </div>
 
-    <!-- 상단 꽉 찬 히어로 요약 섹션 (정보) -->
+    <!-- 상단 꽉 찬 히어로 요약 섹션 (심플 & 모던 딥 다크 배경) -->
     <header id="sec-info" class="portfolio-header scroll-section">
+        <div class="hero-bg-anims">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+        
         <div class="portfolio-header-inner">
             <div class="hero-info-area">
                 <span class="hero-category">MOBILE & WEB DESIGN</span>
-                <p class="hero-subtitle">UI/UX 디자이너 이지수</p>
-                <h2 class="project-title">한국과학창의재단 과제관리시스템</h2>
+                <h2 class="project-title reveal-text">한국과학창의재단<br><strong>과제관리시스템 구축</strong></h2>
                 
                 <div class="hero-meta-grid">
                     <div class="meta-item">
-                        <span class="meta-label">작업 기간</span>
-                        <span class="meta-value">2025.08.01 ~ 2026.03.30</span>
+                        <span class="meta-label">프로젝트 요약</span>
+                        <span class="meta-value">웹 접근성 지침을 준수한 사용자 맞춤형 과제관리 UI/UX 및 반응형 퍼블리싱</span>
                     </div>
+                    
                     <div class="meta-item">
-                        <span class="meta-label">담당 범위</span>
-                        <span class="meta-value">디자인<strong>100%</strong>, 퍼블리싱<strong>100%</strong></span>
+                        <span class="meta-label">작업 기간</span>
+                        <span class="meta-value">2025.08.01 ~ 2026.03.30 (약 8개월)</span>
                     </div>
+                    
+                    <div class="meta-item role-item">
+                        <span class="meta-label">담당 범위</span>
+                        <div class="meta-value role-bars">
+                            <div class="skill-row">
+                                <span class="skill-name">디자인</span>
+                                <div class="progress-track"><div class="progress-fill fill-design"></div></div>
+                                <span class="skill-num">100%</span>
+                            </div>
+                            <div class="skill-row">
+                                <span class="skill-name">퍼블리싱</span>
+                                <div class="progress-track"><div class="progress-fill fill-pub"></div></div>
+                                <span class="skill-num">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="meta-item">
                         <span class="meta-label">작업 환경</span>
                         <span class="meta-value">Photoshop, Illustrator, HTML5, CSS3, JS, jQuery</span>
                     </div>
+                    
                     <div class="meta-item">
                         <span class="meta-label">적용 표준</span>
-                        <span class="meta-value">웹 콘텐츠 접근성 지침 준수, 반응형 웹</span>
+                        <span class="meta-value">웹 콘텐츠 접근성 지침 준수 및 모바일 반응형 웹</span>
                     </div>
+                    
                     <div class="meta-item">
-                        <span class="meta-label">홈페이지</span>
+                        <span class="meta-label">사이트 링크</span>
                         <span class="meta-value">
-                            <a href="https://pmsnew.kosac.re.kr/index.do" target="_blank" title="홈페이지 링크">홈페이지 바로가기 🔗</a>
+                            <a href="https://pmsnew.kosac.re.kr/index.do" target="_blank" title="사이트 방문 새창 열기" class="hero-btn-primary">홈페이지 방문 🔗</a>
                         </span> 
-                    </div> 
+                    </div>                    
                 </div>
             </div>
 
             <div class="hero-visual-area">
                 <!-- 뒤쪽: PC 형태 -->
-                <div class="mockup-device primary-device">
+                <div class="mockup-device primary-device float-anim-1">
                     <div class="pc-screen">
                         <img src="images/sub/kosac-main.png" alt="PC 메인">
                     </div>
                     <div class="pc-stand"></div>
                 </div>
                 <!-- 앞쪽: 모바일 형태 -->
-                <div class="mockup-device secondary-device">
+                <div class="mockup-device secondary-device float-anim-2">
                     <div class="mobile-screen">
                         <img src="images/sub/kosac-main-mobile.png" alt="모바일 메인">
                     </div>
@@ -98,32 +113,30 @@
         </div>
     </header>
 
-    <div class="portfolio-container">
-        <!-- 개선 사항 리스트 -->
-        <div class="improvement-list">
-      
-            <!-- 콘텐츠 1 (메인 대시보드) -->
+    <!-- 중앙 정렬 및 대형 이미지 기반 콘텐츠 리스트 -->
+    <main class="portfolio-container">
+        <div class="improvement-list" style="padding-top: 6rem;">
+            
+            <!-- 콘텐츠 1 (메인) -->
             <div id="sec-main" class="improvement-item scroll-section">
                 <div class="item-text">
-                    <span class="item-category">WEB DESIGN</span>
-                    <span class="item-badge">HOME</span>
-                    <h3 class="item-title">주요 사업공고와 매뉴얼을 빠르게,<br><strong>카드형 정보 배치와 이용매뉴얼 Quick UI</strong></h3>
-                    <p class="item-desc">좌측 상단 공지사항과 주요 사업공고 영역에 '접수중/접수예정' 상태 뱃지를 적용하여 핵심 과제 정보를 직관적으로 파악할 수 있도록 구성했습니다. 우측 로그인 영역 옆에는 퀵 매뉴얼 바(가입, 신청, 공모 안내)를 배치하고, 하단에는 시스템 문의 콜센터 안내를 연결하여 대시보드 중심의 사용성을 극대화했습니다.</p>
+                    <span class="item-category">WEB DESIGN : HOME</span>
+                    <h3 class="item-title">직관적인 카드형 정보 배치와 <strong>이용매뉴얼 Quick UI</strong></h3>
+                    <p class="item-desc">주요 사업공고에 '접수중/접수예정' 상태 뱃지를 적용하여 핵심 과제를 한눈에 파악할 수 있습니다. 퀵 매뉴얼 바와 시스템 문의 콜센터를 전면에 배치하여 대시보드 중심의 사용성을 극대화했습니다.</p>
                 </div>
                 <div class="item-image">
                     <div class="device-frame">
-                        <img src="images/sub/kosac-main.png" alt="한국과학창의재단 과제관리시스템 메인 화면 카드형 공고 및 매뉴얼 UI">
+                        <img src="images/sub/kosac-main.png" alt="한국과학창의재단 과제관리시스템 메인 화면 UI">
                     </div>
                 </div>
             </div>
 
-            <!-- 콘텐츠 2 (온라인접수 메인) -->
+            <!-- 콘텐츠 2 (온라인접수) -->
             <div id="sec-online" class="improvement-item scroll-section">
                 <div class="item-text">
-                    <span class="item-category">WEB DESIGN</span>
-                    <span class="item-badge">ONLINE SYSTEM</span>
-                    <h3 class="item-title">통합 검색과 그리드 카드로,<br><strong>쉬운 온라인접수 신청 대시보드</strong></h3>
-                    <p class="item-desc">상단 히어로 영역에 직관적인 검색바와 비주얼 그래픽을 배치하여 원하는 접수 공고를 즉시 탐색할 수 있도록 설계했습니다. 하단 접수 현황 영역에는 '전체/접수/완료' 탭 필터링과 4열 카드 그리드를 적용하여 공고 기간, 접수 상태, 원클릭 신청 버튼을 한눈에 파악하도록 UI를 고도화했습니다.</p>
+                    <span class="item-category">WEB DESIGN : ONLINE SYSTEM</span>
+                    <h3 class="item-title">통합 검색과 4열 그리드 기반 <strong>온라인접수 대시보드</strong></h3>
+                    <p class="item-desc">상단에 직관적인 검색바를 배치하고 하단에는 탭 필터링과 4열 카드 그리드를 적용했습니다. 공고 기간, 접수 상태, 원클릭 신청 버튼을 직관적으로 파악하도록 UI를 고도화했습니다.</p>
                 </div>
                 <div class="item-image">
                     <div class="device-frame">
@@ -132,13 +145,12 @@
                 </div>
             </div>
 
-            <!-- 콘텐츠 3 (마이페이지 과제현황) -->
+            <!-- 콘텐츠 3 (마이페이지) -->
             <div id="sec-mypage" class="improvement-item scroll-section">
                 <div class="item-text">
-                    <span class="item-category">WEB DESIGN</span>
-                    <span class="item-badge">MY PAGE</span>
-                    <h3 class="item-title">진행 단계 시각화와,<br><strong>한눈에 파악하는 과제 수행 현황 UI</strong></h3>
-                    <p class="item-desc">수행 중인 과제의 상태를 대기중, 진행중, 완료 뱃지로 명확히 구분하고, 상세 스텝(협약-수행-정산-종료)의 진행 위치를 아이콘 프로그레스 바로 제공합니다. 상세 페이지 이동 없이도 사업공고, 평가기간 등 주요 메타정보와 상세보기/팝업조회 버튼을 빠르게 이용할 수 있습니다.</p>
+                    <span class="item-category">WEB DESIGN : MY PAGE</span>
+                    <h3 class="item-title">진행 단계 시각화로 완성한 <strong>맞춤형 과제 수행 현황</strong></h3>
+                    <p class="item-desc">수행 중인 과제 상태를 뱃지로 명확히 구분하고, 협약부터 종료까지의 진행 위치를 아이콘 프로그레스 바로 제공합니다. 주요 정보와 팝업조회 버튼을 빠르게 이용할 수 있도록 탐색 동선을 최적화했습니다.</p>
                 </div>
                 <div class="item-image">
                     <div class="device-frame">
@@ -151,16 +163,15 @@
             <div id="sec-mobile" class="improvement-item scroll-section">
                 <div class="item-text">
                     <span class="item-category">MOBILE DESIGN</span>
-                    <span class="item-badge">MOBILE</span>
-                    <h3 class="item-title">다양한 모바일 해상도와 브라우저에서도,<br><strong>끊김 없는 최적화된 반응형 UI/UX</strong></h3>
-                    <p class="item-desc">스마트폰, 태블릿 등 기기별 해상도 차이와 다양한 모바일 브라우저 환경에 완벽히 대응하도록 모바일 레이아웃을 정교하게 설계했습니다. 마이페이지의 과제 현황 카드와 내부 프로세스 단계 표기가 세로 1열 구조로 자연스럽게 재배치되어, 어떠한 기기 접속 환경에서도 최상의 가독성과 편안한 탐색 경험을 제공합니다.</p>
+                    <h3 class="item-title">디바이스 환경을 고려한 <strong>유연한 반응형 UI/UX</strong></h3>
+                    <p class="item-desc">다양한 모바일 해상도와 브라우저 환경에 완벽히 대응합니다. 마이페이지 과제 현황과 내부 프로세스 단계가 모바일에 최적화된 1열 구조로 자연스럽게 재배치되어 최상의 시독성을 제공합니다.</p>
                 </div>
-                <div class="item-image" style="background: transparent; border: none;">
+                <div class="item-image" style="background: transparent; border: none; box-shadow: none;">
                     <div class="mobile-screens-container">
                         <div class="mobile-screen-wrapper">
                             <img src="images/sub/kosac-mypage-mobile.png" alt="모바일 마이페이지 과제 현황 화면">
                         </div>
-                        <div class="mobile-screen-wrapper">
+                        <div class="mobile-screen-wrapper center-img">
                             <img src="images/sub/kosac-in-page-mobile.png" alt="모바일 사업관리 서브 화면">
                         </div>
                     </div>
@@ -169,46 +180,49 @@
 
         </div>
 
-        <!-- 독립된 디자인 시안 섹션 -->
+        <!-- 내부 관리 UI 컨셉 섹션 -->
         <section id="sec-concept" class="concept-section scroll-section">
             <div class="section-header">
                 <span class="section-tag">DESIGN PROPOSAL</span>
-                <h3 class="section-title">한국과학창의재단 과제관리시스템 <strong>내부 관리 UI 시안</strong></h3>
-                <p class="section-desc">업무 효율성과 데이터 시각화를 극대화하기 위해 설계된 내부 시스템 주요 화면 시안입니다.<br>보안 정책 준수 및 개인정보 보호를 위해 화면 내 주요 데이터는 더미 데이터(Dummy Data)로 구성되어 있습니다.</p>
+                <h3 class="section-title">과제관리시스템 <strong>내부 관리 UI 시안</strong></h3>
+                <p class="section-desc">업무 효율성과 데이터 시각화를 극대화하기 위해 설계된 내부 시스템 주요 화면 시안입니다.<br>(보안 정책 준수를 위해 화면 내 주요 데이터는 더미 데이터로 구성되었습니다.)</p>
             </div>
-            <div class="concept-grid">
+            
+            <div class="concept-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem; max-width: 140rem; margin: 0 auto;">
                 <!-- 시안 1 -->
                 <article class="concept-card">
-                    <div class="concept-image">
-                        <img src="images/sub/kosac-in-page.png" alt="확인서 발급 이력조회 및 목록 UI 시안 1">
+                    <div class="concept-image" style="height: 35rem;">
+                        <img src="images/sub/kosac-in-page.png" alt="확인서 발급 이력조회 및 목록 UI 시안" style="object-position: top;">
                     </div>
-                    <div class="concept-body">
-                        <span class="concept-badge">CONCEPT A</span>
-                        <h4 class="concept-title">단계별 발급 프로세스 및 이력 조회 중심 UI 시안</h4>
-                        <p class="concept-desc">본인확인부터 발급신청까지 4단계 스텝 배너로 진행 단계를 명확히 전달하며, 조회된 과제수행실적 목록을 직관적인 데이터 테이블과 상태 태그(발급 가능/불가)로 구성하여 사용자의 조회 및 선택 편의성을 극대화한 시안입니다.</p>
+                    <div class="concept-body" style="padding: 3rem; text-align: left; align-items: flex-start;">
+                        <span class="item-category" style="margin-bottom: 1rem;">CONCEPT A</span>
+                        <h4 class="concept-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">단계별 프로세스 및 이력 조회 중심 UI</h4>
+                        <p class="concept-desc" style="text-align: left;">본인확인부터 발급신청까지 4단계 스텝 배너로 진행 단계를 명확히 전달합니다. 조회된 과제수행실적 목록을 직관적인 데이터 테이블과 상태 태그로 구성하여 조회 편의성을 극대화했습니다.</p>
                     </div>
                 </article>
+                
                 <!-- 시안 2 -->
                 <article class="concept-card">
-                    <div class="concept-image">
-                        <img src="images/sub/kosac-in-list.png" alt="확인서 문서 미리보기 및 발급신청 UI 시안 2">
+                    <div class="concept-image" style="height: 35rem;">
+                        <img src="images/sub/kosac-in-list.png" alt="확인서 문서 미리보기 및 발급신청 UI 시안" style="object-position: top;">
                     </div>
-                    <div class="concept-body">
-                        <span class="concept-badge">CONCEPT B</span>
-                        <h4 class="concept-title">문서 실시간 미리보기 및 발급 설정 분할 UI 시안</h4>
-                        <p class="concept-desc">발급될 증명서(과제수행실적 확인서) 레이아웃을 좌측에 실시간으로 미리 보여주고, 우측에는 용도 선택 및 OZ Report/PDF 출력 설정 패널을 분할 배치하여 출력 전 오귀재를 방지하고 발급 편의성을 대폭 향상시킨 시안입니다.</p>
+                    <div class="concept-body" style="padding: 3rem; text-align: left; align-items: flex-start;">
+                        <span class="item-category" style="margin-bottom: 1rem;">CONCEPT B</span>
+                        <h4 class="concept-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">문서 실시간 미리보기 및 발급 설정 분할 UI</h4>
+                        <p class="concept-desc" style="text-align: left;">발급될 증명서 레이아웃을 좌측에 실시간으로 보여주고, 우측에 용도 선택 및 출력 설정 패널을 분할 배치하여 출력 전 오류를 방지하고 발급 효율성을 대폭 향상시켰습니다.</p>
                     </div>
                 </article>
             </div>
         </section>
+    </main>
 
-    </div>
-
-    <!-- 우측 하단 고정 컨택트 플로팅 버튼 그룹 -->
+    <!-- 심플 우측 하단 고정 플로팅 버튼 -->
     <aside class="contact-floating-group">
-        <a href="https://open.kakao.com/o/gWnybxFi" target="_blank" rel="noopener noreferrer" class="btn-floating btn-kakao" title="카카오톡 1:1 오픈채팅 열기">
+        <a href="https://open.kakao.com/o/gWnybxFi" target="_blank" rel="noopener noreferrer" class="btn-floating btn-kakao" title="카카오톡 문의">
             <i class="xi-speech-o"></i>
-            <span class="floating-label">카카오톡 문의</span>
+        </a>
+        <a href="#sec-info" class="btn-floating btn-top" title="최상단으로 이동">
+            <i class="xi-arrow-up"></i>
         </a>
     </aside>
 

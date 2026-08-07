@@ -191,4 +191,35 @@ function updateVisitorCount(todayStr, isIncrease) {
 }
 
 
+$(document).ready(function() {
+    $('.skill-row').each(function(index) {
+        var $row = $(this);
+        // .skill-num 텍스트에서 숫자만 추출 (예: "90%" -> "90", "100%" -> "100")
+        var percentText = $row.find('.skill-num').text().replace(/[^0-9]/g, '');
+        
+        if (percentText) {
+            var $fill = $row.find('.progress-fill');
+            
+            // 초기값을 0%로 강제 초기화하여 충돌 방지
+            $fill.css({
+                'width': '0%',
+                'animation': 'none'
+            });
+            
+            // 약간의 시차를 두고 목표 퍼센트까지 부드럽게 트랜지션 실행
+            setTimeout(function() {
+                $fill.css({
+                    'width': percentText + '%',
+                    'transition': 'width 7s cubic-bezier(0.16, 1, 0.3, 1)'
+                });
+            }, 200 + (index * 150));
+        }
+    });
+});
+
+
+
+
+
+
 

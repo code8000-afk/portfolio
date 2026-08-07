@@ -8,71 +8,86 @@
     <link rel="shortcut icon" href="images/icon/favicon-jisu.svg" type="image/x-icon"> 
     <title>12년 차 경력 UI/UX 디자이너 이지수 포트폴리오</title>
     <link rel="stylesheet" href="css/basics-reset.css">
-    <link rel="stylesheet" href="css/ppt-contents.css">
     <link rel="stylesheet" href="css/basic-contents.css">
+    <link rel="stylesheet" href="css/ppt-contents.css">
     <link rel="stylesheet" href="XEIcon-2.2.0/xeicon.css">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/common.js"></script>
 </head>
-<body class="ppt-wrap">
-<div id="skip-nav">
-    <a href="#sec-info">본문 바로가기</a>
-</div>
-    <!-- 고정 뒤로가기 버튼 -->
-    <a href="index.html" class="btn-back-floating" title="목록으로 돌아가기">
+<body>
+    <div id="skip-nav">
+        <a href="#sec-info">본문 바로가기</a>
+    </div>
+
+    <!-- 스크롤 전 최상단에만 위치하는 뒤로가기 버튼 -->
+    <a href="index.html" class="btn-back-hero" title="목록으로 돌아가기">
         <i class="xi-arrow-left"></i>
         <span>목록으로</span>
     </a>
 
-    <!-- 퀵 메뉴 영역 -->
-    <nav class="quick-menu">
-        <ul>
-            <li><a href="#sec-info" class="active"><span class="label">정보</span><span class="dot"></span></a></li>
-            <li><a href="#sec-cover"><span class="label">표지</span><span class="dot"></span></a></li>
-            <li><a href="#sec-overview"><span class="label">목차·간지</span><span class="dot"></span></a></li>
-            <li><a href="#sec-contents"><span class="label">상세내용</span><span class="dot"></span></a></li>
-            <li class="top-item"><a href="#sec-info" class="btn-top" title="최상단으로 이동"><span class="label">TOP</span><span class="dot"><i class="xi-arrow-up"></i></span></a></li>
-        </ul>
-    </nav>
-
     <!-- 스크롤 시 고정 표시될 미니 헤더 바 -->
     <div class="mini-header-bar" id="miniHeader">
-        <h3 class="mini-header-title">우주항공청 사업관리시스템 구축 제안서</h3>
+        <div class="header-left">
+            <a href="index.html" class="mini-back-btn" title="목록으로 돌아가기"><i class="xi-arrow-left"></i>목록으로</a>
+            <h3 class="mini-header-title">우주항공청 PIMS 제안서</h3>
+        </div>
         <ul class="mini-header-info">
-            <li><span class="info-label">작업 기간</span>2025.10.15 - 2025.10.25</li>
+            <li><span class="info-label">작업 기간</span>2025.10.15 ~ 2025.10.25</li>
             <li><span class="info-label">담당 범위</span>디자인 100%, 내용 정돈 70%</li>
-            <li><span class="info-label">작업 환경</span>Photoshop, Illustrator, Microsoft PowerPoint</li>
         </ul>
     </div>
 
-    <!-- 1. 정보 영역 (상단 히어로 요약) -->
+    <!-- 상단 꽉 찬 히어로 요약 섹션 -->
     <header id="sec-info" class="portfolio-header scroll-section">
+        <div class="hero-bg-anims">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+        
         <div class="portfolio-header-inner">
             <div class="hero-info-area">
                 <span class="hero-category">PROPOSAL DESIGN</span>
-                <p class="hero-subtitle">UI/UX 디자이너 이지수</p>
-                <h2 class="project-title">우주항공청 사업관리시스템 구축 제안서</h2>
+                <h2 class="project-title reveal-text">우주항공청 사업관리시스템<br><strong>구축 제안서 디자인</strong></h2>
                 
                 <div class="hero-meta-grid">
                     <div class="meta-item">
-                        <span class="meta-label">작업 기간</span>
-                        <span class="meta-value">2025.10.15 - 2025.10.25</span>
+                        <span class="meta-label">프로젝트 요약</span>
+                        <span class="meta-value">우주항공청 PIMS 제안서 전체 레이아웃 및 템플릿 디자인</span>
                     </div>
+                    
                     <div class="meta-item">
-                        <span class="meta-label">담당 범위</span>
-                        <span class="meta-value">디자인 <strong>100%</strong>내용 정돈 <strong>70%</strong></span>
+                        <span class="meta-label">작업 기간</span>
+                        <span class="meta-value">2025.10.15 ~ 2025.10.25 (10일)</span>
                     </div>
+                    
+                    <div class="meta-item role-item">
+                        <span class="meta-label">담당 범위</span>
+                        <div class="meta-value role-bars">
+                            <div class="skill-row">
+                                <span class="skill-name">디자인</span>
+                                <div class="progress-track"><div class="progress-fill fill-design" style="width: 100%;"></div></div>
+                                <span class="skill-num">100%</span>
+                            </div>
+                            <div class="skill-row">
+                                <span class="skill-name">내용정돈</span>
+                                <div class="progress-track"><div class="progress-fill fill-pub" style="width: 70%;"></div></div>
+                                <span class="skill-num">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="meta-item">
                         <span class="meta-label">작업 환경</span>
-                        <span class="meta-value">Photoshop, Illustrator, Microsoft PowerPoint</span>
+                        <span class="meta-value">Photoshop, Illustrator, MS PowerPoint</span>
                     </div>
                 </div>
             </div>
 
             <div class="hero-visual-area">
-                <div class="mockup-device primary-device">
+                <!-- 제안서 메인 표지 PC 화면 시각화 -->
+                <div class="mockup-device primary-device float-anim-1">
                     <div class="pc-screen">
-                        <img src="images/ppt/우주항공청-표지-가로.png" alt="제안서 표지 프리뷰">
+                        <img src="images/ppt/우주항공청-표지-가로.png" alt="우주항공청 제안서 표지 메인">
                     </div>
                     <div class="pc-stand"></div>
                 </div>
@@ -80,164 +95,100 @@
         </div>
     </header>
 
-    <div class="portfolio-container">
-        
-   <!-- 2. 메인 표지 대형 시안 영역 (인터랙티브 쇼케이스 방식) -->
-        <section id="sec-cover" class="ppt-cover-section scroll-section">
-            <div class="ppt-section-header">
-                <span class="ppt-section-tag">COVER DESIGN</span>
-                <h3 class="ppt-section-title">제안서 <strong>메인 표지 디자인</strong></h3>
-                <p class="ppt-section-desc">대한민국 우주항공 산업의 미래지향적 비전과 신뢰성을 담아낸 가로·세로 맞춤형 표지 시안입니다.</p>
-            </div>
+    <!-- 중앙 정렬 및 대형 이미지 기반 콘텐츠 리스트 -->
+    <main class="portfolio-container">
+        <div class="improvement-list" style="padding-top: 6rem;">
             
-            <div class="ppt-cover-display">
-                <div class="cover-showcase-window">
-                    <!-- CSS 인터랙션용 라디오 컨트롤 -->
-                    <input type="radio" id="cover-tab-horiz" name="cover-tab" class="cover-tab-input" checked>
-                    <input type="radio" id="cover-tab-vert" name="cover-tab" class="cover-tab-input">
-
-                    <!-- 상단 컨트롤 헤더 바 -->
-                    <div class="showcase-header">
-                        <div class="window-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
+            <!-- 콘텐츠 1 (표지 디자인) -->
+            <div id="sec-cover" class="improvement-item scroll-section">
+                <div class="item-text">
+                    <span class="item-category">COVER DESIGN</span>
+                    <h3 class="item-title">미래지향적 비전을 담은 <strong>제안서 표지</strong></h3>
+                    <p class="item-desc">대한민국 우주항공 산업의 신뢰성과 혁신성을 강조한 시안입니다. 목적에 맞게 활용할 수 있도록 가로형(발표용)과 세로형(제출용) 두 가지 포맷으로 최적화하여 디자인했습니다.</p>
+                </div>
+                <div class="item-image" style="background: transparent; border: none; box-shadow: none;">
+                    <div class="multi-frame-container">
+                        <div class="device-frame">
+                            <img src="images/ppt/우주항공청-표지-가로.png" alt="가로형 표지 시안">
                         </div>
-                        <div class="cover-toggle-switch">
-                            <label for="cover-tab-horiz" class="tab-btn label-horiz">
-                                <i class="xi-desktop"></i> 가로형 표지 (PPT 발표용)
-                            </label>
-                            <label for="cover-tab-vert" class="tab-btn label-vert">
-                                <i class="xi-file-text-o"></i> 세로형 표지 (제출용)
-                            </label>
+                        <div class="device-frame">
+                            <img src="images/ppt/우주항공청-표지-세로.png" alt="세로형 표지 시안">
                         </div>
-                    </div>
-
-                    <!-- 이미지 스테이지 영역 -->
-                    <div class="showcase-stage">
-                        <div class="cover-slide slide-horiz">
-                            <img src="images/ppt/우주항공청-표지-가로.png" alt="우주항공청 사업관리시스템 구축 제안서 메인 가로 표지">
-                        </div>
-                        <div class="cover-slide slide-vert">
-                            <img src="images/ppt/우주항공청-표지-세로.png" alt="우주항공청 사업관리시스템 구축 제안서 메인 세로 표지">
-                        </div>
-                    </div>
-
-                    <!-- 보안 하단 안내 -->
-                    <div class="showcase-footer">
-                        <p class="ppt-security-notice-flat"><i class="xi-lock"></i> 보안 유지 및 정보 보호를 위해 주요 상세 제출처 및 고객사 내부 정보는 블러/모자이크 처리되어 있습니다.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- 3. 목차 & 간지 구성 영역 -->
-        <section id="sec-overview" class="ppt-overview-section scroll-section">
-            <div class="ppt-section-header">
-                <span class="ppt-section-tag">INDEX & BREAK SLIDE</span>
-                <h3 class="ppt-section-title">체계적인 체계의 <strong>목차 및 간지 구성</strong></h3>
-                <p class="ppt-section-desc">심사위원의 가독성과 정보 전달력을 극대화한 발표 순서 목차 레이아웃과 섹션 간지 디자인입니다.</p>
-            </div>
-            <div class="ppt-overview-grid">
-                <article class="ppt-overview-card">
-                    <div class="ppt-card-thumb">
-                        <img src="images/ppt/우주항공청-목차.png" alt="제안서 목차 레이아웃">
-                    </div>
-                    <div class="ppt-card-info">
-                        <span class="ppt-card-badge">INDEX</span>
-                        <h4 class="ppt-card-title">직관적인 발표순서 목차</h4>
-                        <p class="ppt-card-desc">제안사 소개부터 제안개요, 사업수행방안, 사업관리 및 지원방안까지 핵심 4개 단락을 명확히 구분하여 전체 제안 흐름을 한눈에 파악할 수 있도록 구성했습니다.</p>
-                        <p class="ppt-security-notice-sm"><i class="xi-lock"></i> 보안 유지를 위해 일부 텍스트는 블러 처리되어 있습니다.</p>
-                    </div>
-                </article>
-                <article class="ppt-overview-card">
-                    <div class="ppt-card-thumb">
-                        <img src="images/ppt/우주항공청-간지.png" alt="제안서 간지 레이아웃">
-                    </div>
-                    <div class="ppt-card-info">
-                        <span class="ppt-card-badge">SECTION BREAK</span>
-                        <h4 class="ppt-card-title">섹션 구분 간지 비주얼 디자인</h4>
-                        <p class="ppt-card-desc">대단락이 전환될 때 심사위원의 시각적 리프레시와 세부 목차(일반현황, 주요 사업실적 등) 사전 전달력을 높이기 위해 블루 톤의 우주 그래픽 간지를 적용했습니다.</p>
-                        <p class="ppt-security-notice-sm"><i class="xi-lock"></i> 보안 유지를 위해 세부 텍스트는 블러 처리되어 있습니다.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- 4. PPT 핵심 콘텐츠 상세 영역 -->
-        <section id="sec-contents" class="ppt-content-section scroll-section">
-            <div class="ppt-section-header">
-                <span class="ppt-section-tag">SLIDE DETAILS</span>
-                <h3 class="ppt-section-title">제안서 <strong>주요 상세 슬라이드 및 전체 구성</strong></h3>
-                <p class="ppt-section-desc">사업 수행 역량, 시스템 UI/UX 설계안, 목표시스템 구성도 등 핵심 제안 내용이 담긴 주요 슬라이드 레이아웃입니다.</p>
-            </div>
-            
-            <div class="ppt-content-stack">
-                <!-- 슬라이드 01 -->
-                <div class="ppt-stack-item">
-                    <div class="ppt-stack-visual">
-                        <div class="ppt-slide-frame">
-                            <img src="images/ppt/우주항공청-콘텐츠1.png" alt="제안의 배경 및 목적 슬라이드">
-                        </div>
-                    </div>
-                    <div class="ppt-stack-text">
-                        <span class="ppt-step-num">01</span>
-                        <h4 class="ppt-stack-title">제안의 배경 및 <strong>사업 추진 목적</strong></h4>
-                        <p class="ppt-stack-desc">우주항공청 사업 전주기의 효율적 운영과 체계적 관리를 위한 통합 시스템 구축 필요성을 정리하고, 검증된 사업관리 역량과 핵심 제안 포인트를 시각화했습니다.</p>
-                        <ul class="ppt-feature-list">
-                            <li><i class="xi-check"></i> 효율적인 사업관리 업무지원 체계 구축안 도출</li>
-                            <li><i class="xi-check"></i> 사용자 편의성 증대 및 사업관리 데이터 정합성 확보 전략</li>
-                        </ul>
-                        <p class="ppt-security-notice-sm"><i class="xi-lock"></i> 보안 유지를 위해 내부 레퍼런스 및 수치는 블러 처리되었습니다.</p>
-                    </div>
+            <!-- 콘텐츠 2 (목차 및 간지) -->
+            <div id="sec-overview" class="improvement-item scroll-section">
+                <div class="item-text">
+                    <span class="item-category">INDEX & BREAK SLIDE</span>
+                    <h3 class="item-title">정보 전달력을 극대화한 <strong>목차 및 간지</strong></h3>
+                    <p class="item-desc">심사위원의 가독성을 최우선으로 고려했습니다. 4개의 핵심 단락을 명확히 구분한 목차와 시각적 리프레시를 돕는 간지 레이아웃으로 제안의 전체 흐름을 한눈에 파악할 수 있습니다.</p>
                 </div>
-
-                <!-- 슬라이드 02 -->
-                <div class="ppt-stack-item">
-                    <div class="ppt-stack-visual">
-                        <div class="ppt-slide-frame">
-                            <img src="images/ppt/우주항공청-콘텐츠2.png" alt="목표시스템 구성도 슬라이드">
+                <div class="item-image" style="background: transparent; border: none; box-shadow: none;">
+                    <div class="multi-frame-container">
+                        <div class="device-frame security-watermark">
+                            <img src="images/ppt/우주항공청-목차.png" alt="제안서 목차 레이아웃">
                         </div>
-                    </div>
-                    <div class="ppt-stack-text">
-                        <span class="ppt-step-num">02</span>
-                        <h4 class="ppt-stack-title">사용자 중심 <strong>목표시스템 구성도</strong></h4>
-                        <p class="ppt-stack-desc">대민 서비스, 외부/내부 사업관리 업무 서비스, 시스템 기반 관리, 통합 DB 및 연계기관(NTIS, IRIS, RCMS 등) 구조를 한눈에 이해하기 쉽게 다이어그램으로 체계화했습니다.</p>
-                        <ul class="ppt-feature-list">
-                            <li><i class="xi-check"></i> 연구자, 연구기관, 평가위원, 내부담당자별 역할 분리</li>
-                            <li><i class="xi-check"></i> 국가 범부처 연계시스템 및 기관 연계 인터페이스 시각화</li>
-                        </ul>
-                        <p class="ppt-security-notice-sm"><i class="xi-lock"></i> 보안 유지를 위해 세부 아키텍처 명칭은 블러 처리되어 있습니다.</p>
-                    </div>
-                </div>
-
-                <!-- 슬라이드 03 -->
-                <div class="ppt-stack-item">
-                    <div class="ppt-stack-visual">
-                        <div class="ppt-slide-frame">
-                            <img src="images/ppt/우주항공청-콘텐츠-목록.png" alt="전체 제안서 슬라이드 덱 목록">
+                        <div class="device-frame security-watermark">
+                            <img src="images/ppt/우주항공청-간지.png" alt="제안서 간지 레이아웃">
                         </div>
-                    </div>
-                    <div class="ppt-stack-text">
-                        <span class="ppt-step-num">03</span>
-                        <h4 class="ppt-stack-title">일관성 있는 <strong>전체 제안 슬라이드 덱</strong></h4>
-                        <p class="ppt-stack-desc">제안서 전체 페이지에 일관된 톤앤매너와 아이콘을 맞춰 제작했습니다.</p>
-                        <ul class="ppt-feature-list">
-                            <li><i class="xi-check"></i> 텍스트 밀도를 줄이고 다이어그램/인포그래픽 위주 재구성</li>
-                        </ul>
-                        <p class="ppt-security-notice-sm"><i class="xi-lock"></i> 보안 유지를 위해 전체 슬라이드 모음 이미지는 블러 처리되어 있습니다.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-    </div>
+            <!-- 콘텐츠 3 (상세 슬라이드 1) -->
+            <div id="sec-contents1" class="improvement-item scroll-section">
+                <div class="item-text">
+                    <span class="item-category">SLIDE DETAILS : BACKGROUND</span>
+                    <h3 class="item-title">직관적으로 시각화한 <strong>제안 배경 및 목적</strong></h3>
+                    <p class="item-desc">복잡한 텍스트 밀도를 줄이고, 사업 전주기의 효율적 운영이라는 핵심 가치를 인포그래픽 중심의 슬라이드로 명확하고 설득력 있게 전달합니다.</p>
+                </div>
+                <div class="item-image">
+                    <div class="device-frame security-watermark">
+                        <img src="images/ppt/우주항공청-콘텐츠1.png" alt="제안의 배경 및 목적 슬라이드">
+                    </div>
+                </div>
+            </div>
 
-    <!-- 플로팅 버튼 그룹 -->
+            <!-- 콘텐츠 4 (상세 슬라이드 2) -->
+            <div id="sec-contents2" class="improvement-item scroll-section">
+                <div class="item-text">
+                    <span class="item-category">SLIDE DETAILS : ARCHITECTURE</span>
+                    <h3 class="item-title">사용자 중심의 <strong>목표시스템 구성도</strong></h3>
+                    <p class="item-desc">대민 서비스, 내부 업무, 연계기관 시스템 구조 등 방대한 아키텍처를 누구나 이해하기 쉽도록 다이어그램으로 체계화하여 표현했습니다.</p>
+                </div>
+                <div class="item-image">
+                    <div class="device-frame security-watermark">
+                        <img src="images/ppt/우주항공청-콘텐츠2.png" alt="목표시스템 구성도 슬라이드">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 콘텐츠 5 (전체 구성) -->
+            <div id="sec-contents3" class="improvement-item scroll-section">
+                <div class="item-text">
+                    <span class="item-category">SLIDE DECK OVERVIEW</span>
+                    <h3 class="item-title">일관성 있는 <strong>전체 제안 슬라이드 덱</strong></h3>
+                    <p class="item-desc">수십 장에 달하는 제안서 전체 페이지에 걸쳐 통일된 톤앤매너와 아이콘 가이드를 엄격하게 적용하여 문서의 최종 완성도를 높였습니다.</p>
+                </div>
+                <div class="item-image">
+                    <div class="device-frame security-watermark">
+                        <img src="images/ppt/우주항공청-콘텐츠-목록.png" alt="전체 제안서 슬라이드 덱 목록">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 심플 우측 하단 고정 플로팅 버튼 -->
     <aside class="contact-floating-group">
-        <a href="https://open.kakao.com/o/gWnybxFi" target="_blank" rel="noopener noreferrer" class="btn-floating btn-kakao" title="카카오톡 1:1 오픈채팅 열기">
+        <a href="https://open.kakao.com/o/gWnybxFi" target="_blank" rel="noopener noreferrer" class="btn-floating btn-kakao" title="카카오톡 문의">
             <i class="xi-speech-o"></i>
-            <span class="floating-label">카카오톡 문의</span>
+        </a>
+        <a href="#sec-info" class="btn-floating btn-top" title="최상단으로 이동">
+            <i class="xi-arrow-up"></i>
         </a>
     </aside>
 
